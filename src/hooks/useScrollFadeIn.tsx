@@ -5,7 +5,7 @@ const useScrollFadeIn = (
     duration = 1,
     delay = 0
 ) => {
-    const element = useRef<HTMLDivElement | null | undefined>();
+    const element = useRef<HTMLDivElement | null | undefined | any>();
 
     const handleDirection = (direction: string) => {
         switch (direction) {

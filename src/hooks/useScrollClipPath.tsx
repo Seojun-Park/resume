@@ -4,7 +4,7 @@ const useScrollClipPath: any = (
     direction = 'left',
     duration = 1,
     delay = 0) => {
-    const element = useRef<HTMLDivElement>();
+    const element = useRef<HTMLDivElement | any>();
 
     const handleClipPath = (direction: string) => {
         switch (direction) {

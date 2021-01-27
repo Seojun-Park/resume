@@ -1,12 +1,12 @@
 import { useRef, useEffect, useCallback } from 'react';
 
-const useScollCount = (
+const useScrollCount = (
     end = 0,
     start = 0,
     duration = 3000,
     delay = 0,
 ) => {
-    const element = useRef<HTMLDivElement>();
+    const element = useRef<HTMLDivElement | any>();
     const observer: any = useRef<IntersectionObserver | null>(null);
     const stepTime = Math.abs(Math.floor(duration / (end - start)));
 
@@ -40,4 +40,4 @@ const useScollCount = (
     }
 }
 
-export default useScollCount
+export default useScrollCount
