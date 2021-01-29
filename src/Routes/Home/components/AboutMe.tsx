@@ -81,6 +81,9 @@ const S = {
     }
   `,
   MobileWrapper: styled.div`
+  @media (min-width:377px){
+    display:none;
+  }
    @media (max-width:376px){
     display: flex;
     flex-direction: column;

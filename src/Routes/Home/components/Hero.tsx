@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from '../../../components/Button';
+import { Link } from 'react-router-dom'
 
 const S = {
   Background: styled.section`
@@ -79,9 +80,11 @@ const Hero = () => {
           I code with passion and bring the idea to life.<br />
           Powered by VS Code and coffee
         </S.Description>
-        <Button fill="solid" type="button">
-          See my profile
+        <Link to='/profile'>
+          <Button fill="solid" type="button">
+            See my profile
         </Button>
+        </Link>
       </S.Wrapper>
     </S.Background>
   );
