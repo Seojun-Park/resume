@@ -8,16 +8,25 @@ const S = {
     max-width: 1180px;
     margin: auto;
     padding: 120px 0;
+    padding-left: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 680px;
+    @media (max-width:376px){
+      padding: 60px auto;
+      margin:auto;
+      margin-top: 680px;
+    }
   `,
   TextWrapper: styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 580px;
+    @media (max-width:376px){
+      display:none;
+    }
   `,
   Label: styled.p`
     display: inline-block;
@@ -34,6 +43,13 @@ const S = {
     ${props => props.theme.typography.description};
     color: ${props => props.theme.palette.black};
     margin-bottom: 2rem;
+    @media (max-width:376px){
+      margin-top: 20px;
+      background-color: white;
+      width: 320px;
+      padding: 1rem;
+      margin-bottom:1rem;
+    }
   `,
   List: styled.ul`
     width: fit-content;
@@ -46,6 +62,9 @@ const S = {
     span {
       color: ${props => props.theme.palette.secondary};
     }
+    @media (max-width:376px){
+      font-size: 14px;
+    }
   `,
   TextButton: styled.button`
     width: fit-content;
@@ -56,15 +75,32 @@ const S = {
   Image: styled.div`
     width: 580px;
     height: 580px;
-    background-color:black;
-    /* background: no-repeat center/cover url(); */
+    background: no-repeat center/cover url('https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/profile.jpeg?alt=media&token=e0ab66cc-4252-4938-90e8-800da11720fa');
+    @media (max-width:376px){
+      display:none;
+    }
   `,
+  MobileWrapper: styled.div`
+   @media (max-width:376px){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 376px; 
+    }
+  `,
+  MobileImage: styled.div`
+  @media (max-width:376px){
+  width: 320px;
+    height: 320px;
+    background: no-repeat center/cover url('https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/profile.jpeg?alt=media&token=e0ab66cc-4252-4938-90e8-800da11720fa');
+   }
+  `
 };
 
 const FEAURE_ITEMS = [
-  'A lacus vestibulum sed arcu non odio euismod lacinia.',
-  'In tellus integer feugiat scelerisque.',
-  'Feugiat in fermentum posuere urna nec tincidunt',
+  `Frontend : ReactJS / JavaScript / TypeScript`,
+  'Backend : NodeJS / Graphql',
+  'I genuinely care about people and love to collaborate with them',
 ];
 
 const Feature = () => {
@@ -75,12 +111,14 @@ const Feature = () => {
       <S.TextWrapper>
         <S.Label>About Me</S.Label>
         <S.Title>
-          Pulvinar elementum <br />
-          integer enim neque
+          Hi I'm Jin <br />
+          Nice to meet you
         </S.Title>
         <S.Description>
-          Senectus et netus et malesuada. Nunc pulvinar sapien et ligula
-          ullamcorper malesuada proin. Neque convallis a cras semper auctor.
+          Since beginning my journey as a web developer student nearly 2 years ago,<br />
+          I've done many projects in C, PHP and Javascript in école 42.<br />
+          I like to code things from scratch, and enjoy bringing ideas to life in the browser.
+          {/* problem at a time. */}
         </S.Description>
         <S.List>
           {FEAURE_ITEMS.map((item, index) => (
@@ -92,6 +130,24 @@ const Feature = () => {
         <S.TextButton>Read more about me</S.TextButton>
       </S.TextWrapper>
       <S.Image {...animatedImage} />
+      <S.MobileWrapper>
+        <S.MobileImage {...animatedImage} />
+        <S.Description>
+          Since beginning my journey as a web developer student nearly 2 years ago,<br />
+          I've done many projects in C, PHP and Javascript in école 42.<br />
+          I like to code things from scratch, and enjoy bringing ideas to life in the browser.
+          {/* problem at a time. */}
+        </S.Description>
+        <S.List>
+          {FEAURE_ITEMS.map((item, index) => (
+            <S.ListItem key={item}>
+              <span>•</span> {item}
+            </S.ListItem>
+          ))}
+        </S.List>
+        <S.TextButton>Read more about me</S.TextButton>
+
+      </S.MobileWrapper>
     </S.Wrapper>
   );
 };

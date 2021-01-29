@@ -6,6 +6,7 @@ import useScrollFadeIn from '../../../hooks/useScrollFadeIn';
 const S = {
   Wrapper: styled.section`
     width: 100%;
+    max-width: 1180px;
     padding: 120px 0;
     background-color: ${props => props.theme.palette.background};
     display: flex;
