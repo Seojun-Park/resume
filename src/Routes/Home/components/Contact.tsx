@@ -22,7 +22,9 @@ const S = {
     width: 580px;
     height: 580px;
     background: no-repeat center/cover url('https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/contact.jpeg?alt=media&token=f382b9ac-7592-461f-9423-4134407ecba6');
-    /* background-color:gray; */
+    @media (max-width:376px){
+      display:none;
+    }
   `,
   TextWrapper: styled.div`
     box-sizing: border-box;
@@ -73,7 +75,7 @@ const Contact = () => {
     <S.Wrapper>
       <S.Image image={'contactImage'} />
       <S.TextWrapper>
-        <S.Label {...animatedItem[0]}>Contact us</S.Label>
+        <S.Label {...animatedItem[0]}>Contact Me</S.Label>
         <S.Title {...animatedItem[1]}>
           Est placerat in egestas
           <br />
@@ -86,7 +88,23 @@ const Contact = () => {
         <S.Form {...animatedItem[3]}>
           <TextField type="text" placeholder="Name" />
           <TextField type="text" placeholder="Email Address" />
-          <TextField type="text" placeholder="Content" />
+          <TextField type="textarea" placeholder="Content" />
+          <a href="mailto:jinchul112@gmail.com?subject=jinpark">
+            test
+          </a>
+          {/* <form name="mailform">
+이  메  일 : <input type="text" name="mailto" value="user1@moozuk.net"><br>
+참       조 : <input type="text" name="cc" value="user2@moozuk.net"><br>
+숨은 참조 : <input type="text" name="bcc" value="user3@moozuk.net"><br>
+메일 제목 : <input type="text" name="subject" value="메일 제목을 입력하세요!"><br>
+본문 내용 : <textarea name="body" rows="10" cols="70">메일 내용을 입력하세요!!</textarea>
+<p><center>
+<input type="button" onclick="location.href='mailto:' + document.mailform.mailto.value +
+'?cc=' + document.mailform.cc.value + '&bcc=' + document.mailform.bcc.value +
+'&subject=' + document.mailform.subject.value + '&body=' +
+document.mailform.body.value" value="메일 실행">
+</center></p>
+</form> */}
           <Button fill="solid" type="submit">
             Contact
           </Button>

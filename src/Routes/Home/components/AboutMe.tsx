@@ -16,7 +16,7 @@ const S = {
     @media (max-width:376px){
       padding: 60px auto;
       margin:auto;
-      margin-top: 680px;
+      margin-top: 400px;
     }
   `,
   TextWrapper: styled.div`
@@ -104,7 +104,10 @@ const FEAURE_ITEMS = [
 ];
 
 const Feature = () => {
-  const animatedImage = useScrollClipPath();
+  const animatedImage = {
+    0: useScrollClipPath(),
+    1: useScrollClipPath('down')
+  }
 
   return (
     <S.Wrapper>
@@ -129,9 +132,9 @@ const Feature = () => {
         </S.List>
         <S.TextButton>Read more about me</S.TextButton>
       </S.TextWrapper>
-      <S.Image {...animatedImage} />
+      <S.Image {...animatedImage[0]} />
       <S.MobileWrapper>
-        <S.MobileImage {...animatedImage} />
+        <S.MobileImage {...animatedImage[1]} />
         <S.Description>
           Since beginning my journey as a web developer student nearly 2 years ago,<br />
           I've done many projects in C, PHP and Javascript in école 42.<br />
@@ -146,7 +149,6 @@ const Feature = () => {
           ))}
         </S.List>
         <S.TextButton>Read more about me</S.TextButton>
-
       </S.MobileWrapper>
     </S.Wrapper>
   );

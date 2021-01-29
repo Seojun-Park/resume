@@ -15,8 +15,9 @@ const S = {
     top: 0;
     /* width: 100%; */
     width: 375px;
-    height: 780px;
+    height: 500px;
     background: no-repeat center/cover url('https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/code1.jpeg?alt=media&token=bc4e1ebe-a18b-4b70-9e87-5bc124294797');
+    background-size:cover;
     z-index:0 
     }
   `,
@@ -28,6 +29,9 @@ const S = {
   background-color:black;
   opacity:0.3;
   z-index: 1;
+  @media (max-width: 376px){
+    height: 500px;
+  }
   `,
   Wrapper: styled.div`
     width: 100%;
@@ -41,11 +45,17 @@ const S = {
     justify-content: center;
     position:absolute;
     z-index:2;
+    @media (max-width: 376px){
+      padding-top: 50px;
+    }
   `,
   Title: styled.h1`
     ${props => props.theme.typography.title};
     color: #fff;
     margin-bottom: 0.5rem;
+    @media (max-width: 376px){
+      font-size: 28px;
+    }
   `,
   Description: styled.p`
     ${props => props.theme.typography.description};
@@ -62,7 +72,7 @@ const Hero = () => {
         <S.Title>
           Jin Park
           <br />
-          Web Software Developer
+          Web Developer
         </S.Title>
         <S.Description>
           Hi! Jin 👋 <br />Currently, I'm studying web development in école 42, Paris<br />
