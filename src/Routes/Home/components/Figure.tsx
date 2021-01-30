@@ -63,7 +63,7 @@ const S = {
 const FIGURE_ITEMS = [
   {
     title: 'Total Projects',
-    number: 630,
+    number: 10,
     unit: '+',
     description: 'Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus.',
   },
@@ -85,7 +85,7 @@ const FIGURE_ITEMS = [
 
 const Figure = () => {
   const countItem = {
-    0: useScrollCount(630),
+    0: useScrollCount(10),
     1: useScrollCount(124),
     2: useScrollCount(92),
   };

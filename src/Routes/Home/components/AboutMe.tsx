@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import useScrollClipPath from '../../../hooks/useScrollClipPath'
 
@@ -133,7 +134,9 @@ const Feature = () => {
             </S.ListItem>
           ))}
         </S.List>
-        <S.TextButton>Read more about me</S.TextButton>
+        <Link to='/profile'>
+          <S.TextButton>Read more about me</S.TextButton>
+        </Link>
       </S.TextWrapper>
       <S.Image {...animatedImage[0]} />
       <S.MobileWrapper>
@@ -151,7 +154,9 @@ const Feature = () => {
             </S.ListItem>
           ))}
         </S.List>
-        <S.TextButton>Read more about me</S.TextButton>
+        <Link to='/profile'>
+          <S.TextButton>Read more about me</S.TextButton>
+        </Link>
       </S.MobileWrapper>
     </S.Wrapper>
   );

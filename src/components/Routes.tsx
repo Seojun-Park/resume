@@ -1,11 +1,12 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import { Home, Profile } from '../Routes'
+import { Home, Profile, Project } from '../Routes'
 
 const Routes = () => (
     <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/profile" component={Profile} />
+        <Route path="/project/:title" component={Project} />
     </Switch>
 )
 

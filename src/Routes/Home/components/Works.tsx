@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Button from '../../../components/Button';
 import useScrollFadeIn from '../../../hooks/useScrollFadeIn';
@@ -140,7 +141,9 @@ const Works = () => {
               <S.ItemTitle>{item.title}</S.ItemTitle>
               <S.ItemLabel>{item.label}</S.ItemLabel>
               <S.ItemDesciption>{item.description}</S.ItemDesciption>
-              <S.TextButton>Read more</S.TextButton>
+              <Link to={`/project/${item.title}`}>
+                <S.TextButton>Read more</S.TextButton>
+              </Link>
             </S.TextContainer>
           </S.ListItem>
         ))}
