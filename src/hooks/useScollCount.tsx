@@ -32,6 +32,7 @@ const useScrollCount = (
                 onScroll, { threshold: 0.7 });
             observer.current.observe(element.current);
         }
+
         return () => observer && observer.disconnect();
     }, [onScroll])
 
