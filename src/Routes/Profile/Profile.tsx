@@ -4,6 +4,7 @@ import Footer from '../../components/Footer'
 import Helmet from 'react-helmet'
 import TopBanner from '../../components/TopBanner'
 import styled from 'styled-components'
+import { ProfileBody } from './components'
 
 const Wrapper = styled.div`
     width: 100%;
@@ -21,7 +22,7 @@ const Profile = () => {
             <Helmet><title>Profile</title></Helmet>
             <Header />
             <TopBanner title='Profile' />
-            profile
+            <ProfileBody />
             <Footer />
         </Wrapper>
     )
