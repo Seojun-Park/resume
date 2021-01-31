@@ -12,7 +12,7 @@ const theme = {
   typography: {
     title: {
       fontFamily: '"Gelasio", serif',
-      fontSize: "4rem",
+      fontSize: "3rem",
       fontWeight: 600,
     },
     subtitle: {

@@ -1,23 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import TopBanner from '../../components/TopBanner'
 import { RouteComponentProps } from 'react-router-dom'
 import { Helmet } from 'react-helmet';
-import { TopBanner, ProjectBody } from './components'
+import { ProjectBody } from './components'
+import { WORKS_ITEMS } from '../../components/AllProjects'
+import styled from 'styled-components'
 
 interface IProps extends RouteComponentProps {
     match: any
 }
 
-const WORKS_ITEMS = [
-    {
-        preview: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/up.gif?alt=media&token=6e6b56c0-9097-46fb-b720-96b57ae93ec4',
-        title: 'Uber Clone',
-        label: 'Dec, 2020',
-        description:
-            'blabla ',
-    }
-];
+const Wrapper = styled.div`
+width: 100%;
+background-color:#F8F5F2;
+@media(max-width: 376px) {
+    /* width: 100%; */
+    width: 376px;
+    background-color:#F8F5F2;
+}
+`
 
 const Project: React.FC<IProps> = ({ match }) => {
     const [data, setData] = useState<any>();
@@ -43,13 +46,13 @@ const Project: React.FC<IProps> = ({ match }) => {
         )
     }
     return (
-        <React.Fragment>
+        <Wrapper>
             <Helmet><title>Projects</title></Helmet>
             <Header />
             <TopBanner title={data.title} />
             <ProjectBody data={data} />
             <Footer />
-        </React.Fragment>
+        </Wrapper>
     )
 }
 

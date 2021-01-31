@@ -1,51 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'
-
-const WORKS_ITEMS = [
-    {
-        thumbnail: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/up.gif?alt=media&token=6e6b56c0-9097-46fb-b720-96b57ae93ec4',
-        title: 'Uber Clone',
-        label: 'Dec, 2020',
-        description:
-            'blabla ',
-    },
-    {
-        thumbnail: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/preview.gif?alt=media&token=c71434db-050e-4e55-aa55-89d6c464533f',
-        title: 'Jinstagram',
-        label: 'Jan, 2021',
-        description:
-            'cloning this bla bla',
-    },
-    {
-        thumbnail: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/1.png?alt=media&token=6f5eb9ae-55ef-4233-9d78-7c818c6bccf5',
-        title: 'Camagru',
-        label: 'Oct, 2020',
-        description:
-            'the first 42 web project',
-    },
-    {
-        thumbnail: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/1.png?alt=media&token=6f5eb9ae-55ef-4233-9d78-7c818c6bccf5',
-        title: 'Filler',
-        label: 'Oct, 2020',
-        description:
-            'the first 42 web project',
-    },
-    {
-        thumbnail: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/1.png?alt=media&token=6f5eb9ae-55ef-4233-9d78-7c818c6bccf5',
-        title: 'Fillit',
-        label: 'Oct, 2020',
-        description:
-            'the first 42 web project',
-    },
-    {
-        thumbnail: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/1.png?alt=media&token=6f5eb9ae-55ef-4233-9d78-7c818c6bccf5',
-        title: 'N-Queen',
-        label: 'Oct, 2020',
-        description:
-            'the first 42 web project',
-    },
-];
+import { WORKS_ITEMS } from '../../../components/AllProjects'
 
 const Nested = styled.div`
 display:none;

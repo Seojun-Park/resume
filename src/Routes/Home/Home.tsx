@@ -3,7 +3,7 @@ import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
-import { Banner, Figure, AboutMe, Hero, Service, Contact, Works } from './components'
+import { Figure, AboutMe, Hero, Contact, Works } from './components'
 
 const S = {
     Wrapper: styled.div`
