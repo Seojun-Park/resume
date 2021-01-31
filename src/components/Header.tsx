@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import Button from './Button';
 
@@ -83,7 +84,9 @@ const Header = () => {
     return (
         <S.Wrapper isScroll={isScroll}>
             <S.Header isScroll={isScroll}>
-                <S.Logo isScroll={isScroll}>JinPark</S.Logo>
+                <Link to={'/'}>
+                    <S.Logo isScroll={isScroll}>JinPark</S.Logo>
+                </Link>
                 <S.Navigation>
                     will be
                 </S.Navigation>

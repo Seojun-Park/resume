@@ -148,7 +148,9 @@ const Works = () => {
           </S.ListItem>
         ))}
       </S.List>
-      <Button fill="outline">More Works</Button>
+      <Link to={'/projects'}>
+        <Button fill="outline">More Works</Button>
+      </Link>
     </S.Wrapper>
   );
 };

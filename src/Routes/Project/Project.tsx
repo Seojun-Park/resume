@@ -11,7 +11,7 @@ interface IProps extends RouteComponentProps {
 
 const WORKS_ITEMS = [
     {
-        Preview: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/up.gif?alt=media&token=6e6b56c0-9097-46fb-b720-96b57ae93ec4',
+        preview: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/up.gif?alt=media&token=6e6b56c0-9097-46fb-b720-96b57ae93ec4',
         title: 'Uber Clone',
         label: 'Dec, 2020',
         description:
@@ -35,7 +35,6 @@ const Project: React.FC<IProps> = ({ match }) => {
         }
     }, [params, setData])
 
-    console.log(data)
     if (!data || !params) {
         return (
             <React.Fragment>
