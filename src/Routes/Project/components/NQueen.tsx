@@ -81,9 +81,57 @@ const NQueen: React.FC<IProps> = ({ data }) => {
                      - if the next Queen is satisfy the question #1 and #2, it is unabled<br />
                      - back to previous status and place the Queen at different available position<br />
                      - if the next Queen is not satisfy for the question #1 and #2, place the Queen at the position<br />
-                     <br />
+                    <br />
                      3
-                     - if the present Queen is Nth(last) Queen, it is the answer
+                     - if the present Queen is N th(last) Queen, plus 1 to number of cases
+                     - if the present Queen is not the N th(last) Queen, move to next
+                </S.Description>
+            </S.Row>
+            <S.Row>
+                <S.SubHeading>Back Tracking</S.SubHeading>
+                <S.Description>
+                    The easiest way to solve N-Queen puzzle is check all number of cases.
+                    However, it would be faster if skipping all unneccessary precess<br />
+                    when the next Queen finds is unable to place at any position.<br />
+                    <br />
+                    Check the following description:
+                </S.Description>
+                <S.MapBox>
+                    <S.ImageBox>
+                        <S.Image src={data.images.backtracking.firstQueen} alt="back" />
+                        <S.Image src={data.images.backtracking.wrong1} alt="back" />
+                    </S.ImageBox>
+                    <S.ImageDesc>Case 1</S.ImageDesc>
+                </S.MapBox>
+                <S.Description>
+                    The first Queen is placed at A8, then the next Queen wouldn't be able to place at B8<br />
+                    At this case, the next queen will not check for further possible cases, and just go back to previus case
+                </S.Description>
+            </S.Row>
+            <S.Row>
+                <S.MapBox>
+                    <S.ImageBox>
+                        <S.Image src={data.images.backtracking.firstQueen} alt="back" />
+                        <S.Image src={data.images.backtracking.wrong2} alt="back" />
+                    </S.ImageBox>
+                    <S.ImageDesc>Case 2</S.ImageDesc>
+                </S.MapBox>
+                <S.Description>
+                    On previus case, I check B8 is unavailabe, so it would be able to check, if B7 is available.<br />
+                    However, B7 is also on the same digonal route from A8, So it is unavailable position as well.
+                    Then, stop finding further possible cases and back to previous case.
+                </S.Description>
+            </S.Row>
+            <S.Row>
+                <S.MapBox>
+                    <S.ImageBox>
+                        <S.Image src={data.images.backtracking.firstQueen} alt="back" />
+                        <S.Image src={data.images.backtracking.secondQueen} alt="back" />
+                    </S.ImageBox>
+                    <S.ImageDesc>Case 3</S.ImageDesc>
+                </S.MapBox>
+                <S.Description>
+                    Through out above cases, I know B8 and B7 is unavailable position.<br />
                 </S.Description>
             </S.Row>
         </S.Container>

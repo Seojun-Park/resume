@@ -85,6 +85,16 @@ export const WORKS_ITEMS = [
         0: "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/nqueens%2Fstep2-1.jpg?alt=media&token=9f466ee6-e687-4721-b91c-c5a3bfeb074d",
         1: "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/nqueens%2Fstep2-2.jpg?alt=media&token=fba4f28f-5fad-4d1c-b1ed-78a7761f5745",
       },
+      backtracking: {
+        firstQueen:
+          "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/nqueens%2Ffirst-queen-position.jpg?alt=media&token=0be28c14-b205-4e76-a287-96b15e009251",
+        wrong1:
+          "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/nqueens%2Fwrong-position.jpg?alt=media&token=d26f4403-9b07-4d0e-99a2-fdd326637abf",
+        wrong2:
+          "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/nqueens%2Fwrong-position2.jpg?alt=media&token=6f175cbe-b2ca-49bc-97a4-96805d54e248",
+        secondQueen:
+          "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/nqueens%2Fsecond-queen-position.jpg?alt=media&token=11a98008-e91b-4a99-88c8-e98da56b578d",
+      },
     },
     description:
       "N-Queens puzzle is well-known puzzle as an example of back tracking algorithm",
