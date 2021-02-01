@@ -3,9 +3,14 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import { WORKS_ITEMS } from '../../../components/AllProjects'
 
+interface IProps {
+    preview: string;
+}
+
 const Nested = styled.div`
 display:none;
-`
+text-decoration:none;
+`;
 
 const S = {
     Wrapper: styled.div`
@@ -37,7 +42,7 @@ const S = {
     grid-auto-rows: 230px;
     justify-content:space-around;
     `,
-    Project: styled(Link)`
+    Project: styled(Link) <IProps>`
     display:flex;
     justify-content:center;
     align-items:center;
@@ -46,12 +51,22 @@ const S = {
     text-decoration:none;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     cursor: pointer;
+    background: no-repeat center/cover url(${props => props.preview});
     &:hover{
-        transition:0.2s linear;
-        background-color:gray;
+        text-decoration:none;
+        background:none;
         ${Nested}{
-            display:block;
-            
+            &:hover{
+                background-color:gray;
+                transition:0.2s linear;
+            }
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width:100%;
+        height: 100%;
+        border-radius: 1rem;
+        transition:0.2s linear;
         }
     }
     `,
@@ -64,7 +79,7 @@ const ProjectBody = () => {
             <S.Container>
                 {WORKS_ITEMS.map((item, index) => {
                     return (
-                        <S.Project key={index} to={`/project/${item.title}`}>
+                        <S.Project key={index} to={`/project/${item.title}`} preview={item.preview}>
                             <Nested>
                                 {item.title}
                             </Nested>

@@ -68,12 +68,13 @@ export const WORKS_ITEMS = [
   },
   {
     preview:
-      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/1.png?alt=media&token=6f5eb9ae-55ef-4233-9d78-7c818c6bccf5",
+      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/nqueens%2FnqueenPre.png?alt=media&token=6cc1b19b-218c-465c-9dcc-317dc1b448c0",
     title: "N-Queen",
     thumbnail: "tbu",
     label: "Oct, 2020",
     images: "",
-    description: "the first 42 web project",
+    description:
+      "The N Queen is the problem of placing N chess queens on an N×N chessboard so that no two queens attack each other. For example, following is a solution for 4 Queen problem",
   },
 ];
 

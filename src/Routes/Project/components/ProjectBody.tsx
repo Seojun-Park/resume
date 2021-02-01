@@ -73,7 +73,7 @@ const ProjectBody: React.FC<IProps> = ({ data }) => {
     return (
         <S.Wrapper>
             <S.Overview>
-                <S.Title>Overview</S.Title>
+                <S.Title>{data.title}</S.Title>
                 <S.Preview image={data.preview} />
                 <S.Description>{data.description}</S.Description>
             </S.Overview>

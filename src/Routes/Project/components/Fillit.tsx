@@ -43,7 +43,15 @@ const S = {
     padding-left: 20px;
     margin-top: 20px;
     `,
-    Usage: styled.div``,
+    Usage: styled.div`
+        ${props => props.theme.typography.description};
+    padding:20px;
+    margin:0 auto;
+    margin-top: 20px;
+    width: 80%;
+    background-color: #eee;
+    border-radius: 1rem;
+    `,
     Description: styled.p`
     ${props => props.theme.typography.description};
     padding-left:20px;
@@ -85,7 +93,6 @@ const S = {
 const Fillit: React.FC<IProps> = ({ data }) => {
     return (
         <S.Container>
-            <S.Title>42-Fillit</S.Title>
             <S.Head>
                 <S.Glogo src={githubLogo} alt="github" />
                 <S.Link>: repository link</S.Link>
