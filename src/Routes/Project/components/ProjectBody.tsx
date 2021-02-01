@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Fillit } from '.'
+import { Fillit, NQueen } from '.'
 
 interface IProps {
     data: {
@@ -29,6 +29,8 @@ const S = {
     `
     ,
     Overview: styled.div`
+    width: 80%;
+    margin:0 auto;
     padding: 15px;
     `,
     Preview: styled.div<IStyle>`
@@ -37,6 +39,7 @@ const S = {
     border-radius: 0.5rem 0.5rem 0 0 ;
     border-bottom: 1px solid #333;
     background: no-repeat center/cover url(${props => props.image});
+    background-size:contain;
     margin:15px auto;
     `,
     Content: styled.div`
@@ -50,21 +53,16 @@ const S = {
     ${props => props.theme.typography.description};
     width:80%;
     padding-top: 20px;
-    `,
-    Image: styled.img`
-    width:500px;
-    margin: 10px auto;
-
     `
 }
 
 const ProjectBody: React.FC<IProps> = ({ data }) => {
-
     const handlePresent = (title: string) => {
         switch (title) {
             case 'Fillit':
-                console.log("in")
-                return <Fillit data={data} />
+                return <Fillit data={data} />;
+            case 'N-Queen':
+                return <NQueen data={data} />;
             default:
                 return;
         }

@@ -72,9 +72,22 @@ export const WORKS_ITEMS = [
     title: "N-Queen",
     thumbnail: "tbu",
     label: "Oct, 2020",
-    images: "",
+    images: {
+      nqueen:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/nqueens%2Fngueens.jpg?alt=media&token=e7190d62-85d9-4401-b528-380724ef6ac8",
+      result:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/nqueens%2FnqueenResult.jpg?alt=media&token=bb69f110-f2d1-4045-a82b-a41a5babb9e4",
+      step1: {
+        0: "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/nqueens%2Fstep1-1.jpg?alt=media&token=3e917c13-6a60-4c2b-bd10-496eb4e4659e",
+        1: "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/nqueens%2Fstep1-2.jpg?alt=media&token=586cb1fe-9989-4086-be8e-102fd0a84a52",
+      },
+      step2: {
+        0: "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/nqueens%2Fstep2-1.jpg?alt=media&token=9f466ee6-e687-4721-b91c-c5a3bfeb074d",
+        1: "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/nqueens%2Fstep2-2.jpg?alt=media&token=fba4f28f-5fad-4d1c-b1ed-78a7761f5745",
+      },
+    },
     description:
-      "The N Queen is the problem of placing N chess queens on an N×N chessboard so that no two queens attack each other. For example, following is a solution for 4 Queen problem",
+      "N-Queens puzzle is well-known puzzle as an example of back tracking algorithm",
   },
 ];
 
