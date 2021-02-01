@@ -52,6 +52,16 @@ export const WORKS_ITEMS = [
         "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/fillit%2Fmap.png?alt=media&token=c5e7994f-0662-4d5f-a609-dc11c054a085",
       tetStructure:
         "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/fillit%2Ftet.png?alt=media&token=dc3cb1f7-68d4-4242-9e6c-ef585a8af04c",
+      example1:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/fillit%2Fexample1.png?alt=media&token=0acd8297-491f-40d5-8206-0ddf54a38bb5",
+      example2:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/fillit%2Fexample2.png?alt=media&token=5d8251e9-f9a0-4f54-8343-bc81296521a4",
+      example3:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/fillit%2Fexample3.png?alt=media&token=1bc4d182-89e3-4af6-9ece-a79c5407624b",
+      example4:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/fillit%2Fexample4.png?alt=media&token=3f2a08d6-cc76-4747-829e-90e03cb7fdf1",
+      example5:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/fillit%2Fexample5.png?alt=media&token=8fa3b054-2c01-4ae8-9907-37303bdf3cfd",
     },
     description:
       "Algorithm Practice - Fit tetris pieces into the smallest square possible",
@@ -66,3 +76,6 @@ export const WORKS_ITEMS = [
     description: "the first 42 web project",
   },
 ];
+
+export const githubLogo =
+  "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/gihub.png?alt=media&token=a02faa2d-105e-4003-b868-ba42db654f92";

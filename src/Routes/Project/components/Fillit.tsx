@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { githubLogo } from '../../../components/AllProjects'
 
 interface IProps {
     data: {
@@ -17,25 +18,36 @@ const S = {
     display:flex;
     flex-direction:column;
     `,
+    Head: styled.div`
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    `,
+    Glogo: styled.img`
+    width: 20px;
+    `,
+    Link: styled.span``,
     Row: styled.div`
-    padding-left: 20px;
+    padding-left:15px;
     margin: 20px 0;
     `,
     Title: styled.h4`
     ${props => props.theme.typography.subtitle};
-    margin: 15px;
     `,
     SubTitle: styled.h4`
     ${props => props.theme.typography.subheading};
     font-size: 1.7rem;
-    padding: 10px;
     `,
     SubHeading: styled.h4`
     ${props => props.theme.typography.subheading};
-    padding: 5px;
+    padding-left: 20px;
+    margin-top: 20px;
     `,
+    Usage: styled.div``,
     Description: styled.p`
     ${props => props.theme.typography.description};
+    padding-left:20px;
+    margin-top: 20px;
     `,
     Bold: styled.span`
     font-weight:600;
@@ -74,6 +86,10 @@ const Fillit: React.FC<IProps> = ({ data }) => {
     return (
         <S.Container>
             <S.Title>42-Fillit</S.Title>
+            <S.Head>
+                <S.Glogo src={githubLogo} alt="github" />
+                <S.Link>: repository link</S.Link>
+            </S.Head>
             <S.Row>
                 <S.SubTitle>Overview</S.SubTitle>
                 <S.Description>
@@ -100,6 +116,12 @@ const Fillit: React.FC<IProps> = ({ data }) => {
                 </S.MapBox>
             </S.Row>
             <S.Row>
+                <S.SubTitle>Usage</S.SubTitle>
+                <S.Usage>
+                    $&gt; ~make
+                </S.Usage>
+            </S.Row>
+            <S.Row>
                 <S.SubTitle>
                     Limitation
             </S.SubTitle>
@@ -123,7 +145,7 @@ const Fillit: React.FC<IProps> = ({ data }) => {
             <S.Row>
                 <S.SubHeading>Step 2</S.SubHeading>
                 <S.Description>
-                    After, validation it's time to split the array and storing the splitted array into tetrimino structure<br />
+                    When tetrimino validation is finished, it's time to split the array and storing the splitted array into tetrimino structure<br />
                     Since, each tetrimino blocks always takes 21 length(ex : ". . . # \n + \n at the end of the block), deviding the tetrimino array by 21,<br />
                     And storing it into 2 dimension structure
                 </S.Description>
@@ -132,8 +154,52 @@ const Fillit: React.FC<IProps> = ({ data }) => {
                     <S.ImageDesc>Each tetriminos has an ID;c : A, B, C...</S.ImageDesc>
                 </S.MapBox>
                 <S.Description>
-
+                    After, finishing storing tetriminos into the structure, create new map that filled with only '.' depending on quantities of tetriminos.
                 </S.Description>
+            </S.Row>
+            <S.Row>
+                <S.SubHeading>Step 3</S.SubHeading>
+                <S.Description>
+                    The backgracking algorithm for this program is similar to many other students at 42.
+                    But, the key is the speed when finding the next possible spot to fill in the piece and<br />
+                    how the shifting is handled.<br />
+                    To illustrate how the algorithm works, please refer these examples below:<br />
+                </S.Description>
+                <S.MapBox>
+                    <S.Map src={data.images.example1} alt="example1" />
+                    <S.ImageDesc>O and rotated L piece</S.ImageDesc>
+                </S.MapBox>
+                <S.Description>
+                    When the program started, the first piece is alway filled at the top left.<br />
+                    So, it would look like this :
+                </S.Description>
+                <S.MapBox>
+                    <S.Map src={data.images.example2} alt="example2" />
+                    <S.ImageDesc>O piece starting at (0,0)</S.ImageDesc>
+                </S.MapBox>
+                <S.Description>
+                    If the program look at the next piece, it will realize it won't fit in the map.<br />
+                    Then, it will go through each slot on the map and check the collition and try to fit the next piece.
+                    Since, there are no possible, it goes back to the previuse piece and shift it to the right like this:<br />
+                </S.Description>
+                <S.MapBox>
+                    <S.Map src={data.images.example3} alt="example3" />
+                    <S.ImageDesc>Add 1 to all x coordinates</S.ImageDesc>
+                </S.MapBox>
+                <S.Description>
+                    However, it won't fit yet. So then, keep shifting until the piece through each possible space on the map
+                </S.Description>
+                <S.MapBox>
+                    <S.Map src={data.images.example4} alt="example4" />
+                    <S.ImageDesc>Now it has space to fit for next piece!</S.ImageDesc>
+                </S.MapBox>
+                <S.Description>
+                    Finally, the program found the right position for the first piece and filling the next piece is possible.
+                    Thus, the solution will be like :
+                </S.Description>
+                <S.MapBox>
+                    <S.Map src={data.images.example5} alt="example5" />
+                </S.MapBox>
             </S.Row>
         </S.Container>
     )
