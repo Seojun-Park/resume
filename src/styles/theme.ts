@@ -1,4 +1,65 @@
-const theme = {
+interface IProps {
+  palette: {
+    primary: string;
+    secondary: string;
+    background: string;
+    white: string;
+    black: string;
+    lightgray: string;
+    gray: string;
+    darkgray: string;
+  };
+  typography: {
+    title: {
+      fontFamily: string;
+      fontSize: string;
+      fontWeight: number;
+    };
+    subtitle: {
+      fontFamily: string;
+      fontSize: string;
+      fontWeight: number;
+      lineHeight: number;
+    };
+    heading: {
+      fontFamily: string;
+      fontSize: string;
+      fontWeight: number;
+    };
+    subheading: {
+      fontFamily: string;
+      fontSize: string;
+      fontWeight: number;
+    };
+    label: {
+      fontFamily: string;
+      fontWeight: number;
+    };
+    description: {
+      fontFamily: string;
+      lineHeight: number;
+    };
+    body: {
+      fontFamily: string;
+    };
+    caption: {
+      fontFamily: string;
+      fontSize: string;
+    };
+    button: {
+      fontFamily: string;
+      fontSize: string;
+    };
+    textbutton: {
+      fontFamily: string;
+      fontSize: string;
+      fontWeight: number;
+      border: number;
+    };
+  };
+}
+
+const theme: IProps = {
   palette: {
     primary: "#f45d48",
     secondary: "#0a8080",

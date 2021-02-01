@@ -1,13 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Fillit } from '.'
 
 interface IProps {
     data: {
-        image: string;
+        preview: string;
         thumbnail: string;
         description: string;
         label: string;
         title: string;
+        images: any;
     }
 }
 
@@ -39,25 +41,44 @@ const S = {
     `,
     Content: styled.div`
     margin-top:35px;
+    display:flex;
+    flex-direction: column;
+    padding-left:20px;
+
     `,
     Description: styled.span`
     ${props => props.theme.typography.description};
     width:80%;
-    padding: 20px;
+    padding-top: 20px;
+    `,
+    Image: styled.img`
+    width:500px;
+    margin: 10px auto;
+
     `
 }
 
 const ProjectBody: React.FC<IProps> = ({ data }) => {
+
+    const handlePresent = (title: string) => {
+        switch (title) {
+            case 'Fillit':
+                console.log("in")
+                return <Fillit data={data} />
+            default:
+                return;
+        }
+    }
+    console.log(data)
     return (
         <S.Wrapper>
             <S.Overview>
                 <S.Title>Overview</S.Title>
-                <S.Preview image={data.image} />
-                <S.Description>lalala</S.Description>
+                <S.Preview image={data.preview} />
+                <S.Description>{data.description}</S.Description>
             </S.Overview>
             <S.Content>
-                <S.Title>Content</S.Title>
-
+                {handlePresent(data.title)}
             </S.Content>
         </S.Wrapper>
     )
