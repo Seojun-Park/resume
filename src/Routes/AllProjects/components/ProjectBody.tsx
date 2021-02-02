@@ -56,8 +56,9 @@ const S = {
         background:none;
         ${Nested}{
             &:hover{
-                background-color:gray;
+                background-color:${props => props.theme.palette.primary};
                 transition:0.2s linear;
+                opacity:0.7;
             }
         display:flex;
         justify-content:center;
@@ -69,6 +70,20 @@ const S = {
         }
     }
     `,
+    ProjectTitleBox: styled.div`
+    border: 3px solid white;
+    padding: 15px;
+    padding-top: 25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    `,
+    ProjectTitle: styled.span`
+     font-weight:600;
+    color:white;
+    font-size:2rem;
+    `
 }
 
 const ProjectBody = () => {
@@ -80,7 +95,11 @@ const ProjectBody = () => {
                     return (
                         <S.Project key={index} to={`/project/${item.title}`} preview={item.preview}>
                             <Nested>
-                                {item.title}
+                                <S.ProjectTitleBox>
+                                    <S.ProjectTitle>
+                                        {item.title}
+                                    </S.ProjectTitle>
+                                </S.ProjectTitleBox>
                             </Nested>
                         </S.Project>
                     )
