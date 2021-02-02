@@ -99,6 +99,18 @@ export const WORKS_ITEMS = [
     description:
       "N-Queens puzzle is well-known puzzle as an example of back tracking algorithm",
   },
+  {
+    preview:
+      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/libft%2Flibft.png?alt=media&token=785f61ad-9a08-422d-bcc8-e9a5c2d58418",
+    title: "libft",
+    thumbnail: "tbu",
+    label: "Oct, 2020",
+    images: {
+      page: "",
+    },
+    description:
+      "Libft is an individual project at 42 that requires students to re-create some standard C library functions includeing some additional ones that can be used later 42 projects",
+  },
 ];
 
 export const githubLogo =

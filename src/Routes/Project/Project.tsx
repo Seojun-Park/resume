@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet';
 import { ProjectBody } from './components'
 import { WORKS_ITEMS } from '../../components/AllProjects'
 import styled from 'styled-components'
+import MoveTop from '../../components/MoveTop'
 
 interface IProps extends RouteComponentProps {
     match: any
@@ -51,6 +52,7 @@ const Project: React.FC<IProps> = ({ match }) => {
             <Header />
             <TopBanner title={data.title} />
             <ProjectBody data={data} />
+            <MoveTop />
             <Footer />
         </Wrapper>
     )

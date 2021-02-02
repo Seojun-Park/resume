@@ -13,8 +13,6 @@ interface IProps {
     }
 }
 
-
-
 const NQueen: React.FC<IProps> = ({ data }) => {
     return (
         <S.Container>
@@ -67,7 +65,7 @@ const NQueen: React.FC<IProps> = ({ data }) => {
                 </S.Description>
                 <S.SubHeading>Solution</S.SubHeading>
                 <S.Description>
-                    There are 3 check before placing a Queen on the board.
+                    There is a check list before placing a Queen on the board.
                     </S.Description>
                 <S.Usage>
                     <S.Description>
@@ -132,6 +130,10 @@ const NQueen: React.FC<IProps> = ({ data }) => {
                 </S.MapBox>
                 <S.Description>
                     Through out above cases, I know B8 and B7 is unavailable position.<br />
+                    Now, the programme tries to place the Queen at B6.
+
+                    As you can see, back tracking algorithm works only in possible case.
+                    if it is impossible, it goes back and finding new possible way.
                 </S.Description>
             </S.Row>
         </S.Container>

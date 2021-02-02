@@ -30,7 +30,6 @@ const S = {
     `,
     Container: styled.div`
     width: 80%;
-    height: 70vh;
     min-height:50vh;
     margin:0 auto;
     background-color:white;

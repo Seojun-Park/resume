@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { Fillit, NQueen } from '.'
+import { Fillit, Libft, NQueen } from '.'
 
 interface IProps {
     data: {
@@ -23,6 +24,13 @@ const S = {
     @media (max-width: 376px){
         margin-top: 250px;
     }
+    `,
+    Head: styled.div`
+    width: 100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
     `,
     Title: styled.h4`
     ${props => props.theme.typography.subtitle};
@@ -53,7 +61,8 @@ const S = {
     ${props => props.theme.typography.description};
     width:80%;
     padding-top: 20px;
-    `
+    `,
+    Link: styled(Link)``
 }
 
 const ProjectBody: React.FC<IProps> = ({ data }) => {
@@ -63,15 +72,20 @@ const ProjectBody: React.FC<IProps> = ({ data }) => {
                 return <Fillit data={data} />;
             case 'N-Queen':
                 return <NQueen data={data} />;
+            case 'libft':
+                return <Libft data={data} />;
             default:
                 return;
         }
     }
-    console.log(data)
+    console.log(data.title)
     return (
         <S.Wrapper>
             <S.Overview>
-                <S.Title>{data.title}</S.Title>
+                <S.Head>
+                    <S.Title>{data.title}</S.Title>
+                    <S.Link to="/projects">Go back to project list</S.Link>
+                </S.Head>
                 <S.Preview image={data.preview} />
                 <S.Description>{data.description}</S.Description>
             </S.Overview>

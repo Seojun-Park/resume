@@ -19,7 +19,7 @@ const Fillit: React.FC<IProps> = ({ data }) => {
         <S.Container>
             <S.Head>
                 <S.Glogo src={githubLogo} alt="github" />
-                <S.Link>: repository link</S.Link>
+                <S.Link>: repo</S.Link>
             </S.Head>
             <S.Row>
                 <S.SubTitle>Overview</S.SubTitle>
