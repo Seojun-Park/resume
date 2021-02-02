@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { libft } from '../../../components/LibftFunctions'
 import { githubLogo } from '../../../components/AllProjects'
 import { S } from './styles'
 
@@ -14,6 +15,35 @@ interface IProps {
 }
 
 const Libft: React.FC<IProps> = ({ data }) => {
+
+    const handleTable = (title) => {
+        const data = libft.filter((item) => {
+            if (item.title === title) {
+                return item;
+            } else {
+                return null;
+            }
+        })
+        if (data && data[0].functions) {
+            return (
+                <S.TableCol>
+                    <S.TableHead>
+                        <S.SubHeading>{data[0].title}</S.SubHeading>
+                    </S.TableHead>
+                    <S.TableBody>
+                        {data[0].functions.map((item, index) => {
+                            return (
+                                <S.TableRow key={index}>
+                                    {item}
+                                </S.TableRow>
+                            )
+                        })}
+                    </S.TableBody>
+                </S.TableCol>
+            )
+        }
+    }
+
     return (
         <S.Container>
             <S.Head>
@@ -36,6 +66,12 @@ const Libft: React.FC<IProps> = ({ data }) => {
             </S.Row>
             <S.Row>
                 <S.SubTitle>Function List</S.SubTitle>
+                <S.Table>
+                    {handleTable('Standard')}
+                    {handleTable('Additional')}
+                    {handleTable('Bonus')}
+                    {handleTable('Personal')}
+                </S.Table>
             </S.Row>
         </S.Container>
     )

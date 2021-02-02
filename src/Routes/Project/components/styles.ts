@@ -30,7 +30,7 @@ export const S = {
   SubHeading: styled.h4`
     ${(props) => props.theme.typography.subheading};
     padding-left: 20px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
   `,
   Usage: styled.div`
     ${(props) => props.theme.typography.description};
@@ -83,5 +83,32 @@ export const S = {
     ${(props) => props.theme.typography.caption};
     color: ${(props) => props.theme.palette.gray};
     padding: 15px;
+  `,
+  Table: styled.div`
+    width: 80%;
+    display: grid;
+    margin: 0 auto;
+    margin-top: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  `,
+  TableCol: styled.div`
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+    &:last-child {
+      border-right: 1px solid #333;
+    }
+  `,
+  TableHead: styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    border-bottom: 2px solid #333;
+  `,
+  TableBody: styled.div`
+    padding: 10px;
+  `,
+  TableRow: styled.div`
+    padding: 8px 12px;
   `,
 };
