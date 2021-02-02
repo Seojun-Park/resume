@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { libft } from '../../../components/LibftFunctions'
 import { githubLogo } from '../../../components/AllProjects'
 import { S } from './styles'

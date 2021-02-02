@@ -19,21 +19,32 @@ export const WORKS_ITEMS = [
   },
   {
     preview:
-      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/1.png?alt=media&token=6f5eb9ae-55ef-4233-9d78-7c818c6bccf5",
+      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/camagru%2Fcamapreview.gif?alt=media&token=8e705ea5-0563-4bcf-8f91-3865894b1814",
     title: "Camagru",
     thumbnail: "tbu",
     label: "Oct, 2020",
-    images: "",
-    description: "the first 42 web project",
-  },
-  {
-    preview:
-      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/1.png?alt=media&token=6f5eb9ae-55ef-4233-9d78-7c818c6bccf5",
-    title: "Filler",
-    thumbnail: "tbu",
-    label: "Oct, 2020",
-    images: "",
-    description: "the first 42 web project",
+    images: {
+      login:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/camagru%2Flogin.png?alt=media&token=126fe877-a072-4fbf-8e08-47ab25c9a0bd",
+      signup:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/camagru%2Fsignup.png?alt=media&token=9147c513-eb5f-4005-866f-c7d64ebadfc6",
+      main:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/camagru%2Fmain.png?alt=media&token=c82b3188-eeee-4f14-9ab8-80183c0c6d74",
+      upload:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/camagru%2Fupload.png?alt=media&token=865580fa-522b-4a8b-ae54-b9c8cbf2e2af",
+      camera:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/camagru%2Fcamera.png?alt=media&token=9b8854c7-9395-49ff-b298-ea336275ae8a",
+      gallery:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/camagru%2Fgallery.png?alt=media&token=53d793fe-b50b-459e-a5b1-456b2e5743c6",
+      comment:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/camagru%2Fcomment.png?alt=media&token=45dc7fea-ed95-4137-a8f3-b268a4fbe6ea",
+      profile:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/camagru%2Fprofile.png?alt=media&token=aa20f788-ceb3-4a7a-bdd4-814c998ac733",
+      modify:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/camagru%2Fmodify.png?alt=media&token=be4f18de-8a67-4034-b85d-4e214fd2041b",
+    },
+    description:
+      "This is the first project creating own social network, with php and vanilla JavaScript",
   },
   {
     preview:
@@ -101,6 +112,18 @@ export const WORKS_ITEMS = [
   },
   {
     preview:
+      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/ssl%2Fssl.png?alt=media&token=da6a49ff-969b-4b97-b7a9-c0531e8d5ffc",
+    title: "ft_SSL",
+    thumbnail: "tbu",
+    label: "Oct, 2020",
+    images: {
+      page: "",
+    },
+    description:
+      "SSL (Secure Sockets Layer) and its successor, TLS (Transport Layer Security), are protocols for establishing authenticated and encrypted links between networked computers.",
+  },
+  {
+    preview:
       "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/libft%2Flibft.png?alt=media&token=785f61ad-9a08-422d-bcc8-e9a5c2d58418",
     title: "libft",
     thumbnail: "tbu",
@@ -108,8 +131,7 @@ export const WORKS_ITEMS = [
     images: {
       page: "",
     },
-    description:
-      "Libft is an individual project at 42 that requires students to re-create some standard C library functions includeing some additional ones that can be used later 42 projects",
+    description: "A program that imitates commands from OpenSSL",
   },
 ];
 

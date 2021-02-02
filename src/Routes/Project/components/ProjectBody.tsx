@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { Fillit, Libft, NQueen } from '.'
+import { Fillit, Libft, NQueen, Camagru, FtSSL } from '.'
 
 interface IProps {
     data: {
@@ -45,7 +45,6 @@ const S = {
     width: 80%;
     height: 400px;
     border-radius: 0.5rem 0.5rem 0 0 ;
-    border-bottom: 1px solid #333;
     background: no-repeat center/cover url(${props => props.image});
     background-size:contain;
     margin:15px auto;
@@ -74,6 +73,10 @@ const ProjectBody: React.FC<IProps> = ({ data }) => {
                 return <NQueen data={data} />;
             case 'libft':
                 return <Libft data={data} />;
+            case 'Camagru':
+                return <Camagru data={data} />;
+            case 'ft_SSL':
+                return <FtSSL data={data} />;
             default:
                 return;
         }

@@ -40,6 +40,7 @@ export const S = {
     width: 80%;
     background-color: #eee;
     border-radius: 1rem;
+    text-overflow: ellipsis;
   `,
   Description: styled.p`
     ${(props) => props.theme.typography.description};
