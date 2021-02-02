@@ -15,7 +15,9 @@ export const S = {
   Glogo: styled.img`
     width: 20px;
   `,
-  Link: styled.span``,
+  Link: styled.span`
+    padding-left: 10px;
+  `,
   Row: styled.div`
     padding-left: 15px;
     margin: 20px 0;
@@ -26,6 +28,7 @@ export const S = {
   SubTitle: styled.h4`
     ${(props) => props.theme.typography.subheading};
     font-size: 1.7rem;
+    margin-bottom: 10px;
   `,
   SubHeading: styled.h4`
     ${(props) => props.theme.typography.subheading};
@@ -37,7 +40,7 @@ export const S = {
     padding: 20px;
     margin: 0 auto;
     margin-top: 20px;
-    width: 80%;
+    width: 90%;
     background-color: #eee;
     border-radius: 1rem;
     text-overflow: ellipsis;
