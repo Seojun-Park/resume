@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { Fillit, Libft, NQueen, Camagru, FtSSL } from '.'
+import { Fillit, Libft, NQueen, Camagru, FtSSL, Uber } from '.'
 
 interface IProps {
     data: {
@@ -77,11 +77,12 @@ const ProjectBody: React.FC<IProps> = ({ data }) => {
                 return <Camagru data={data} />;
             case 'ft_SSL':
                 return <FtSSL data={data} />;
+            case 'Uber Clone':
+                return <Uber data={data} />
             default:
                 return;
         }
     }
-    console.log(data.title)
     return (
         <S.Wrapper>
             <S.Overview>

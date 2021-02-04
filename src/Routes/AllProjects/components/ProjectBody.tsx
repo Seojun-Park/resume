@@ -58,7 +58,6 @@ const S = {
             &:hover{
                 background-color:${props => props.theme.palette.primary};
                 transition:0.2s linear;
-                opacity:0.7;
             }
         display:flex;
         justify-content:center;

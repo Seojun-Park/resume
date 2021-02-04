@@ -5,8 +5,35 @@ export const WORKS_ITEMS = [
     title: "Uber Clone",
     thumbnail: "tbu",
     label: "Dec, 2020",
-    images: "",
-    description: "blabla ",
+    images: {
+      login:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/uberclone%2Flogin.gif?alt=media&token=6c9197bf-8535-42db-b9e6-b73926a4bb4e",
+      addPlace:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/uberclone%2Faddplace.gif?alt=media&token=39bdde20-7f1b-4787-a2f4-16e0e2bfd84f",
+      editUser:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/uberclone%2FeditUser.gif?alt=media&token=5095dc2b-a584-4c1d-88db-4caa3bcf33c0",
+      request:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/uberclone%2FrequestRideandChat.gif?alt=media&token=557498c7-77f0-4de8-a0ad-7728957a0a4f",
+      end:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/uberclone%2Fend.gif?alt=media&token=5886fd9b-17a3-4dd1-8de4-7e718aad950d",
+      main:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/uberclone%2Fmainpage.png?alt=media&token=8418ff72-9011-4928-bb04-45964f3d5003",
+      move1:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/uberclone%2Fmove1.png?alt=media&token=1cb28144-6dab-4507-93c4-7060eff6d344",
+      move2:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/uberclone%2Fmove2.png?alt=media&token=ec882652-b4a6-465f-a98c-4ebca6a435e2",
+      find:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/uberclone%2FfindAddress.png?alt=media&token=401e3383-d821-4e1f-9c01-87b0d172a669",
+      api:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/uberclone%2Fapi.png?alt=media&token=042ca355-2ae9-49a6-8237-ed3c8394968f",
+      api1:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/uberclone%2Fapi1.png?alt=media&token=8c4ef9a1-c635-4e4e-acbb-1941a96a3b34",
+      api2:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/uberclone%2Fapi2.png?alt=media&token=779a778f-a7ed-4ee5-beed-7daf54847920",
+      api3:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/uberclone%2Fapi3.png?alt=media&token=717a4292-f4d4-4392-b7da-e4aeaf53b357",
+    },
+    description: "what I have learnt throught this project",
   },
   {
     preview:
@@ -15,7 +42,7 @@ export const WORKS_ITEMS = [
     thumbnail: "tbu",
     label: "Jan, 2021",
     images: "",
-    description: "cloning this bla bla",
+    description: "ㅁ",
   },
   {
     preview:
@@ -132,6 +159,44 @@ export const WORKS_ITEMS = [
       page: "",
     },
     description: "A program that imitates commands from OpenSSL",
+  },
+];
+
+export const stackIcon = [
+  {
+    title: "typescript",
+    logo:
+      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/typescript.png?alt=media&token=4e24cc99-173c-420d-a88a-76009e504df4",
+  },
+  {
+    title: "ReactJS",
+    logo:
+      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/react.png?alt=media&token=b8bd8acc-23e1-4989-90bd-f45b52ee8fd2",
+  },
+  {
+    title: "apollo",
+    logo:
+      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/apollo.png?alt=media&token=2ac67ed0-90f4-473a-a8df-bc353eff5279",
+  },
+  {
+    title: "GraphQL",
+    logo:
+      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/graphql.png?alt=media&token=5fbd52e2-825e-4b7c-b684-59f66030efe2",
+  },
+  {
+    title: "NodeJS",
+    logo:
+      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/nodejs.png?alt=media&token=e68d1183-ce61-4b2d-9ac5-5eac43ea505e",
+  },
+  {
+    title: "Postgres",
+    logo:
+      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/postgres.png?alt=media&token=3e0888d8-b1b7-40d9-a52e-127b150c857f",
+  },
+  {
+    title: "firebase",
+    logo:
+      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/firebase.png?alt=media&token=3e5a60aa-372c-4575-aafe-ef680ee755b2",
   },
 ];
 

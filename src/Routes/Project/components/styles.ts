@@ -49,6 +49,7 @@ export const S = {
     ${(props) => props.theme.typography.description};
     padding-left: 20px;
     margin-top: 20px;
+    margin-bottom: 20px;
   `,
   Bold: styled.span`
     font-weight: 600;
@@ -75,6 +76,7 @@ export const S = {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin: 10px;
   `,
   Image: styled.img`
     width: 300px;
@@ -114,5 +116,33 @@ export const S = {
   `,
   TableRow: styled.div`
     padding: 8px 12px;
+  `,
+  Snap: styled.img`
+    width: 600px;
+  `,
+  SnapBox: styled.img`
+    width: 400px;
+  `,
+  StackBox: styled.div`
+    padding: 15px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  `,
+  Col: styled.div`
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  `,
+  Stack: styled.img`
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
   `,
 };

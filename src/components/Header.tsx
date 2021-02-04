@@ -91,9 +91,9 @@ const Header = () => {
                     will be
                 </S.Navigation>
                 <S.ButtonWrapper>
-                    <Button fill="solid" type="button" style={{ marginLeft: 'auto' }}>
-                        Button
-                    </Button>
+                    {/* <Button fill="solid" type="button" style={{ marginLeft: 'auto' }}> */}
+                    {/* Button */}
+                    {/* </Button> */}
                 </S.ButtonWrapper>
             </S.Header>
         </S.Wrapper>
