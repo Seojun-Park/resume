@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/Seojun-Park/resume/static/js/main.3774ef45.chunk.js",
-    "main.js.map": "/Seojun-Park/resume/static/js/main.3774ef45.chunk.js.map",
-    "runtime-main.js": "/Seojun-Park/resume/static/js/runtime-main.00586004.js",
-    "runtime-main.js.map": "/Seojun-Park/resume/static/js/runtime-main.00586004.js.map",
-    "static/css/2.31ff0196.chunk.css": "/Seojun-Park/resume/static/css/2.31ff0196.chunk.css",
-    "static/js/2.575195a5.chunk.js": "/Seojun-Park/resume/static/js/2.575195a5.chunk.js",
-    "static/js/2.575195a5.chunk.js.map": "/Seojun-Park/resume/static/js/2.575195a5.chunk.js.map",
-    "index.html": "/Seojun-Park/resume/index.html",
-    "static/css/2.31ff0196.chunk.css.map": "/Seojun-Park/resume/static/css/2.31ff0196.chunk.css.map",
-    "static/js/2.575195a5.chunk.js.LICENSE.txt": "/Seojun-Park/resume/static/js/2.575195a5.chunk.js.LICENSE.txt"
+    "main.js": "/resume/static/js/main.1836ae1e.chunk.js",
+    "main.js.map": "/resume/static/js/main.1836ae1e.chunk.js.map",
+    "runtime-main.js": "/resume/static/js/runtime-main.cf758e11.js",
+    "runtime-main.js.map": "/resume/static/js/runtime-main.cf758e11.js.map",
+    "static/css/2.31ff0196.chunk.css": "/resume/static/css/2.31ff0196.chunk.css",
+    "static/js/2.2e2b43af.chunk.js": "/resume/static/js/2.2e2b43af.chunk.js",
+    "static/js/2.2e2b43af.chunk.js.map": "/resume/static/js/2.2e2b43af.chunk.js.map",
+    "index.html": "/resume/index.html",
+    "static/css/2.31ff0196.chunk.css.map": "/resume/static/css/2.31ff0196.chunk.css.map",
+    "static/js/2.2e2b43af.chunk.js.LICENSE.txt": "/resume/static/js/2.2e2b43af.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.00586004.js",
+    "static/js/runtime-main.cf758e11.js",
     "static/css/2.31ff0196.chunk.css",
-    "static/js/2.575195a5.chunk.js",
-    "static/js/main.3774ef45.chunk.js"
+    "static/js/2.2e2b43af.chunk.js",
+    "static/js/main.1836ae1e.chunk.js"
   ]
 }
