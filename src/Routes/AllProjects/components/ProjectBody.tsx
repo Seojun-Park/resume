@@ -25,14 +25,15 @@ const S = {
     margin-bottom: 0.5rem;
     margin-left: 20px;
     @media (max-width: 376px){
-        font-size: 28px;
+        font-size: 3rem;
+        margin-left:8px;
     }
     `,
     Container: styled.div`
     width: 80%;
     min-height:50vh;
     margin:0 auto;
-    background-color:white;
+    /* background-color:white; */
     display:grid;
     padding-top: 35px;
     padding-bottom: 35px;
@@ -40,6 +41,12 @@ const S = {
     grid-template-rows:230px;
     grid-auto-rows: 230px;
     justify-content:space-around;
+    @media (max-width:376px){
+        width:95%;
+        grid-template-columns:repeat(2, 40%);
+        grid-template-rows:150px;
+        grid-auto-rows:150px;
+    }
     `,
     Project: styled(Link) <IProps>`
     display:flex;
@@ -88,7 +95,7 @@ const S = {
 const ProjectBody = () => {
     return (
         <S.Wrapper>
-            <S.Title>List</S.Title>
+            <S.Title>Project List</S.Title>
             <S.Container>
                 {WORKS_ITEMS.map((item, index) => {
                     return (

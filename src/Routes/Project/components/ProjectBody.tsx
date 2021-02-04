@@ -22,7 +22,7 @@ const S = {
     Wrapper: styled.div`
     margin-top: 400px;
     @media (max-width: 376px){
-        margin-top: 250px;
+        margin-top: 200px;
     }
     `,
     Head: styled.div`
@@ -34,12 +34,18 @@ const S = {
     `,
     Title: styled.h4`
     ${props => props.theme.typography.subtitle};
+    @media (max-width:376px){
+        font-size:2rem;
+    }
     `
     ,
     Overview: styled.div`
     width: 80%;
     margin:0 auto;
     padding: 15px;
+    @media (max-width:376px){
+        padding:8px;
+    }
     `,
     Preview: styled.div<IStyle>`
     width: 80%;
@@ -48,12 +54,18 @@ const S = {
     background: no-repeat center/cover url(${props => props.image});
     background-size:contain;
     margin:15px auto;
+    @media (max-width:376px){
+        height: 150px;
+    }
     `,
     Content: styled.div`
     margin-top:35px;
     display:flex;
     flex-direction: column;
     padding-left:20px;
+    @media (max-width:376px){
+        padding-left:8px;
+    }
 
     `,
     Description: styled.span`
@@ -61,7 +73,11 @@ const S = {
     width:80%;
     padding-top: 20px;
     `,
-    Link: styled(Link)``
+    Link: styled(Link)`
+    @media (max-width:376px){
+        display:none;
+    }
+    `
 }
 
 const ProjectBody: React.FC<IProps> = ({ data }) => {
