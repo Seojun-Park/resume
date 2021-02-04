@@ -42,6 +42,7 @@ const S = {
       font-size: 1.5rem;
       flex: 0 0 25%;
       max-width: 25%;
+      padding-left:25px;
       @media (max-width:376px){
           margin-right:20px;
     }
@@ -114,7 +115,7 @@ const S = {
     position:absolute;
     padding:10px;
     padding-top:15px;
-    width: 120px;
+    width: 100px;
     height:150px;
     margin-top:40px;
     background-color: ${props => (props.isOpen ? 'white' : 'none')};
@@ -135,6 +136,10 @@ const S = {
     `,
     ExtendedMotion: styled(Motion)`
     `,
+    ExtendedLink: styled(Link)`
+    text-decoration:none;
+    color:black;
+    `
 };
 
 
@@ -194,6 +199,14 @@ const Header = () => {
         setHeight(height === 0 ? 150 : 0)
     }
 
+    useEffect(() => {
+        if (!isOpen) {
+            if (height !== 0) {
+                setHeight(0)
+            }
+        }
+    }, [isOpen, height, setHeight])
+
     return (
         <S.Wrapper isScroll={isScroll}>
             <S.Header isScroll={isScroll}>
@@ -231,9 +244,17 @@ const Header = () => {
                     </S.Burger>
                     <S.ExtendedMotion style={{ height: spring(height) }}>
                         {({ height }) => <S.DropDown style={Object.assign({}, { height })} isOpen={isOpen}>
-                            <S.DropDownMenu isOpen={isOpen}>Profile</S.DropDownMenu>
-                            <S.DropDownMenu isOpen={isOpen}>Projects</S.DropDownMenu>
-                            <S.DropDownMenu isOpen={isOpen}>Contact</S.DropDownMenu>
+                            <S.ExtendedLink to="/">
+                                <S.DropDownMenu isOpen={isOpen}>
+                                    Profile
+                                </S.DropDownMenu>
+                            </S.ExtendedLink>
+                            <S.ExtendedLink to="/projects">
+                                <S.DropDownMenu isOpen={isOpen}>Projects</S.DropDownMenu>
+                            </S.ExtendedLink>
+                            <S.ExtendedLink to="/">
+                                <S.DropDownMenu isOpen={isOpen}>Contact</S.DropDownMenu>
+                            </S.ExtendedLink>
                         </S.DropDown>}
                     </S.ExtendedMotion>
                 </S.Col>
