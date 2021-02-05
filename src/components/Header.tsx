@@ -58,14 +58,15 @@ const S = {
     `,
     NavigationItem: styled.a<StyleProps>`
       color: ${({ isScroll, theme }) =>
-            isScroll ? theme.palette.black : theme.palette.white};
+            isScroll ? theme.palette.white : theme.palette.black};
     ${props => props.theme.typography.subheading};
       margin: 0 1rem;
       cursor: pointer;
+      text-decoration-line:none;
       &:hover {
           transition:0.2s linear;
         opacity: 0.5;
-        text-decoration:none;
+        text-decoration-line:none;
       }
     `,
     ButtonWrapper: styled.div`
@@ -141,7 +142,7 @@ const S = {
     ExtendedMotion: styled(Motion)`
     `,
     ExtendedLink: styled(Link)`
-    text-decoration:none;
+    text-decoration-line:none;
     color:black;
     `
 };
@@ -217,23 +218,25 @@ const Header = () => {
                 <S.ExtendedLink to={'/'}>
                     <S.Logo isScroll={isScroll}>JinPark</S.Logo>
                 </S.ExtendedLink>
-                <S.Navigation>
-                    <S.ExtendedLink to="/">
-                        <S.NavigationItem>
-                            Profile
+                {isScroll &&
+                    <S.Navigation>
+                        <S.ExtendedLink to="/">
+                            <S.NavigationItem>
+                                Profile
                         </S.NavigationItem>
-                    </S.ExtendedLink>
-                    <S.ExtendedLink to="/projects">
-                        <S.NavigationItem>
-                            Project
+                        </S.ExtendedLink>
+                        <S.ExtendedLink to="/projects">
+                            <S.NavigationItem>
+                                Project
                         </S.NavigationItem>
-                    </S.ExtendedLink>
-                    <S.ExtendedLink to="/">
-                        <S.NavigationItem>
-                            Contact
+                        </S.ExtendedLink>
+                        <S.ExtendedLink to="/">
+                            <S.NavigationItem>
+                                Contact
                         </S.NavigationItem>
-                    </S.ExtendedLink>
-                </S.Navigation>
+                        </S.ExtendedLink>
+                    </S.Navigation>
+                }
             </S.Header>
             <S.MobileHeader isScroll={isScroll}>
                 <S.Col>

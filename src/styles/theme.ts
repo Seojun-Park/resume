@@ -8,6 +8,7 @@ interface IProps {
     lightgray: string;
     gray: string;
     darkgray: string;
+    orange: string;
   };
   typography: {
     title: {
@@ -61,7 +62,7 @@ interface IProps {
 
 const theme: IProps = {
   palette: {
-    primary: "#f45d48",
+    primary: "#0063FF",
     secondary: "#0a8080",
     background: "#f8f5f2",
     white: "#ffffff",
@@ -69,6 +70,7 @@ const theme: IProps = {
     lightgray: "#e2e2e2",
     gray: "#8a8a8a",
     darkgray: "#505050",
+    orange: "#f45d48",
   },
   typography: {
     title: {

@@ -63,6 +63,28 @@ const S = {
     color: ${props => props.theme.palette.white};
     margin-bottom: 2rem;
   `,
+  Breadcrumb: styled.div`
+  display: flex;
+  flex-direction:row;
+  ${props => props.theme.typography.subheading};
+  color:white;
+  `,
+  Button: styled.div`
+  &:not(:last-child){
+    margin-right: 15px;
+  }
+  `,
+  ExtendedLink: styled(Link)`
+  text-decoration:none;
+  color:white;
+  &:hover{
+    transition:0.2s linear;
+    text-decoration:none;
+    text-decoration-line:none;
+    color:white;
+    opacity:0.5;
+  }
+  `
 };
 
 const Hero = () => {
@@ -80,11 +102,11 @@ const Hero = () => {
           I code with passion and bring the idea to life.<br />
           Powered by VS Code and coffee
         </S.Description>
-        <Link to='/profile'>
-          <Button fill="solid" type="button">
-            See my profile
-        </Button>
-        </Link>
+        <S.Breadcrumb>
+          <S.Button><S.ExtendedLink to="/">Profile</S.ExtendedLink></S.Button> /
+          <S.Button><S.ExtendedLink to="/projects">&emsp;Projects</S.ExtendedLink></S.Button> /
+          <S.Button><S.ExtendedLink to="/">&emsp;Contact</S.ExtendedLink></S.Button>
+        </S.Breadcrumb>
       </S.Wrapper>
     </S.Background>
   );
