@@ -1,7 +1,7 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Motion, spring } from 'react-motion'
-import styled from 'styled-components'
+import { Motion, spring } from 'react-motion';
+import styled from 'styled-components';
 
 interface StyleProps {
     isScroll?: boolean;
@@ -31,7 +31,8 @@ const S = {
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content:space-around;
+      justify-content:space-between;
+      padding-right:1rem;
       @media (max-width:376px){
           display:none;
     }
@@ -44,23 +45,27 @@ const S = {
       flex: 0 0 25%;
       max-width: 25%;
       padding-left:25px;
+      text-decoration:none;
       @media (max-width:376px){
           margin-right:20px;
     }
     `,
     Navigation: styled.div`
-      flex: 0 0 50%;
-      max-width: 50%;
+      /* flex: 0 0 50%; */
+      /* max-width: 50%; */
       display: flex;
       justify-content: center;
     `,
     NavigationItem: styled.a<StyleProps>`
       color: ${({ isScroll, theme }) =>
             isScroll ? theme.palette.black : theme.palette.white};
+    ${props => props.theme.typography.subheading};
       margin: 0 1rem;
       cursor: pointer;
       &:hover {
+          transition:0.2s linear;
         opacity: 0.5;
+        text-decoration:none;
       }
     `,
     ButtonWrapper: styled.div`
@@ -111,7 +116,6 @@ const S = {
     }
     `,
     DropDown: styled.ul<StyleProps>`
-    /* display:none; */
     display: ${props => (props.isOpen ? 'block' : 'none')};
     position:absolute;
     padding:10px;
@@ -125,7 +129,6 @@ const S = {
     flex-direction:column;
     justify-content:space-around;
     box-shadow: ${props => (props.isOpen ? '5px 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);' : 'none')};
-    // box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     `,
     DropDownMenu: styled.li<StyleProps>`
     display: ${props => props.isOpen ? 'block' : 'none'};
@@ -211,14 +214,26 @@ const Header = () => {
     return (
         <S.Wrapper isScroll={isScroll}>
             <S.Header isScroll={isScroll}>
-                <Link to={'/'}>
+                <S.ExtendedLink to={'/'}>
                     <S.Logo isScroll={isScroll}>JinPark</S.Logo>
-                </Link>
+                </S.ExtendedLink>
                 <S.Navigation>
-                    will be
+                    <S.ExtendedLink to="/">
+                        <S.NavigationItem>
+                            Profile
+                        </S.NavigationItem>
+                    </S.ExtendedLink>
+                    <S.ExtendedLink to="/projects">
+                        <S.NavigationItem>
+                            Project
+                        </S.NavigationItem>
+                    </S.ExtendedLink>
+                    <S.ExtendedLink to="/">
+                        <S.NavigationItem>
+                            Contact
+                        </S.NavigationItem>
+                    </S.ExtendedLink>
                 </S.Navigation>
-                <S.ButtonWrapper>
-                </S.ButtonWrapper>
             </S.Header>
             <S.MobileHeader isScroll={isScroll}>
                 <S.Col>
