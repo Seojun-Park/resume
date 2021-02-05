@@ -72,47 +72,47 @@ const theme: IProps = {
   },
   typography: {
     title: {
-      fontFamily: '"Gelasio", serif',
+      fontFamily: '"Noto Sans", sans-serif',
       fontSize: "3rem",
       fontWeight: 600,
     },
     subtitle: {
-      fontFamily: '"Gelasio", serif',
+      fontFamily: '"Noto Sans", sans-serif',
       fontSize: "2.5rem",
       fontWeight: 600,
       lineHeight: 1.1,
     },
     heading: {
-      fontFamily: '"Gelasio", serif',
+      fontFamily: '"Noto Sans", sans-serif',
       fontSize: "1.5rem",
       fontWeight: 500,
     },
     subheading: {
-      fontFamily: '"Lato", sans-serif',
+      fontFamily: '"Noto Sans", sans-serif',
       fontSize: "1.25rem",
       fontWeight: 700,
     },
     label: {
-      fontFamily: '"Lato", sans-serif',
+      fontFamily: '"Noto Sans", sans-serif',
       fontWeight: 700,
     },
     description: {
-      fontFamily: '"Lato", sans-serif',
+      fontFamily: '"Noto Sans", sans-serif',
       lineHeight: 1.5,
     },
     body: {
-      fontFamily: '"Lato", sans-serif',
+      fontFamily: '"Noto Sans", sans-serif',
     },
     caption: {
-      fontFamily: '"Lato", sans-serif',
+      fontFamily: '"Noto Sans", sans-serif',
       fontSize: "0.875rem",
     },
     button: {
-      fontFamily: '"Lato", sans-serif',
+      fontFamily: '"Noto Sans", sans-serif',
       fontSize: "0.875rem",
     },
     textbutton: {
-      fontFamily: '"Lato", sans-serif',
+      fontFamily: '"Noto Sans", sans-serif',
       fontWeight: 700,
       fontSize: "1rem",
       border: 0,

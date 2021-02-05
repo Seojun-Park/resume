@@ -31,6 +31,7 @@ const S = {
       display: flex;
       flex-direction: row;
       align-items: center;
+      justify-content:space-around;
       @media (max-width:376px){
           display:none;
     }

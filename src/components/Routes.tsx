@@ -13,7 +13,7 @@ const Routes = () => (
 
 const AppRouter = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={`/resume/`}>
             <Routes />
         </BrowserRouter>
     )

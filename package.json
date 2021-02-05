@@ -18,7 +18,6 @@
         "@types/react-table": "^7.0.28",
         "@types/styled-components": "^5.1.7",
         "bootstrap": "^4.6.0",
-        "gh-pages": "^3.1.0",
         "react": "^17.0.1",
         "react-bootstrap": "^1.4.3",
         "react-dom": "^17.0.1",
@@ -59,5 +58,8 @@
             "last 1 safari version"
         ]
     },
-    "homepage": "https://Seojun-Park.github.io/resume"
+    "devDependencies": {
+        "gh-pages": "^3.1.0"
+    },
+    "homepage": "https://Seojun-Park.github.io/resume/"
 }
