@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { Fillit, Libft, NQueen, Camagru, FtSSL, Uber } from '.'
+import { Fillit, Libft, NQueen, Camagru, FtSSL, Uber, Jinstagram } from '.'
 
 interface IProps {
     data: {
@@ -95,6 +95,8 @@ const ProjectBody: React.FC<IProps> = ({ data }) => {
                 return <FtSSL data={data} />;
             case 'Uber Clone':
                 return <Uber data={data} />
+            case 'Jinstagram':
+                return <Jinstagram data={data} />
             default:
                 return;
         }
