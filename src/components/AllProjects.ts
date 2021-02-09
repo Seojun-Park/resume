@@ -41,7 +41,18 @@ export const WORKS_ITEMS = [
     title: "Jinstagram",
     thumbnail: "tbu",
     label: "Jan, 2021",
-    images: "",
+    images: {
+      auth:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/Jinstagram%2Fauth.gif?alt=media&token=ebf3b2bb-3b81-41fb-972f-80e2942f4ad8",
+      upload:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/Jinstagram%2Fupload.gif?alt=media&token=01eedb71-0852-4a28-a347-eae1193aa122",
+      edit:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/Jinstagram%2Fedit.gif?alt=media&token=f47d5b7a-5ec9-4759-ae02-25ff71b523ff",
+      chat:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/Jinstagram%2Fchat.gif?alt=media&token=28f64d7b-72f0-4d20-8464-5452b43e7d17",
+      sendchat:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/Jinstagram%2FsendChat.gif?alt=media&token=0749c1f6-02f7-4e5e-abbd-e57fa10b80c5",
+    },
     description: "ㅁ",
   },
   {

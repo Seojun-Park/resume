@@ -56,9 +56,9 @@ const S = {
       display: flex;
       justify-content: center;
     `,
-    NavigationItem: styled.a<StyleProps>`
+    NavigationItem: styled.div<StyleProps>`
       color: ${({ isScroll, theme }) =>
-            isScroll ? theme.palette.white : theme.palette.black};
+            isScroll ? theme.palette.black : theme.palette.white};
     ${props => props.theme.typography.subheading};
       margin: 0 1rem;
       cursor: pointer;
@@ -142,8 +142,6 @@ const S = {
     ExtendedMotion: styled(Motion)`
     `,
     ExtendedLink: styled(Link)`
-    text-decoration-line:none;
-    color:black;
     `
 };
 
@@ -218,7 +216,24 @@ const Header = () => {
                 <S.ExtendedLink to={'/'}>
                     <S.Logo isScroll={isScroll}>JinPark</S.Logo>
                 </S.ExtendedLink>
-                {isScroll &&
+                <S.Navigation>
+                    <S.ExtendedLink to="/" style={{ textDecoration: "none" }}>
+                        <S.NavigationItem isScroll={isScroll}>
+                            Profile
+                        </S.NavigationItem>
+                    </S.ExtendedLink>
+                    <S.ExtendedLink to="/projects" style={{ textDecoration: "none" }}>
+                        <S.NavigationItem isScroll={isScroll}>
+                            Project
+                        </S.NavigationItem>
+                    </S.ExtendedLink>
+                    <S.ExtendedLink to="/" style={{ textDecoration: "none" }}>
+                        <S.NavigationItem isScroll={isScroll}>
+                            Contact
+                        </S.NavigationItem>
+                    </S.ExtendedLink>
+                </S.Navigation>
+                {/* {isScroll &&
                     <S.Navigation>
                         <S.ExtendedLink to="/">
                             <S.NavigationItem>
@@ -236,7 +251,7 @@ const Header = () => {
                         </S.NavigationItem>
                         </S.ExtendedLink>
                     </S.Navigation>
-                }
+                } */}
             </S.Header>
             <S.MobileHeader isScroll={isScroll}>
                 <S.Col>
