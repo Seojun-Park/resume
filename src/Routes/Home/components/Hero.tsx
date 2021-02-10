@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from '../../../components/Button';
 import { Link } from 'react-router-dom'
 
 const S = {
@@ -98,7 +97,7 @@ const Hero = () => {
           Web Developer
         </S.Title>
         <S.Description>
-          Hi! Jin 👋 <br />Currently, I'm studying web development in école 42, Paris<br />
+          Hi! I'm Jin 👋 <br />Currently, I'm studying web development in école 42, Paris<br />
           I code with passion and bring the idea to life.<br />
           Powered by VS Code and coffee
         </S.Description>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import { AllProjects, Home, Profile, Project } from '../Routes'
+import { AllProjects, Home, Profile, Project, Contact } from '../Routes'
 
 const Routes = () => (
     <Switch>
@@ -8,6 +8,7 @@ const Routes = () => (
         <Route path="/profile" component={Profile} />
         <Route path="/projects" component={AllProjects} />
         <Route path="/project/:title" component={Project} />
+        <Route path='/contact' component={Contact} />
     </Switch>
 )
 

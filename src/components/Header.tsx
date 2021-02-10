@@ -227,7 +227,7 @@ const Header = () => {
                             Project
                         </S.NavigationItem>
                     </S.ExtendedLink>
-                    <S.ExtendedLink to="/" style={{ textDecoration: "none" }}>
+                    <S.ExtendedLink to="/contact" style={{ textDecoration: "none" }}>
                         <S.NavigationItem isScroll={isScroll}>
                             Contact
                         </S.NavigationItem>
@@ -286,7 +286,7 @@ const Header = () => {
                             <S.ExtendedLink to="/projects">
                                 <S.DropDownMenu isOpen={isOpen}>Projects</S.DropDownMenu>
                             </S.ExtendedLink>
-                            <S.ExtendedLink to="/">
+                            <S.ExtendedLink to="/contact">
                                 <S.DropDownMenu isOpen={isOpen}>Contact</S.DropDownMenu>
                             </S.ExtendedLink>
                         </S.DropDown>}
