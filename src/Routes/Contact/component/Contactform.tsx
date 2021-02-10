@@ -70,9 +70,9 @@ const S = {
 
 
 const Contactform = () => {
-    const [name, nameOnchange, setName] = useInput('');
-    const [email, emailOnchange, setEmail] = useInput('');
-    const [body, bodyOnchange, setBody] = useInput('');
+    const [name, nameOnchange] = useInput('');
+    const [email, emailOnchange] = useInput('');
+    const [body, bodyOnchange] = useInput('');
 
     return (
         <S.Wrapper>

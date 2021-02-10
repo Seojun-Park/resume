@@ -102,9 +102,9 @@ const Hero = () => {
           Powered by VS Code and coffee
         </S.Description>
         <S.Breadcrumb>
-          <S.Button><S.ExtendedLink to="/">Profile</S.ExtendedLink></S.Button> /
+          <S.Button><S.ExtendedLink to="/profile">Profile</S.ExtendedLink></S.Button> /
           <S.Button><S.ExtendedLink to="/projects">&emsp;Projects</S.ExtendedLink></S.Button> /
-          <S.Button><S.ExtendedLink to="/">&emsp;Contact</S.ExtendedLink></S.Button>
+          <S.Button><S.ExtendedLink to="/contact">&emsp;Contact</S.ExtendedLink></S.Button>
         </S.Breadcrumb>
       </S.Wrapper>
     </S.Background>

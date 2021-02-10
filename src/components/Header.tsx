@@ -213,11 +213,11 @@ const Header = () => {
     return (
         <S.Wrapper isScroll={isScroll}>
             <S.Header isScroll={isScroll}>
-                <S.ExtendedLink to={'/'}>
+                <S.ExtendedLink to={'/'} style={{ textDecoration: "none" }}>
                     <S.Logo isScroll={isScroll}>JinPark</S.Logo>
                 </S.ExtendedLink>
                 <S.Navigation>
-                    <S.ExtendedLink to="/" style={{ textDecoration: "none" }}>
+                    <S.ExtendedLink to="/profile" style={{ textDecoration: "none" }}>
                         <S.NavigationItem isScroll={isScroll}>
                             Profile
                         </S.NavigationItem>
@@ -233,25 +233,6 @@ const Header = () => {
                         </S.NavigationItem>
                     </S.ExtendedLink>
                 </S.Navigation>
-                {/* {isScroll &&
-                    <S.Navigation>
-                        <S.ExtendedLink to="/">
-                            <S.NavigationItem>
-                                Profile
-                        </S.NavigationItem>
-                        </S.ExtendedLink>
-                        <S.ExtendedLink to="/projects">
-                            <S.NavigationItem>
-                                Project
-                        </S.NavigationItem>
-                        </S.ExtendedLink>
-                        <S.ExtendedLink to="/">
-                            <S.NavigationItem>
-                                Contact
-                        </S.NavigationItem>
-                        </S.ExtendedLink>
-                    </S.Navigation>
-                } */}
             </S.Header>
             <S.MobileHeader isScroll={isScroll}>
                 <S.Col>
@@ -278,15 +259,15 @@ const Header = () => {
                     </S.Burger>
                     <S.ExtendedMotion style={{ height: spring(height) }}>
                         {({ height }) => <S.DropDown style={Object.assign({}, { height })} isOpen={isOpen}>
-                            <S.ExtendedLink to="/">
+                            <S.ExtendedLink to="/profile" style={{ textDecoration: "none" }}>
                                 <S.DropDownMenu isOpen={isOpen}>
                                     Profile
                                 </S.DropDownMenu>
                             </S.ExtendedLink>
-                            <S.ExtendedLink to="/projects">
+                            <S.ExtendedLink to="/projects" style={{ textDecoration: "none" }}>
                                 <S.DropDownMenu isOpen={isOpen}>Projects</S.DropDownMenu>
                             </S.ExtendedLink>
-                            <S.ExtendedLink to="/contact">
+                            <S.ExtendedLink to="/contact" style={{ textDecoration: "none" }}>
                                 <S.DropDownMenu isOpen={isOpen}>Contact</S.DropDownMenu>
                             </S.ExtendedLink>
                         </S.DropDown>}
