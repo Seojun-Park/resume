@@ -145,27 +145,35 @@ export const S = {
     display: grid;
     margin: 0 auto;
     margin-top: 15px;
+    border: 1px solid #ffffff;
+    border-collapse: collapse;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   `,
   TableCol: styled.div`
-    border-left: 1px solid #333;
     border-bottom: 1px solid #333;
-    &:last-child {
-      border-right: 1px solid #333;
-    }
+    text-align: center;
   `,
   TableHead: styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px 10px;
-    border-bottom: 2px solid #333;
+    padding: 12px;
+    text-align: center;
+    background-color: #d0e4f5;
+    border-bottom: 5px solid #333;
+    color: #333;
   `,
   TableBody: styled.div`
-    padding: 10px;
+    /* padding: 10px; */
   `,
   TableRow: styled.div`
-    padding: 8px 12px;
+    padding: 12px;
+    &:nth-child(even) {
+      background: #d0e4f5;
+    }
+    &:not(:first-child) {
+      border-left: 2px solid #ffffff;
+    }
   `,
   Snap: styled.img`
     width: 600px;

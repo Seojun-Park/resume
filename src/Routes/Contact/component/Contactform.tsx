@@ -42,14 +42,20 @@ const S = {
     padding:8px 12px;
     width: 95%;
     border-bottom:1px solid #333;
+    ::placeholder{
+        color:${props => props.theme.palette.lightgray};
+    }
     `,
     Textarea: styled(InputWithLabel)`
     width:100%;
     border-bottom:1px solid #333;
+    ::placeholder{
+        color:${props => props.theme.palette.lightgray};
+    }
     `,
     Button: styled.input`
     border:none;
-    padding: 12px 8px;
+    padding: 12px 16px;
     ${props => props.theme.typography.button};
     background-color: ${props => props.theme.palette.primary};
     color:white;
@@ -74,36 +80,41 @@ const Contactform = () => {
                 <S.Row>
                     <S.Title>Contact</S.Title>
                 </S.Row>
-                <S.Row>
-                    <S.InfoRow>
-                        <S.Input
-                            type="text"
-                            label="Name"
-                            placeholder="Enter your name"
-                            onChange={nameOnchange}
-                            value={name}
+                <form className="gform" method="post" action="https://script.google.com/macros/s/AKfycbyXHncuH2ASiA4_jqZYWCiCkMwcAc6AmQGGdFg0USvmDuoAMGfIJ2Pb/exec">
+                    <S.Row>
+                        <S.InfoRow>
+                            <S.Input
+                                type="text"
+                                label="Name"
+                                placeholder="Enter your name"
+                                onChange={nameOnchange}
+                                value={name}
+                                name="name"
+                            />
+                            <S.Input
+                                type="email"
+                                label="Email"
+                                placeholder="Enter your email"
+                                onChange={emailOnchange}
+                                value={email}
+                                name="email"
+                            />
+                        </S.InfoRow>
+                    </S.Row>
+                    <S.Row style={{ marginTop: '40px' }}>
+                        <S.Textarea
+                            type="textarea"
+                            label="Message"
+                            placeholder="Message..."
+                            onChange={bodyOnchange}
+                            value={body}
+                            name="message"
                         />
-                        <S.Input
-                            type="text"
-                            label="Email"
-                            placeholder="Enter your email"
-                            onChange={emailOnchange}
-                            value={email}
-                        />
-                    </S.InfoRow>
-                </S.Row>
-                <S.Row style={{ marginTop: '40px' }}>
-                    <S.Textarea
-                        type="textarea"
-                        label="Message"
-                        placeholder="Message..."
-                        onChange={bodyOnchange}
-                        value={body}
-                    />
-                </S.Row>
-                <S.Row>
-                    <S.Button type="submit" value={"Submit"} />
-                </S.Row>
+                    </S.Row>
+                    <S.Row>
+                        <S.Button type="submit" value={"Submit"} />
+                    </S.Row>
+                </form>
             </S.Container>
         </S.Wrapper>
     )

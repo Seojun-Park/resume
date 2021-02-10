@@ -15,7 +15,6 @@ interface IProps {
 }
 
 const Libft: React.FC<IProps> = ({ data }) => {
-
     const handleTable = (title) => {
         const data = libft.filter((item) => {
             if (item.title === title) {

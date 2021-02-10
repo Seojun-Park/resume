@@ -6,6 +6,7 @@ interface IProps {
     onChange: (event: React.ChangeEvent) => any,
     placeholder: string;
     type: string;
+    name?: string
 }
 
 const Wrapper = styled.div`
@@ -56,6 +57,8 @@ const InputWithLabel: React.FC<IProps> = ({ label, type, ...rest }) => {
         switch (type) {
             case 'text':
                 return <Input {...rest} />;
+            case 'email':
+                return <Input type={type} {...rest} />;
             case 'textarea':
                 return <Textarea {...rest} rows={5} />;
             default:
