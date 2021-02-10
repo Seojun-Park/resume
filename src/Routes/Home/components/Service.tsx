@@ -55,6 +55,7 @@ const S = {
     color: ${props => props.theme.palette.secondary};
     margin-top: auto;
     cursor: pointer;
+    
   `,
 };
 
