@@ -13,7 +13,7 @@ const S = {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 680px;
+    margin-top: 550px;
     @media (max-width:376px){
       padding: 60px auto;
       margin:auto;
@@ -145,7 +145,6 @@ const Feature = () => {
           Since beginning my journey as a web developer student nearly 2 years ago,<br />
           I've done many projects in C, PHP and Javascript in école 42.<br />
           I like to code things from scratch, and enjoy bringing ideas to life in the browser.
-          {/* problem at a time. */}
         </S.Description>
         <S.List>
           {FEAURE_ITEMS.map((item, index) => (
@@ -155,7 +154,7 @@ const Feature = () => {
           ))}
         </S.List>
         <Link to='/profile'>
-          <S.TextButton>Read more about me</S.TextButton>
+          <S.TextButton>Find more about me</S.TextButton>
         </Link>
       </S.MobileWrapper>
     </S.Wrapper>

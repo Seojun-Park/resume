@@ -3,16 +3,8 @@ import styled from 'styled-components';
 import useScrollCount from '../../../hooks/useScollCount'
 
 const S = {
-  Background: styled.section`
-    width: 100%;
-    max-width:1180px;
-    background-color: ${(props) => props.theme.palette.background};
-    @media (max-width:376px){
-      display:none;
-    }
-  `,
   Wrapper: styled.div`
-    width: 100%;
+    width: 90%;
     max-width: 1180px;
     margin: auto;
     padding: 100px 0;
@@ -65,7 +57,7 @@ const FIGURE_ITEMS = [
     title: 'Total Projects',
     number: 10,
     unit: '+',
-    description: 'Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus.',
+    description: 'more than actual toy projects.',
   },
   {
     title: 'Partners',
@@ -83,20 +75,18 @@ const Figure = () => {
   };
 
   return (
-    <S.Background>
-      <S.Wrapper>
-        <S.List>
-          {FIGURE_ITEMS.map((item, index) => (
-            <S.ListItem key={item.title}>
-              <S.Number {...countItem[index]}>0</S.Number>
-              <S.Unit>{item.unit}</S.Unit>
-              <S.Title>{item.title}</S.Title>
-              <S.Description>{item.description}</S.Description>
-            </S.ListItem>
-          ))}
-        </S.List>
-      </S.Wrapper>
-    </S.Background>
+    <S.Wrapper>
+      <S.List>
+        {FIGURE_ITEMS.map((item, index) => (
+          <S.ListItem key={item.title}>
+            <S.Number {...countItem[index]}>0</S.Number>
+            <S.Unit>{item.unit}</S.Unit>
+            <S.Title>{item.title}</S.Title>
+            <S.Description>{item.description}</S.Description>
+          </S.ListItem>
+        ))}
+      </S.List>
+    </S.Wrapper>
   );
 };
 

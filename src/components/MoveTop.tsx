@@ -12,12 +12,16 @@ const S = {
     Button: styled.button`
     width: 100%;
     padding: 12px;
-    background-color: ${props => props.theme.palette.primary};
+    border:1px solid ${props => props.theme.palette.primary};
     border-radius:1rem;
-    border:none;
-    color:white;
-    ${props => props.theme.typography.title};
-    font-size: 1rem;
+    color:${props => props.theme.palette.primary};
+    ${props => props.theme.typography.button};
+    /* font-size: 1rem; */
+    &:hover{
+        transition:0.2s linear;
+        color:white;
+        background-color: ${props => props.theme.palette.primary};
+    }
     `
 }
 

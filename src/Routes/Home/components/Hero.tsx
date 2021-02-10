@@ -7,7 +7,7 @@ const S = {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 780px;
+    height: 600px;
     background: no-repeat center/cover url('https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/code1.jpeg?alt=media&token=bc4e1ebe-a18b-4b70-9e87-5bc124294797');
     z-index:0;
     @media (max-width: 376px){
@@ -25,7 +25,7 @@ const S = {
   position:absolute;
   top:0;
   width:100%;
-  height: 780px;
+  height: 600px;
   background-color:black;
   opacity:0.3;
   z-index: 1;
