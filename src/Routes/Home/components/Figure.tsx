@@ -73,21 +73,13 @@ const FIGURE_ITEMS = [
     unit: '',
     description:
       'Nisi scelerisque eu ultrices vitae auctor eu augue ut lectus.',
-  },
-  {
-    title: 'Business Success',
-    number: 92,
-    unit: '%',
-    description:
-      'Porttitor rhoncus dolor purus non enim praesent elementum facilisis.',
-  },
+  }
 ];
 
 const Figure = () => {
   const countItem = {
     0: useScrollCount(10),
     1: useScrollCount(124),
-    2: useScrollCount(92),
   };
 
   return (

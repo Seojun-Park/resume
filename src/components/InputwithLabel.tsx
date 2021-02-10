@@ -29,6 +29,7 @@ const Input = styled.input`
     font-size: 18px;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    border:none;
     &:focus{
         outline:none;
     }
@@ -42,6 +43,7 @@ const Textarea = styled.textarea`
     font-size: 18px;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    border:none;
     resize:none;
     &:focus{
         outline:none;

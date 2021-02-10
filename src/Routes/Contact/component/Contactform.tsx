@@ -15,7 +15,7 @@ const S = {
     `,
     Container: styled.div`
     width:70%;
-    height: 50%;
+    min-height: 50%;
     background-color:white;
     border-radius:10px;
     max-width: 800px;
@@ -30,6 +30,7 @@ const S = {
     `,
     Row: styled.div`
     width:100%;
+    margin:20px auto;
     `,
     InfoRow: styled.div`
     display:flex;
@@ -40,9 +41,24 @@ const S = {
     Input: styled(InputWithLabel)`
     padding:8px 12px;
     width: 95%;
+    border-bottom:1px solid #333;
     `,
     Textarea: styled(InputWithLabel)`
     width:100%;
+    border-bottom:1px solid #333;
+    `,
+    Button: styled.input`
+    border:none;
+    padding: 12px 8px;
+    ${props => props.theme.typography.button};
+    background-color: ${props => props.theme.palette.primary};
+    color:white;
+    border-radius:4px;
+    font-size:1.2rem;
+    &:hover{
+        transition:0.2s linear;
+        background-color:${props => props.theme.palette.orange};
+    }
     `
 }
 
@@ -76,7 +92,7 @@ const Contactform = () => {
                         />
                     </S.InfoRow>
                 </S.Row>
-                <S.Row>
+                <S.Row style={{ marginTop: '40px' }}>
                     <S.Textarea
                         type="textarea"
                         label="Message"
@@ -86,7 +102,7 @@ const Contactform = () => {
                     />
                 </S.Row>
                 <S.Row>
-                    <button>button</button>
+                    <S.Button type="submit" value={"Submit"} />
                 </S.Row>
             </S.Container>
         </S.Wrapper>

@@ -102,8 +102,8 @@ const S = {
 };
 
 const FEAURE_ITEMS = [
-  `Frontend : ReactJS / JavaScript / TypeScript`,
-  'Backend : NodeJS / Graphql',
+  `Frontend : React JS / JavaScript / TypeScript`,
+  'Backend : Node JS / Graphql',
   'I genuinely care about people and love to collaborate with them',
 ];
 
