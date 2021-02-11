@@ -42,6 +42,7 @@ const S = {
   `,
   SubTitle: styled.h3`
   ${props => props.theme.typography.heading};
+  margin:20px;
   `
   ,
   Description: styled.p`
@@ -90,6 +91,55 @@ const S = {
   width:100%;
   display:flex;
   flex-direction:column;
+  `,
+  ExpRow: styled.div`
+  display:flex;
+  flex-direction:column;
+  margin-left:20px;
+  margin-right:20px;
+  `,
+  Line: styled.div`
+  width:100%;
+  height:10px;
+  border-bottom:1px solid ${props => props.theme.palette.gray};
+  `,
+
+  ExpTitle: styled.div`
+  ${props => props.theme.typography.heading};
+  color:${props => props.theme.palette.darkgray};
+  text-decoration:underline 1px solid;
+  text-underline-offset:20%;
+  padding-bottom:20px;
+  `,
+  ExpDesc: styled.div`
+  ${props => props.theme.typography.description};
+  margin-bottom: 20px;
+  `,
+  ExpSp: styled.div`
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  `,
+  ExpCol: styled.div`
+  display:flex;
+  flex-direction:column;
+  `,
+  ColHeading: styled.div`
+  ${props => props.theme.typography.subheading};
+  font-weight:400;
+  margin-bottom:15px;
+  `,
+  ColPeriod: styled.div`
+  ${props => props.theme.typography.subheading};
+  font-weight:400;
+  color:${props => props.theme.palette.gray};
+  `,
+  Ul: styled.ul`
+  list-style: inside;
+  ${props => props.theme.typography.subheading};
+  font-weight:400;
+  `,
+  Li: styled.li`
+  padding:10px 0;
   `
 };
 
@@ -139,19 +189,49 @@ const ProfileBody = () => {
           <br />
           Studying in 42 curriculm which pushes studens to the limit, my problem solving
         </S.Description>
+        <a style={{ margin: 30, marginTop: 10 }} href={`https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/Resume_Jinpark.pdf?alt=media&token=c0305e79-ab37-4d73-98ba-2151196ceb61`} download rel="noreferrer" target="_blank">Download resume</a>
       </S.IntroRow>
       <S.IntroRow>
-        <S.Title>Work Experience</S.Title>
-        <S.Description>
-          Hello! I'm Jin. Currently, studying coding at école 42 Paris.<br />
-          I have started my career as Marketing Export for 3 years in Seoul, South Korea and Frankfurt, Germany<br />
-          However, I found myself loosing my passion for my job and my behavior has being became a passive person.<br />
-          So, I dicided quitting the job to make further step.<br />
-          <br />
-          Studying in 42 curriculm which pushes studens to the limit, my problem solving
-        </S.Description>
+        <S.Title>Experience</S.Title>
+        <S.SubTitle>Developer</S.SubTitle>
+        <S.Description>Will be full</S.Description>
+        <S.Line />
+        <S.SubTitle>Marketing</S.SubTitle>
+        <S.ExpRow style={{ marginBottom: 30 }}>
+          <S.ExpTitle>E.Style.gmbh</S.ExpTitle>
+          <S.ExpDesc>Marketing</S.ExpDesc>
+          <S.ExpSp>
+            <S.ExpCol>
+              <S.ColHeading>Account Executive</S.ColHeading>
+              <S.ColPeriod>2017.09 - 2018.03</S.ColPeriod>
+            </S.ExpCol>
+            <S.ExpCol>
+              <S.Ul>
+                <S.Li>2018 Russia World Cup OMBC proposal team</S.Li>
+                <S.Li>Operated and organized company 10th anniversary</S.Li>
+              </S.Ul>
+            </S.ExpCol>
+          </S.ExpSp>
+        </S.ExpRow>
+        <S.Line />
+        <S.ExpRow style={{ marginTop: 30 }}>
+          <S.ExpTitle>S.miles.co.ltd,.</S.ExpTitle>
+          <S.ExpDesc>Marketing</S.ExpDesc>
+          <S.ExpSp>
+            <S.ExpCol>
+              <S.ColHeading>Account Executive</S.ColHeading>
+              <S.ColPeriod>2015.12 - 2017.07</S.ColPeriod>
+            </S.ExpCol>
+            <S.ExpCol>
+              <S.Ul>
+                <S.Li>IFC(International Finance Centre) mall in Seoul annual marketing operator</S.Li>
+                <S.Li>Operated 2016 UNESCO-L'Oréal Woman in Science Awards</S.Li>
+                <S.Li>Operated 2016 Medtronic 8th ATEP conference</S.Li>
+              </S.Ul>
+            </S.ExpCol>
+          </S.ExpSp>
+        </S.ExpRow>
       </S.IntroRow>
-      <a href={`https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/Resume_Jinpark.pdf?alt=media&token=c0305e79-ab37-4d73-98ba-2151196ceb61`} download rel="noreferrer" target="_blank">Download resume</a>
     </S.Wrapper>
   );
 };
