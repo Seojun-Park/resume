@@ -18,7 +18,7 @@ export const S = {
   Glogo: styled.img`
     width: 20px;
   `,
-  Link: styled.span`
+  Link: styled.a`
     padding-left: 10px;
   `,
   Row: styled.div`
@@ -192,7 +192,8 @@ export const S = {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 60%;
+    width: 100%;
+    max-width: 800px;
     &:not(:last-child) {
       margin-bottom: 20px;
     }

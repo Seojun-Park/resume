@@ -10,6 +10,7 @@ interface IProps {
         label: string;
         title: string;
         images: any;
+        repository: string
     }
 }
 
@@ -18,13 +19,10 @@ const Jinstagram: React.FC<IProps> = ({ data }) => {
         <S.Container>
             <S.Head>
                 <S.Glogo src={githubLogo} alt="github" />
-                <S.Link>: repo</S.Link>
+                <S.Link href={data.repository} target="_blank">Link</S.Link>
             </S.Head>
             <S.Row>
-                <S.SubTitle>Overview</S.SubTitle>
-                <S.Description>
-                    blablabla description needed
-                </S.Description>
+                <S.SubTitle>Stacks</S.SubTitle>
                 <S.SubHeading>
                     Front-end
                 </S.SubHeading>
@@ -59,10 +57,18 @@ const Jinstagram: React.FC<IProps> = ({ data }) => {
                         <S.ImageDesc>Postgres</S.ImageDesc>
                     </S.Col>
                 </S.StackBox>
+                <S.SubTitle>Features</S.SubTitle>
+                <S.Description>
+                    - Login with Social media(Facebook / Google)<br />
+                    - Email verification<br />
+                    - jwt token authentification<br />
+                    - Sending direct message<br />
+                    - User search<br />
+                    - Gettin current location by using Google Geocoding API<br />
+                </S.Description>
             </S.Row>
             <S.Row>
                 <S.SubTitle>What's inside</S.SubTitle>
-                <S.Description>Jinstagram ...</S.Description>
                 <S.Row>
                     <S.SubHeading>Login | Auth</S.SubHeading>
                     <S.MapBox>

@@ -11,6 +11,7 @@ interface IProps {
         label: string;
         title: string;
         images: any;
+        repository
     }
 }
 
@@ -20,25 +21,23 @@ interface IStyle {
 
 const S = {
     Wrapper: styled.div`
-    margin-top: 400px;
+    padding:30px;
+    padding-top:50px;
+    min-height:100vh;
+    background-color:white;
     @media (max-width: 376px){
         margin-top: 200px;
     }
     `,
-    Head: styled.div`
-    width: 100%;
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-    align-items:center;
+    Title: styled.div`
+    ${props => props.theme.typography.title};
     `,
-    Title: styled.h4`
-    ${props => props.theme.typography.subtitle};
-    @media (max-width:376px){
-        font-size:2rem;
-    }
-    `
-    ,
+    Line: styled.div`
+     width:7%;
+     height:20px;
+     border-bottom:2px solid black;
+     margin-bottom: 30px;
+     `,
     Overview: styled.div`
     width: 80%;
     margin:0 auto;
@@ -74,6 +73,8 @@ const S = {
     padding-top: 20px;
     `,
     Link: styled(Link)`
+    /* padding:20px; */
+    margin:20px;
     @media (max-width:376px){
         display:none;
     }
@@ -103,11 +104,10 @@ const ProjectBody: React.FC<IProps> = ({ data }) => {
     }
     return (
         <S.Wrapper>
+            <S.Title>{data.title}</S.Title>
+            <S.Line />
+            <S.Link to="/projects" style={{ textDecoration: "none", color: 'black' }}>Go back to project list</S.Link>
             <S.Overview>
-                <S.Head>
-                    <S.Title>{data.title}</S.Title>
-                    <S.Link to="/projects">Go back to project list</S.Link>
-                </S.Head>
                 <S.Preview image={data.preview} />
                 <S.Description>{data.description}</S.Description>
             </S.Overview>

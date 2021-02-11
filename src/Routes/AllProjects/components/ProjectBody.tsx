@@ -14,25 +14,26 @@ text-decoration:none;
 
 const S = {
     Wrapper: styled.div`
-    margin-top: 400px;
+    padding:30px;
+    padding-top:50px;
+    min-height:100vh;
+    background-color:white;
     @media (max-width: 376px){
         margin-top: 250px;
     }
     `,
-    Title: styled.h3`
-    ${props => props.theme.typography.title};
-    color:black;
-    margin-bottom: 0.5rem;
-    margin-left: 20px;
-    @media (max-width: 376px){
-        font-size: 3rem;
-        margin-left:8px;
-    }
-    `,
+    Line: styled.div`
+   width:7%;
+   height:20px;
+   border-bottom:2px solid black;
+   `,
+    Title: styled.div`
+   ${props => props.theme.typography.title};
+   `,
     Container: styled.div`
     width: 80%;
     min-height:50vh;
-    margin:0 auto;
+    margin:50px auto;
     /* background-color:white; */
     display:grid;
     padding-top: 35px;
@@ -96,6 +97,7 @@ const ProjectBody = () => {
     return (
         <S.Wrapper className="projects">
             <S.Title>Project List</S.Title>
+            <S.Line />
             <S.Container>
                 {WORKS_ITEMS.map((item, index) => {
                     return (

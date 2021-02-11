@@ -12,6 +12,7 @@ interface IProps {
         label: string;
         title: string;
         images: any;
+        repository: string
     }
 }
 
@@ -21,13 +22,10 @@ const Uber: React.FC<IProps> = ({ data }) => {
         <S.Container>
             <S.Head>
                 <S.Glogo src={githubLogo} alt="github" />
-                <S.Link>: repo</S.Link>
+                <S.Link href={data.repository} target="_blank">Link</S.Link>
             </S.Head>
             <S.Row>
-                <S.SubTitle>Overview</S.SubTitle>
-                <S.Description>
-                    blablabla description needed
-                </S.Description>
+                <S.SubTitle>Stacks</S.SubTitle>
                 <S.SubHeading>
                     Front-end
                 </S.SubHeading>
@@ -62,10 +60,18 @@ const Uber: React.FC<IProps> = ({ data }) => {
                         <S.ImageDesc>Postgres</S.ImageDesc>
                     </S.Col>
                 </S.StackBox>
+                <S.SubTitle>Features</S.SubTitle>
+                <S.Description>
+                    - Real-time ride request and accept depending on mode(driver / customer)<br />
+                    - Real-time chat between driver and customer<br />
+                    - Getting direction, and render it on map with Google Map API<br />
+                    - Email and phone verification<br />
+                    - SMS / Email verification<br />
+                    - jwt token authentification<br />
+                </S.Description>
             </S.Row>
             <S.Row>
                 <S.SubTitle>What's inside</S.SubTitle>
-                <S.Description>This Uber clone contains similer user interface as Original uber</S.Description>
                 <S.Row>
                     <S.SubHeading>Login | Auth</S.SubHeading>
                     <S.MapBox>

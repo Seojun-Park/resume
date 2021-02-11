@@ -20,8 +20,8 @@ const AllProjects = () => {
     return (
         <Wrapper>
             <Helmet><title>Projects</title></Helmet>
-            <Header />
-            <TopBanner title="Projects" />
+            <Header home={false} />
+            {/* <TopBanner title="Projects" /> */}
             <ProjectBody />
             <Footer />
         </Wrapper>

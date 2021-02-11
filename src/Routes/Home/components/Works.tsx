@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 interface IStyle {
@@ -47,14 +48,22 @@ const S = {
    `,
   Card: styled.div`
   width:100%;
-  height: 400px;
+  height: 600px;
+  max-width: 600px;
   display:flex;
   flex-direction:column;
+  margin-top:40px;
+  cursor: pointer;
+  &:hover{
+    transition:0.2s linear;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  }
   `,
   Preview: styled.div<IStyle>`
   background: no-repeat center/cover url(${props => props.image});
   width:100%;
-  height: 50%;
+  height: 70%;
   &:hover{
     transition:0.2s linear;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
@@ -63,7 +72,7 @@ const S = {
   `,
   Cover: styled.div`
   width:45%;
-  height:50%;
+  height:70%;
   background-color:${props => props.theme.palette.gray};
   opacity:0.5;
   position:absolute;
@@ -71,18 +80,15 @@ const S = {
 
   CardDesc: styled.div`
   width:100%;
-  height:40%;
+  height:60%;
   background-color:white;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:flex-start;
   padding:35px;
-  &:hover{
-    transition:0.2s linear;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
-    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-  }
+  color:black;
+ 
   `,
   DescTitle: styled.div`
   ${props => props.theme.typography.subtitle};
@@ -93,7 +99,29 @@ const S = {
   ${props => props.theme.typography.description};
   color: ${props => props.theme.palette.gray};
  
-  `
+  `,
+  Bottom: styled.div`
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:50px;
+  `,
+  Circle: styled.div`
+   border:4px solid black;
+   padding: 4px 15px;
+   border-radius:5rem;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   cursor: pointer;
+   ${props => props.theme.typography.description};
+   &:hover{
+     background-color:${props => props.theme.palette.primary};
+     border:4px solid ${props => props.theme.palette.primary};
+     transition:0.2s linear;
+     color:white;
+   }
+   `,
 };
 
 const WORKS_ITEMS = [
@@ -131,17 +159,24 @@ const Works = () => {
       <S.Row>
         {WORKS_ITEMS.map((item, idx) => {
           return (
-            <S.Card key={idx}>
-              {/* <S.Cover /> */}
-              <S.Preview image={item.image} />
-              <S.CardDesc>
-                <S.DescTitle>{item.title}</S.DescTitle>
-                <S.Desc>{item.description}</S.Desc>
-              </S.CardDesc>
-            </S.Card>
+            <Link to={`/project/${item.title}`} style={{ textDecoration: "none" }} key={idx}>
+              <S.Card>
+                {/* <S.Cover /> */}
+                <S.Preview image={item.image} />
+                <S.CardDesc>
+                  <S.DescTitle>{item.title}</S.DescTitle>
+                  <S.Desc>{item.description}</S.Desc>
+                </S.CardDesc>
+              </S.Card>
+            </Link>
           )
         })}
       </S.Row>
+      <S.Bottom>
+        <Link to={`/projects`} style={{ textDecoration: "none", color: 'black' }}>
+          <S.Circle>More works</S.Circle>
+        </Link>
+      </S.Bottom>
     </S.Wrapper>
   );
 };

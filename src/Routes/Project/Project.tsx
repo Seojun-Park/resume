@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import TopBanner from '../../components/TopBanner'
+// import TopBanner from '../../components/TopBanner'
 import { RouteComponentProps } from 'react-router-dom'
 import { Helmet } from 'react-helmet';
 import { ProjectBody } from './components'
@@ -49,8 +49,8 @@ const Project: React.FC<IProps> = ({ match }) => {
     return (
         <Wrapper>
             <Helmet><title>Projects</title></Helmet>
-            <Header />
-            <TopBanner title={data.title} />
+            <Header home={false} />
+            {/* <TopBanner title={data.title} /> */}
             <ProjectBody data={data} />
             <MoveTop />
             <Footer />

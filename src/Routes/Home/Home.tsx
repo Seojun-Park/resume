@@ -26,7 +26,7 @@ const Home = () => {
             <Helmet>
                 <title>Home</title>
             </Helmet>
-            <Header homeref={ref} />
+            <Header homeref={ref} home={true} />
             <Hero />
             <Intro />
             <Figure />

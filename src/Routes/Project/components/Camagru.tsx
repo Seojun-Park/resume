@@ -1,5 +1,5 @@
 import React from 'react'
-import { githubLogo } from '../../../components/AllProjects'
+import { githubLogo, stackIcon } from '../../../components/AllProjects'
 import { S } from './styles'
 
 interface IProps {
@@ -10,6 +10,7 @@ interface IProps {
         label: string;
         title: string;
         images: any;
+        repository: string
     }
 }
 
@@ -18,17 +19,28 @@ const Camagru: React.FC<IProps> = ({ data }) => {
         <S.Container>
             <S.Head>
                 <S.Glogo src={githubLogo} alt="github" />
-                <S.Link>:repo</S.Link>
+                <S.Link href={data.repository} target="_blank"> Link</S.Link>
             </S.Head>
             <S.Row>
-                <S.SubTitle>Overview</S.SubTitle>
-                <S.Description>
-                    A web application allowing registered users to make basic photo editing using their<br />
-                    webcam and some predefined images.<br />
-                    All captured images are likeable and commentable via a gallery page.<br />
-                    <br />
-                    This project has been developed with HTML/CSS, PHP and Javascript without any framwork or external library.
-                </S.Description>
+                <S.SubTitle>Stacks</S.SubTitle>
+                <S.StackBox>
+                    <S.Col>
+                        <S.Stack src={stackIcon[8].logo} alt="php" />
+                        <S.ImageDesc>PHP</S.ImageDesc>
+                    </S.Col>
+                    <S.Col>
+                        <S.Stack src={stackIcon[9].logo} alt="docker" />
+                        <S.ImageDesc>Docker</S.ImageDesc>
+                    </S.Col>
+                    <S.Col>
+                        <S.Stack src={stackIcon[10].logo} alt="maria" />
+                        <S.ImageDesc>MariaDB</S.ImageDesc>
+                    </S.Col>
+                    <S.Col>
+                        <S.Stack src={stackIcon[11].logo} alt="hcj" />
+                        <S.ImageDesc>HTML / CSS / JS</S.ImageDesc>
+                    </S.Col>
+                </S.StackBox>
             </S.Row>
             <S.Row>
                 <S.SubTitle>Features</S.SubTitle>

@@ -10,6 +10,7 @@ interface IProps {
         label: string;
         title: string;
         images: any;
+        repository: string
     }
 }
 
@@ -18,7 +19,7 @@ const FtSSL: React.FC<IProps> = ({ data }) => {
         <S.Container>
             <S.Head>
                 <S.Glogo src={githubLogo} alt="github" />
-                <S.Link>: repo</S.Link>
+                <S.Link href={data.repository} target="_blank">Link</S.Link>
             </S.Head>
             <S.Row>
                 <S.SubTitle>Overview</S.SubTitle>

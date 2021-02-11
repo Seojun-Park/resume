@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 interface IProps {
     homeref?: React.RefObject<HTMLDivElement>
+    home: boolean;
 }
 interface StyleProps {
     isScroll?: boolean;
@@ -73,7 +74,8 @@ const S = {
 };
 
 
-const Header: React.FC<IProps> = ({ homeref }) => {
+const Header: React.FC<IProps> = ({ homeref, home }) => {
+    const [to, setTo] = useState<string>('')
     const [isScroll, setIsScroll] = useState<boolean>(false);
     const handleScroll = useCallback(() => {
         if (window.pageYOffset > 0) {
@@ -92,22 +94,24 @@ const Header: React.FC<IProps> = ({ homeref }) => {
     }, [handleScroll])
 
     useEffect(() => {
-        console.log(homeref?.current?.children)
-    }, [])
-
-    const handleClick = (to: string) => {
-        switch (to) {
-            case 'profile':
-                window.scrollTo({ top: 620, behavior: "smooth" })
-                break;
-            case 'projects':
-                window.scrollTo({ top: 1201, behavior: 'smooth' })
-                break;
-            case 'contact':
-                window.scrollTo({ top: 3390, behavior: "smooth" })
-                break;
+        if (homeref && homeref.current) {
+            switch (to) {
+                case 'profile':
+                    homeref.current.children[2].scrollIntoView({ behavior: "smooth" })
+                    setTo('')
+                    break;
+                case 'projects':
+                    homeref.current.children[4].scrollIntoView({ behavior: "smooth" })
+                    setTo('')
+                    break;
+                case 'contact':
+                    homeref.current.children[5].scrollIntoView({ behavior: "smooth" })
+                    setTo('')
+                    break;
+            }
         }
-    }
+    }, [homeref, to])
+
 
     return (
         <S.Wrapper isScroll={isScroll}>
@@ -115,17 +119,37 @@ const Header: React.FC<IProps> = ({ homeref }) => {
                 <Link to={'/'} style={{ textDecoration: "none" }}>
                     <S.Logo isScroll={isScroll}>JinPark</S.Logo>
                 </Link>
-                <S.Navigation>
-                    <S.NavigationItem isScroll={isScroll} onClick={() => handleClick('profile')}>
-                        Profile
+                {home ?
+                    <S.Navigation>
+                        <S.NavigationItem isScroll={isScroll} onClick={() => setTo('profile')}>
+                            Profile
                     </S.NavigationItem>
-                    <S.NavigationItem isScroll={isScroll} onClick={() => handleClick('projects')}>
-                        Project
+                        <S.NavigationItem isScroll={isScroll} onClick={() => setTo('projects')}>
+                            Project
                     </S.NavigationItem>
-                    <S.NavigationItem isScroll={isScroll} onClick={() => handleClick('contact')}>
-                        Contact
+                        <S.NavigationItem isScroll={isScroll} onClick={() => setTo('contact')}>
+                            Contact
                     </S.NavigationItem>
-                </S.Navigation>
+                    </S.Navigation>
+                    :
+                    <S.Navigation>
+                        <Link to='/profile' style={{ textDecoration: "none", color: "white" }}>
+                            <S.NavigationItem isScroll={isScroll} onClick={() => setTo('profile')}>
+                                Profile
+                        </S.NavigationItem>
+                        </Link>
+                        <Link to="/projects" style={{ textDecoration: "none", color: "white" }}>
+                            <S.NavigationItem isScroll={isScroll} onClick={() => setTo('projects')}>
+                                Project
+                        </S.NavigationItem>
+                        </Link>
+                        <Link to="/contact" style={{ textDecoration: "none", color: "white" }}>
+                            <S.NavigationItem isScroll={isScroll} onClick={() => setTo('contact')}>
+                                Contact
+                        </S.NavigationItem>
+                        </Link>
+                    </S.Navigation>
+                }
             </S.Header>
         </S.Wrapper>
     )

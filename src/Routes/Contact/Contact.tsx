@@ -25,7 +25,7 @@ const Contact = () => {
     return (
         <S.Wrapper>
             <S.Cover />
-            <Header />
+            <Header home={false} />
             <Contactform />
         </S.Wrapper>
     )

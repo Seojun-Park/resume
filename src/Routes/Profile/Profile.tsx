@@ -20,7 +20,7 @@ const Profile = () => {
     return (
         <Wrapper>
             <Helmet><title>Profile</title></Helmet>
-            <Header />
+            <Header home={false} />
             <TopBanner title='Profile' />
             <ProfileBody />
             <Footer />

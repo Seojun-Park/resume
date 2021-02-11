@@ -33,7 +33,12 @@ export const WORKS_ITEMS = [
       api3:
         "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/uberclone%2Fapi3.png?alt=media&token=717a4292-f4d4-4392-b7da-e4aeaf53b357",
     },
-    description: "what I have learnt throught this project",
+    description: `Uber Clone is uber-like web app. After user logs in user can choose whether driver or customer. The app tracks user and driver's current position and show them on the map by using graphql subscription. 
+    User can search the location where they want by location name or coordinates. Once, the app received location term from the user, the app request location information to Google geocoding API and convert it into readable data.
+    When user request a ride, the nearest driver from the user will get notification popup, and the driver can choose whether accept the requested ride or not. All riding information such as duration, price, distance ...etc is from Google map API.
+    The chat between driver and customer is only available when driver accept the requested ride. It is terminated automatically when the ride is finished.
+    `,
+    repository: "https://github.com/Seojun-Park/uberClone",
   },
   {
     preview:
@@ -53,7 +58,13 @@ export const WORKS_ITEMS = [
       sendchat:
         "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/Jinstagram%2FsendChat.gif?alt=media&token=0749c1f6-02f7-4e5e-abbd-e57fa10b80c5",
     },
-    description: "ㅁ",
+    description: `Jinstagram is instagram-like web app. It contains User posting and realtime chat. User can post image with caption and user's current position(if user allows)
+      User can log in with their social media or sigin in with their verified email. 
+      Once, user logs in, the app request permission of getting user's current position. If user allows, the app tracks user's position, and everytime user uploads post, the post uploads with user's current position.
+      The user location data is transformed by Google geocoding API(coordinate -> address).
+      User is able to send message to other user and edit own information such as name, profile photo...etc
+      `,
+    repository: "https://github.com/Seojun-Park/Jinstagram-client",
   },
   {
     preview:
@@ -81,8 +92,13 @@ export const WORKS_ITEMS = [
       modify:
         "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/camagru%2Fmodify.png?alt=media&token=be4f18de-8a67-4034-b85d-4e214fd2041b",
     },
-    description:
-      "This is the first project creating own social network, with php and vanilla JavaScript",
+    description: `This is the first project creating own social network, with php and vanilla JavaScript.
+      A web application allowing registered users to make basic photo editing using their
+      webcam and some predefined images.
+      All captured images are likeable and commentable via a gallery page.
+      This project has been developed with HTML/CSS, PHP and Javascript without any framwork or external library.
+      `,
+    repository: "https://github.com/Seojun-Park/42_camagru",
   },
   {
     preview:
@@ -114,6 +130,7 @@ export const WORKS_ITEMS = [
     },
     description:
       "Algorithm Practice - Fit tetris pieces into the smallest square possible",
+    repository: "https://github.com/Seojun-Park/42_projects/tree/main/fillIt",
   },
   {
     preview:
@@ -147,6 +164,7 @@ export const WORKS_ITEMS = [
     },
     description:
       "N-Queens puzzle is well-known puzzle as an example of back tracking algorithm",
+    repository: "https://github.com/Seojun-Park/N_queens_game",
   },
   {
     preview:
@@ -170,6 +188,7 @@ export const WORKS_ITEMS = [
       page: "",
     },
     description: "A program that imitates commands from OpenSSL",
+    repository: "https://github.com/Seojun-Park/42_projects/tree/main/ft_ssl",
   },
 ];
 
@@ -210,10 +229,30 @@ export const stackIcon = [
       "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/firebase.png?alt=media&token=3e5a60aa-372c-4575-aafe-ef680ee755b2",
   },
   {
-    title:"C",
+    title: "C",
     logo:
-    "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/fillit%2FC.png?alt=media&token=529c4741-0f93-4b87-b951-156e0929d72c"
-  }
+      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/fillit%2FC.png?alt=media&token=529c4741-0f93-4b87-b951-156e0929d72c",
+  },
+  {
+    title: "PHP",
+    logo:
+      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/camagru%2Fphp.png?alt=media&token=d02aae7f-d0e7-4e37-ab0f-430f0dccdc6b",
+  },
+  {
+    title: "Docker",
+    logo:
+      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/camagru%2Fdocker.png?alt=media&token=a4da9cf4-5b6d-413e-9da6-fbb2c0ab41d6",
+  },
+  {
+    title: "MariaDB",
+    logo:
+      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/camagru%2Fmariadb.png?alt=media&token=523465f7-50c6-4fb5-a588-0dd64fd1db36",
+  },
+  {
+    title: "HTML / CSS / JAVASCRIPT",
+    logo:
+      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/camagru%2Fhtml.png?alt=media&token=f0583a95-bf2e-44a7-a117-6e67555a7e78",
+  },
 ];
 
 export const githubLogo =
