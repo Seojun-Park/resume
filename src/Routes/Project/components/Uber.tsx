@@ -115,7 +115,7 @@ const Uber: React.FC<IProps> = ({ data }) => {
                 </S.Row>
             </S.Row>
             <S.Row>
-                <S.SubTitle>title....</S.SubTitle>
+                <S.SubTitle>Detail</S.SubTitle>
                 <S.Row>
                     <S.SubHeading>Get drivers near the user</S.SubHeading>
                     <S.Description>
