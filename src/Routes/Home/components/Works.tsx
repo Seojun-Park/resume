@@ -1,8 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Button from '../../../components/Button';
-import useScrollFadeIn from '../../../hooks/useScrollFadeIn';
 
 interface IStyle {
   image: string
@@ -10,89 +7,93 @@ interface IStyle {
 
 const S = {
   Wrapper: styled.div`
-    width: 100%;
-    max-width: 1180px;
+     width: 100%;
     margin: auto;
-    padding: 120px 0;
+    padding: 30px 0;
+    padding-left: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    @media (max-width: 376px){
-      padding: 60px 0;
-    }
-  `,
-  Label: styled.p`
-    display: inline-block;
-    ${props => props.theme.typography.label};
-    color: ${props => props.theme.palette.primary};
-    margin-bottom: 1rem;
-  `,
-  Title: styled.h2`
-    ${props => props.theme.typography.subtitle};
-    color: ${props => props.theme.palette.black};
-    text-align: center;
-    margin-bottom: 1rem;
-    @media (max-width:376px){
-      font-size:18px;
-    }
-  `,
-  Description: styled.p`
-    ${props => props.theme.typography.description};
-    color: ${props => props.theme.palette.black};
-    margin-bottom: 4rem;
-  `,
-  List: styled.ul`
-    width: 100%;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 4rem;
+    background-color:#EFF2F5;
     @media (max-width:376px){
-    flex-wrap:wrap;
+      padding: 60px auto;
+      margin:auto;
+      margin-top: 400px;
     }
   `,
-  ListItem: styled.li`
-    width: 380px;
-    box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.03);
-    border-radius: 0.5rem;
-    @media (max-width:376px){
-      width: 360px;
-      margin:0 auto;
-      margin-bottom: 1rem;
-    }
+  Line: styled.div`
+   width:7%;
+   height:20px;
+   border-bottom:2px solid black;
+   `,
+  Title: styled.div`
+   ${props => props.theme.typography.title};
+   `,
+  Row: styled.div`
+   margin-top:30px;
+   padding:0 10px;
+   display:grid;
+   grid-template-columns:repeat(2, 45%);
+   grid-template-rows:50%;
+   grid-auto-rows:50%;
+   justify-content:space-between;
+   align-items:space-around;
+   padding-right:30px;
+   `,
+  Description: styled.div`
+   ${props => props.theme.typography.heading};
+   color:${props => props.theme.palette.gray};
+   font-size:1.2rem;
+   `,
+  Card: styled.div`
+  width:100%;
+  height: 400px;
+  display:flex;
+  flex-direction:column;
   `,
-  ItemImage: styled.div<IStyle>`
-    width: 100%;
-    height: 280px;
-    border-radius: 0.5rem 0.5rem 0 0;
-    border-bottom: 1px solid #333;
-    background: no-repeat center/cover url(${props => props.image});
+  Preview: styled.div<IStyle>`
+  background: no-repeat center/cover url(${props => props.image});
+  width:100%;
+  height: 50%;
+  &:hover{
+    transition:0.2s linear;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  }
   `,
-  TextContainer: styled.div`
-    padding: 2rem;
+  Cover: styled.div`
+  width:45%;
+  height:50%;
+  background-color:${props => props.theme.palette.gray};
+  opacity:0.5;
+  position:absolute;
   `,
-  ItemTitle: styled.h3`
-    ${props => props.theme.typography.heading};
-    color: ${props => props.theme.palette.black};
-    margin-bottom: 0.75rem;
+
+  CardDesc: styled.div`
+  width:100%;
+  height:40%;
+  background-color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  padding:35px;
+  &:hover{
+    transition:0.2s linear;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  }
   `,
-  ItemLabel: styled.p`
-    ${props => props.theme.typography.caption};
-    color: ${props => props.theme.palette.gray};
-    font-weight: 400;
-    margin-bottom: 1.5rem;
+  DescTitle: styled.div`
+  ${props => props.theme.typography.subtitle};
+  font-size:2rem;
   `,
-  ItemDesciption: styled.p`
-    ${props => props.theme.typography.description};
-    margin-bottom: 1.5rem;
-  `,
-  TextButton: styled.button`
-    width: fit-content;
-    padding: 0;
-    ${props => props.theme.typography.textbutton};
-    color: ${props => props.theme.palette.secondary};
-    cursor: pointer;
-  `,
+  Desc: styled.div`
+  margin-top:30px;
+  ${props => props.theme.typography.description};
+  color: ${props => props.theme.palette.gray};
+ 
+  `
 };
 
 const WORKS_ITEMS = [
@@ -101,14 +102,14 @@ const WORKS_ITEMS = [
     title: 'Uber Clone',
     label: 'Dec, 2020',
     description:
-      'blabla ',
+      'Uber-like web app created in React JS / typescript',
   },
   {
     image: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/preview.gif?alt=media&token=c71434db-050e-4e55-aa55-89d6c464533f',
     title: 'Jinstagram',
     label: 'Jan, 2021',
     description:
-      'cloning this bla bla',
+      'Instagram-like web app created In React JS / typescript',
   },
   {
     image: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/1.png?alt=media&token=6f5eb9ae-55ef-4233-9d78-7c818c6bccf5',
@@ -120,37 +121,27 @@ const WORKS_ITEMS = [
 ];
 
 const Works = () => {
-  const animatedItem = {
-    0: useScrollFadeIn('left', 1),
-    1: useScrollFadeIn('left', 1, 0.2),
-    2: useScrollFadeIn('left', 1, 0.4),
-  };
 
   return (
-    <S.Wrapper>
-      <S.Label>My Recent Works</S.Label>
+    <S.Wrapper className={'projects'}>
       <S.Title>
-        See my personal projects and <br />
-        projects in école 42
+        Projects
       </S.Title>
-      <S.List>
-        {WORKS_ITEMS.map((item, index) => (
-          <S.ListItem key={item.title} {...animatedItem[index]}>
-            <S.ItemImage image={item.image} />
-            <S.TextContainer>
-              <S.ItemTitle>{item.title}</S.ItemTitle>
-              <S.ItemLabel>{item.label}</S.ItemLabel>
-              <S.ItemDesciption>{item.description}</S.ItemDesciption>
-              <Link to={`/project/${item.title}`}>
-                <S.TextButton>Read more</S.TextButton>
-              </Link>
-            </S.TextContainer>
-          </S.ListItem>
-        ))}
-      </S.List>
-      <Link to={'/projects'}>
-        <Button fill="outline">More Works</Button>
-      </Link>
+      <S.Line />
+      <S.Row>
+        {WORKS_ITEMS.map((item, idx) => {
+          return (
+            <S.Card key={idx}>
+              {/* <S.Cover /> */}
+              <S.Preview image={item.image} />
+              <S.CardDesc>
+                <S.DescTitle>{item.title}</S.DescTitle>
+                <S.Desc>{item.description}</S.Desc>
+              </S.CardDesc>
+            </S.Card>
+          )
+        })}
+      </S.Row>
     </S.Wrapper>
   );
 };

@@ -209,6 +209,11 @@ export const stackIcon = [
     logo:
       "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/firebase.png?alt=media&token=3e5a60aa-372c-4575-aafe-ef680ee755b2",
   },
+  {
+    title:"C",
+    logo:
+    "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/fillit%2FC.png?alt=media&token=529c4741-0f93-4b87-b951-156e0929d72c"
+  }
 ];
 
 export const githubLogo =

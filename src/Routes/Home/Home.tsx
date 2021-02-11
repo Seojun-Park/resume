@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
-import { Figure, AboutMe, Hero, Works } from './components'
+import { Figure, Intro, Hero, Works, Contact } from './components'
 import MoveTop from '../../components/MoveTop'
 
 const S = {
@@ -19,18 +19,20 @@ const S = {
 }
 
 const Home = () => {
+    const ref = useRef<HTMLDivElement>(null)
+
     return (
-        <S.Wrapper>
+        <S.Wrapper ref={ref}>
             <Helmet>
                 <title>Home</title>
             </Helmet>
-            <Header />
+            <Header homeref={ref} />
             <Hero />
-            <AboutMe />
+            <Intro />
             <Figure />
             <Works />
+            <Contact />
             <MoveTop />
-            {/* <Contact /> */}
             <Footer />
         </S.Wrapper>
     )

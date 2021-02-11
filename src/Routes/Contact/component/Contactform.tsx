@@ -75,7 +75,7 @@ const Contactform = () => {
     const [body, bodyOnchange] = useInput('');
 
     return (
-        <S.Wrapper>
+        <S.Wrapper className={"contact"}>
             <S.Container>
                 <S.Row>
                     <S.Title>Contact</S.Title>

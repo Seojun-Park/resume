@@ -94,7 +94,7 @@ const S = {
 
 const ProjectBody = () => {
     return (
-        <S.Wrapper>
+        <S.Wrapper className="projects">
             <S.Title>Project List</S.Title>
             <S.Container>
                 {WORKS_ITEMS.map((item, index) => {

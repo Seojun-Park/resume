@@ -1,5 +1,5 @@
 import React from 'react'
-import { githubLogo } from '../../../components/AllProjects'
+import { githubLogo, stackIcon } from '../../../components/AllProjects'
 import { S } from './styles'
 
 interface IProps {
@@ -27,6 +27,12 @@ const Fillit: React.FC<IProps> = ({ data }) => {
                     The goal of this project is to fill in a map of empty spaces.
                     Each valid space is represented by a dot like below examples:
                 </S.Description>
+                <S.StackBox>
+                    <S.Col>
+                        <S.Stack src={stackIcon[6].logo} alt="C" />
+                        <S.ImageDesc>C</S.ImageDesc>
+                    </S.Col>
+                </S.StackBox>
                 <S.MapBox>
                     <S.Map src={data.images.map} alt="map" />
                     <S.ImageDesc>4x4 grid with a new line character at the end of each line</S.ImageDesc>

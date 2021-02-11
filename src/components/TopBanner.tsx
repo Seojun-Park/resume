@@ -5,18 +5,18 @@ interface IProps {
   title?: string;
 }
 
-const bgImage = [
-  {
-    title: "profile",
-    image: ""
-  }, {
-    title: "project",
-    image: ""
-  },{
-    title:"contact",
-    image:""
-  }
-]
+// const bgImage = [
+//   {
+//     title: "profile",
+//     image: ""
+//   }, {
+//     title: "project",
+//     image: ""
+//   },{
+//     title:"contact",
+//     image:""
+//   }
+// ]
 
 const S = {
   Background: styled.section`

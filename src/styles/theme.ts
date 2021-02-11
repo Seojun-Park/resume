@@ -64,7 +64,7 @@ const theme: IProps = {
   palette: {
     primary: "#0063FF",
     secondary: "#0a8080",
-    background: "#f8f5f2",
+    background: "#151619",
     white: "#ffffff",
     black: "#222525",
     lightgray: "#e2e2e2",
