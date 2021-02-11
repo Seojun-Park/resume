@@ -40,6 +40,10 @@ const S = {
     color: ${props => props.theme.palette.black};
     margin-bottom: 1rem;
   `,
+  SubTitle: styled.h3`
+  ${props => props.theme.typography.heading};
+  `
+  ,
   Description: styled.p`
     ${props => props.theme.typography.description};
     color: ${props => props.theme.palette.black};
@@ -129,14 +133,25 @@ const ProfileBody = () => {
         <S.Title>About me</S.Title>
         <S.Description>
           Hello! I'm Jin. Currently, studying coding at école 42 Paris.<br />
-          I have started my career as Marketing Export for 3 years in Seoul, South Korea and Frankfure, Germany<br />
+          I have started my career as Marketing Export for 3 years in Seoul, South Korea and Frankfurt, Germany<br />
           However, I found myself loosing my passion for my job and my behavior has being became a passive person.<br />
-          So, I dicided quitting the job for my future, so now, I'm studying coding since 2019.<br />
+          So, I dicided quitting the job to make further step.<br />
           <br />
-          
-
+          Studying in 42 curriculm which pushes studens to the limit, my problem solving
         </S.Description>
       </S.IntroRow>
+      <S.IntroRow>
+        <S.Title>Work Experience</S.Title>
+        <S.Description>
+          Hello! I'm Jin. Currently, studying coding at école 42 Paris.<br />
+          I have started my career as Marketing Export for 3 years in Seoul, South Korea and Frankfurt, Germany<br />
+          However, I found myself loosing my passion for my job and my behavior has being became a passive person.<br />
+          So, I dicided quitting the job to make further step.<br />
+          <br />
+          Studying in 42 curriculm which pushes studens to the limit, my problem solving
+        </S.Description>
+      </S.IntroRow>
+      <a href={`https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/Resume_Jinpark.pdf?alt=media&token=c0305e79-ab37-4d73-98ba-2151196ceb61`} download rel="noreferrer" target="_blank">Download resume</a>
     </S.Wrapper>
   );
 };
