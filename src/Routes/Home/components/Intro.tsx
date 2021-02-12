@@ -40,6 +40,7 @@ const S = {
   ${props => props.theme.typography.heading};
   color:${props => props.theme.palette.gray};
   font-size:1.2rem;
+  font-family: "Archivo", sans-serif;
   `,
   InnerRow: styled.div`
   display:flex;
@@ -100,7 +101,7 @@ const Intro = () => {
         ABOUT ME
       </S.SubTitle>
       <S.Row>
-        <S.Description>
+        <S.Description style={{ lineHeight: 1.5 }}>
           Hi! I'm Jin 👋 <br />
           Currently, I'm studying web development in école 42 Paris<br />
           I code with passion and bring the idea to life.<br />

@@ -35,27 +35,27 @@ const S = {
   margin:0 auto;
    margin-top:30px;
    /* padding:0 10px; */
-   min-width:1100px;
-   display:grid;
-   grid-template-columns:repeat(2, 45%);
-   grid-template-rows:50%;
-   grid-auto-rows:50%;
-   justify-content:center;
-   align-items:center;
-   /* justify-content:space-between; */
-   /* align-items:space-around; */
+   width:90%;
+   min-width:600px;
+   max-width:1300px;
+   display:flex;
+   flex-direction:row;
    padding-right:30px;
+   flex-wrap:wrap;
+   justify-content:space-between;
    `,
   Description: styled.div`
    ${props => props.theme.typography.heading};
    color:${props => props.theme.palette.gray};
    font-size:1.2rem;
    `,
+  ExtendedLink: styled(Link)`
+  width:100%;
+  max-width:400px;
+  `,
   Card: styled.div`
   width:100%;
   height: 600px;
-  max-width: 600px;
-  min-width:500px;
   display:flex;
   flex-direction:column;
   margin-top:40px;
@@ -74,28 +74,23 @@ const S = {
     transition:0.2s linear;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-  }
-  `,
-  Cover: styled.div`
-  width:45%;
-  height:70%;
-  background-color:${props => props.theme.palette.gray};
-  opacity:0.5;
-  position:absolute;
-  `,
-
+  }`,
   CardDesc: styled.div`
   width:100%;
-  min-width:500px;
-  height:60%;
+  /* min-width:500px; */
+  height:30%;
   background-color:white;
   display:flex;
   flex-direction:column;
   justify-content:center;
-  align-items:flex-start;
+  align-items:center;
   padding:35px;
   color:black;
- 
+  &:hover{
+    background-color:${props => props.theme.palette.primary};
+    transition:0.2s linear;
+    color:white;
+}
   `,
   DescTitle: styled.div`
   ${props => props.theme.typography.subtitle};
@@ -104,8 +99,7 @@ const S = {
   Desc: styled.div`
   margin-top:30px;
   ${props => props.theme.typography.description};
-  color: ${props => props.theme.palette.gray};
- 
+  /* color: ${props => props.theme.palette.gray}; */
   `,
   Bottom: styled.div`
   display:flex;
@@ -136,21 +130,21 @@ const S = {
 const WORKS_ITEMS = [
   {
     image: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/up.gif?alt=media&token=6e6b56c0-9097-46fb-b720-96b57ae93ec4',
-    title: 'Uber Clone',
+    title: 'UBER CLONE',
     label: 'Dec, 2020',
     description:
       'Uber-like web app created in React JS / typescript',
   },
   {
     image: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/preview.gif?alt=media&token=c71434db-050e-4e55-aa55-89d6c464533f',
-    title: 'Jinstagram',
+    title: 'JINSTAGRAM',
     label: 'Jan, 2021',
     description:
       'Instagram-like web app created In React JS / typescript',
   },
   {
     image: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/1.png?alt=media&token=6f5eb9ae-55ef-4233-9d78-7c818c6bccf5',
-    title: 'Camagru',
+    title: 'CAMAGRU',
     label: 'Oct, 2020',
     description:
       'the first 42 web project',
@@ -168,16 +162,15 @@ const Works = () => {
       <S.Row>
         {WORKS_ITEMS.map((item, idx) => {
           return (
-            <Link to={`/project/${item.title}`} style={{ textDecoration: "none" }} key={idx}>
+            <S.ExtendedLink to={`/project/${item.title}`} style={{ textDecoration: "none" }} key={idx}>
               <S.Card>
-                {/* <S.Cover /> */}
                 <S.Preview image={item.image} />
                 <S.CardDesc>
                   <S.DescTitle>{item.title}</S.DescTitle>
                   <S.Desc>{item.description}</S.Desc>
                 </S.CardDesc>
               </S.Card>
-            </Link>
+            </S.ExtendedLink>
           )
         })}
       </S.Row>

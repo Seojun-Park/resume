@@ -10,8 +10,10 @@ padding-left: 30px;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-background-color: #485461;
-background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);`,
+background-color:white;
+/* background-color: #485461; */
+/* background-image: linear-gradient(315deg, #485461 0%, #28313b 74%); */
+`,
     Line: styled.div`
 width:7%;
 height:20px;
@@ -29,10 +31,11 @@ align-items:center;
  ${props => props.theme.typography.heading};
   font-weight:600;
   margin-top: 50px;
-  color:white;
+  /* color:white; */
 `,
     Circle: styled.div`
-border:4px solid white;
+border:4px solid ${props => props.theme.palette.primary};
+background-color:${props => props.theme.palette.primary};
 padding: 4px 15px;
 border-radius:5rem;
 display:flex;
@@ -48,7 +51,7 @@ ${props => props.theme.typography.description};
 }`,
     Description: styled.div`
   ${props => props.theme.typography.heading};
-  color:${props => props.theme.palette.lightgray};
+  color:${props => props.theme.palette.gray};
   font-size:1.2rem;
   margin:20px;
   `
@@ -59,7 +62,7 @@ const Contact = () => {
         <S.Wrapper className="contact">
             <S.Container>
                 <S.Title>
-                    Contact Me
+                    CONTACT ME
                 </S.Title>
                 <S.Description>
                     I will reply you as soon as possible :D

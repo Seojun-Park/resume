@@ -17,7 +17,7 @@ const S = {
     width:70%;
     min-height: 50%;
     background-color:white;
-    border-radius:10px;
+    /* border-radius:10px; */
     max-width: 800px;
     min-width: 600px;
     padding: 30px;

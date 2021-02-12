@@ -74,47 +74,47 @@ const theme: IProps = {
   },
   typography: {
     title: {
-      fontFamily: '"Montserrat", sans-serif',
+      fontFamily: '"Archivo", sans-serif',
       fontSize: "3rem",
       fontWeight: 600,
     },
     subtitle: {
-      fontFamily: '"Montserrat", sans-serif',
+      fontFamily: '"Archivo", sans-serif',
       fontSize: "2.5rem",
       fontWeight: 600,
       lineHeight: 1.1,
     },
     heading: {
-      fontFamily: '"Montserrat", sans-serif',
+      fontFamily: '"Archivo", sans-serif',
       fontSize: "1.5rem",
       fontWeight: 500,
     },
     subheading: {
-      fontFamily: '"Montserrat", sans-serif',
+      fontFamily: '"Archivo", sans-serif',
       fontSize: "1.25rem",
       fontWeight: 700,
     },
     label: {
-      fontFamily: '"Montserrat", sans-serif',
+      fontFamily: '"Archivo", sans-serif',
       fontWeight: 700,
     },
     description: {
-      fontFamily: '"Montserrat", sans-serif',
+      fontFamily: '"Archivo", sans-serif',
       lineHeight: 1.5,
     },
     body: {
-      fontFamily: '"Montserrat", sans-serif',
+      fontFamily: '"Archivo", sans-serif',
     },
     caption: {
-      fontFamily: '"Montserrat", sans-serif',
+      fontFamily: '"Archivo", sans-serif',
       fontSize: "0.875rem",
     },
     button: {
-      fontFamily: '"Montserrat", sans-serif',
+      fontFamily: '"Archivo", sans-serif',
       fontSize: "0.875rem",
     },
     textbutton: {
-      fontFamily: '"Montserrat", sans-serif',
+      fontFamily: '"Archivo", sans-serif',
       fontWeight: 700,
       fontSize: "1rem",
       border: 0,
