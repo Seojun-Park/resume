@@ -42,9 +42,9 @@ const S = {
     display:grid;
     padding-top: 35px;
     padding-bottom: 35px;
-    grid-template-columns:repeat(3, 30%);
-    grid-template-rows:230px;
-    grid-auto-rows: 230px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
     justify-content:space-around;
     @media (max-width:376px){
         width:95%;
@@ -54,13 +54,14 @@ const S = {
     }
     `,
     Project: styled(Link) <IProps>`
+    width:260px;
+    height:250px;
     display:flex;
     justify-content:center;
     align-items:center;
-    /* border-radius:1rem; */
     margin-bottom: 25px;
+    margin-right:8px;
     text-decoration:none;
-    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); */
     cursor: pointer;
     background: no-repeat center/cover url(${props => props.preview});
     &:hover{
@@ -76,7 +77,6 @@ const S = {
         align-items:center;
         width:100%;
         height: 100%;
-        border-radius: 1rem;
         transition:0.2s linear;
         }
     }
