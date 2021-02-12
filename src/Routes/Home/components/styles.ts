@@ -3,15 +3,12 @@ import styled from "styled-components";
 export const S = {
   Wrapper: styled.div`
     width: 100%;
-    height: 100vh;
-    background-color: ${(props) => props.theme.palette.background};
+    height: 94vh;
+    background-color: ${(props) => props.theme.palette.primary};
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-collapse: collapse;
-    /* position: absolute; */
-    /* top: 0; */
   `,
   Container: styled.div`
     display: flex;
@@ -25,10 +22,15 @@ export const S = {
     ${(props) => props.theme.typography.subtitle};
     color: white;
     text-align: center;
+    text-transform: capitalize;
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    /* font-family: "Montserrat", sans-serif; */
+    font-size: 5rem;
   `,
   TitleDesc: styled.div`
     ${(props) => props.theme.typography.description};
-    color: ${(props) => props.theme.palette.gray};
+    color: ${(props) => props.theme.palette.white};
     margin-top: 20px;
     text-align: center;
   `,

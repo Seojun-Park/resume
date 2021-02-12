@@ -24,7 +24,7 @@ const S = {
   `,
   Number: styled.span`
     ${(props) => props.theme.typography.subtitle};
-    color: ${(props) => props.theme.palette.secondary};
+    color: ${(props) => props.theme.palette.primary};
     font-size: 3rem;
     margin-bottom: 1rem;
     @media (max-width:376px){
@@ -33,7 +33,7 @@ const S = {
   `,
   Unit: styled.span`
     ${(props) => props.theme.typography.subtitle};
-    color: ${(props) => props.theme.palette.secondary};
+    color: ${(props) => props.theme.palette.primary};
     font-size: 3rem;
     margin-bottom: 1rem;
     @media (max-width:376px){

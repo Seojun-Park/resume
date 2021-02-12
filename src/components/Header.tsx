@@ -21,12 +21,12 @@ const S = {
       z-index: 1000;
       transition: all 0.2s ease-in-out;
       background-color: ${({ isScroll, theme }) =>
-            isScroll ? '#111111' : '#111111'};
+            isScroll ? '#111111' : theme.palette.primary};
       box-shadow: ${props =>
             props.isScroll ? '0 0 16px 8px rgba(0, 0, 0, 0.03)' : 'none'};
     `,
     Header: styled.header<StyleProps>`
-      width: 90%;
+      width: 98%;
       transition: all 0.2s ease-in-out;
       height: ${props => (props.isScroll ? '60px' : '70px')};
       display: flex;

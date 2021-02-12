@@ -18,6 +18,10 @@ const S = {
     padding-top:50px;
     min-height:100vh;
     background-color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     @media (max-width: 376px){
         margin-top: 250px;
     }
@@ -53,10 +57,10 @@ const S = {
     display:flex;
     justify-content:center;
     align-items:center;
-    border-radius:1rem;
+    /* border-radius:1rem; */
     margin-bottom: 25px;
     text-decoration:none;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); */
     cursor: pointer;
     background: no-repeat center/cover url(${props => props.preview});
     &:hover{
@@ -96,7 +100,7 @@ const S = {
 const ProjectBody = () => {
     return (
         <S.Wrapper className="projects">
-            <S.Title>Project List</S.Title>
+            <S.Title>PROJECT LIST</S.Title>
             <S.Line />
             <S.Container>
                 {WORKS_ITEMS.map((item, index) => {

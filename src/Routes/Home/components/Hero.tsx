@@ -18,16 +18,11 @@ const Hero = () => {
     <S.Wrapper>
       <S.Container>
         <S.Title>
-          👨🏻‍💻<br />
-          Jin Park<br />
-          WebDeveloper
+          <span style={{ fontSize: '3rem' }}>👨🏻‍💻</span><br />
+          JIN PARK<br />
+          <div style={{ width: 100, height: 2 }} />
+          WEB DEVELOPER
           </S.Title>
-        <S.TitleDesc>
-          Hi! I'm Jin 👋 <br />
-          Currently, I'm studying web development in école 42 Paris<br />
-          I code with passion and bring the idea to life.<br />
-          Powered by VS Code and coffee
-        </S.TitleDesc>
       </S.Container>
       <S.Bottom>
         <Arrow />

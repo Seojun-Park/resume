@@ -14,7 +14,8 @@ const S = {
     padding-left: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items:center;
     background-color:#EFF2F5;
     @media (max-width:376px){
       padding: 60px auto;
@@ -31,14 +32,18 @@ const S = {
    ${props => props.theme.typography.title};
    `,
   Row: styled.div`
+  margin:0 auto;
    margin-top:30px;
-   padding:0 10px;
+   /* padding:0 10px; */
+   min-width:1100px;
    display:grid;
    grid-template-columns:repeat(2, 45%);
    grid-template-rows:50%;
    grid-auto-rows:50%;
-   justify-content:space-between;
-   align-items:space-around;
+   justify-content:center;
+   align-items:center;
+   /* justify-content:space-between; */
+   /* align-items:space-around; */
    padding-right:30px;
    `,
   Description: styled.div`
@@ -50,6 +55,7 @@ const S = {
   width:100%;
   height: 600px;
   max-width: 600px;
+  min-width:500px;
   display:flex;
   flex-direction:column;
   margin-top:40px;
@@ -80,6 +86,7 @@ const S = {
 
   CardDesc: styled.div`
   width:100%;
+  min-width:500px;
   height:60%;
   background-color:white;
   display:flex;
@@ -107,7 +114,9 @@ const S = {
   margin-top:50px;
   `,
   Circle: styled.div`
-   border:4px solid black;
+  background-color:${props => props.theme.palette.primary};
+   border:4px solid ${props => props.theme.palette.primary};
+   color:white;
    padding: 4px 15px;
    border-radius:5rem;
    display:flex;
@@ -153,7 +162,7 @@ const Works = () => {
   return (
     <S.Wrapper className={'projects'}>
       <S.Title>
-        Projects
+        PROJECTS
       </S.Title>
       <S.Line />
       <S.Row>

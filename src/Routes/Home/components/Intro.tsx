@@ -11,7 +11,9 @@ const S = {
     padding-left: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content:center;
+    align-items:center;
+    font-family: 'Montserrat', sans-serif;
     @media (max-width:376px){
       padding: 60px auto;
       margin:auto;
@@ -45,7 +47,9 @@ const S = {
   margin-top:30px;
   `,
   Circle: styled.div`
-  border:4px solid black;
+  border:4px solid ${props => props.theme.palette.primary};
+  background-color:${props => props.theme.palette.primary};
+  color:white;
   padding: 4px 15px;
   border-radius:5rem;
   display:flex;
@@ -89,29 +93,21 @@ const Intro = () => {
   return (
     <S.Wrapper className="aboutme">
       <S.Title>
-        Intro
+        INTRO
       </S.Title>
       <S.Line />
       <S.SubTitle>
-        About me
+        ABOUT ME
       </S.SubTitle>
       <S.Row>
         <S.Description>
-          I'm lalala
+          Hi! I'm Jin 👋 <br />
+          Currently, I'm studying web development in école 42 Paris<br />
+          I code with passion and bring the idea to life.<br />
+          Powered by VS Code and coffee
         </S.Description>
-        <S.InnerRow>
-          <Link to='/profile' style={{ textDecoration: 'none', color: 'black' }}>
-            <S.Circle>More about me</S.Circle>
-          </Link>
-        </S.InnerRow>
       </S.Row>
-      <S.SubTitle>
-        Social Media
-      </S.SubTitle>
       <S.Row>
-        <S.Description>
-          lala
-        </S.Description>
         <S.InnerRow>
           {social.map((item, idx) => {
             return (
@@ -122,6 +118,9 @@ const Intro = () => {
               </S.HyperLink>
             )
           })}
+          <Link to='/profile' style={{ textDecoration: 'none', color: 'black' }}>
+            <S.Circle>ABOUT ME</S.Circle>
+          </Link>
         </S.InnerRow>
       </S.Row>
     </S.Wrapper >

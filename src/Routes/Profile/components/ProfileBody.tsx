@@ -42,14 +42,15 @@ const S = {
   `,
   SubTitle: styled.h3`
   ${props => props.theme.typography.heading};
-  margin:20px;
+  margin:20px 0;
+  margin-bottom:40px;
   `
   ,
   Description: styled.p`
     ${props => props.theme.typography.description};
     color: ${props => props.theme.palette.black};
     margin-bottom: 2rem;
-    margin-left:20px;
+    /* margin-left:20px; */
     @media (max-width:376px){
       margin-top: 20px;
       background-color: white;
@@ -80,8 +81,8 @@ const S = {
     cursor: pointer;
   `,
   Image: styled.div`
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     background: no-repeat center/cover url('https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/profile.jpeg?alt=media&token=e0ab66cc-4252-4938-90e8-800da11720fa');
     @media (max-width:376px){
       display:none;
@@ -95,8 +96,8 @@ const S = {
   ExpRow: styled.div`
   display:flex;
   flex-direction:column;
-  margin-left:20px;
-  margin-right:20px;
+  /* margin-left:20px; */
+  /* margin-right:20px; */
   `,
   Line: styled.div`
   width:100%;
@@ -163,10 +164,11 @@ const ProfileBody = () => {
             Hi I'm Jin <br />
           Nice to meet you
         </S.Title>
-          <S.Description>
-            Since beginning my journey as a web developer student about 2 years ago,<br />
-          I've done many projects in C, PHP and Javascript in école 42.<br />
-          I like to code things from scratch, and enjoy bringing ideas to life in the browser.
+          <S.Description style={{ marginRight: 30 }}>
+            Since beginning my journey as a web developer student about<br />
+            2 years ago,I've done many projects in C, PHP and Javascript<br />
+            in école 42.I like to code things from scratch, and enjoy bringing ideas to life
+          in the browser.
           {/* problem at a time. */}
           </S.Description>
           <S.List>

@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
   ${reset};
   *, *::before, *::after {
     box-sizing: border-box;
-    font-family: 'Noto Sans', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
   }
 `;
 
