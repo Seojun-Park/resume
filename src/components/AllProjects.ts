@@ -128,8 +128,9 @@ export const WORKS_ITEMS = [
       example5:
         "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/fillit%2Fexample5.png?alt=media&token=8fa3b054-2c01-4ae8-9907-37303bdf3cfd",
     },
-    description:
-      "Algorithm Practice - Fit tetris pieces into the smallest square possible",
+    description: `Algorithm Practice - Fit tetris pieces into the smallest square possible.
+      The goal of this project is to fill in a map of empty spaces with given classic tetriminos.
+      `,
     repository: "https://github.com/Seojun-Park/42_projects/tree/main/fillIt",
   },
   {
@@ -161,9 +162,14 @@ export const WORKS_ITEMS = [
         secondQueen:
           "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/nqueens%2Fsecond-queen-position.jpg?alt=media&token=11a98008-e91b-4a99-88c8-e98da56b578d",
       },
+      code:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/nqueens%2Fnqeencode.png?alt=media&token=68a45bc8-e7fe-4997-a7f7-1d8fd50eb02f",
     },
-    description:
-      "N-Queens puzzle is well-known puzzle as an example of back tracking algorithm",
+    description: `N-Queens puzzle is well-known puzzle as an example of back tracking algorithm.
+      The eight queens puzzle is the problem of placing eight chess queens on an 8×8 chessboard,
+      so that no two queens threaten each other;
+      thus, a solution requires that no two queens share the same row, column, or diagonal.
+      `,
     repository: "https://github.com/Seojun-Park/N_queens_game",
   },
   {
@@ -189,6 +195,20 @@ export const WORKS_ITEMS = [
     },
     description: "A program that imitates commands from OpenSSL",
     repository: "https://github.com/Seojun-Park/42_projects/tree/main/ft_ssl",
+  },
+  {
+    preview:
+      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/filler%2Ffiller.gif?alt=media&token=257664bd-4ff3-4d99-beb6-6c2d370bdb2e",
+    title: "filler",
+    thumbnail: "tbu",
+    label: "1010",
+    images: {
+      page: "",
+    },
+    description: `Filler is a 42 project to learn about Algorithm. The goal is to be the last player to put a piece, that can have any size and shape, sent by the Filler Virtual Machine.
+      To put a piece it needs to overlap one player's cell and only one and not overlap any of the challengers cells.
+      `,
+    repository: "https://github.com/Seojun-Park/42_projects/tree/main/filler",
   },
 ];
 
@@ -231,7 +251,7 @@ export const stackIcon = [
   {
     title: "C",
     logo:
-      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/fillit%2FC.png?alt=media&token=529c4741-0f93-4b87-b951-156e0929d72c",
+      "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/C.png?alt=media&token=98ce09af-c70b-461f-befe-96e8d9178d30",
   },
   {
     title: "PHP",

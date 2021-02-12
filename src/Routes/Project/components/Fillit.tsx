@@ -23,20 +23,33 @@ const Fillit: React.FC<IProps> = ({ data }) => {
                 <S.Link href={data.repository} target="_blank">Link</S.Link>
             </S.Head>
             <S.Row>
-                <S.SubTitle>Overview</S.SubTitle>
-                <S.Description>
-                    The goal of this project is to fill in a map of empty spaces.
-                    Each valid space is represented by a dot like below examples:
-                </S.Description>
+                <S.SubTitle>STACKS</S.SubTitle>
                 <S.StackBox>
                     <S.Col>
-                        <S.Stack src={stackIcon[6].logo} alt="C" />
+                        <S.Stack src={stackIcon[7].logo} alt="C" />
                         <S.ImageDesc>C</S.ImageDesc>
                     </S.Col>
                 </S.StackBox>
+                <S.SubTitle>USAGE</S.SubTitle>
+                <S.Usage style={{ marginBottom: 30 }}>
+                    $&gt; make<br />
+                    $&gt; ./fillit smaples/test_8<br /><br />
+                    <span style={{ fontWeight: 600 }}>Result:</span><br />
+                    .AABB..<br />
+                    AACCB..<br />
+                    .CC.BDD<br />
+                    .EE.DD.<br />
+                    EEFFGG.<br />
+                    .FFGGHH<br />
+                    ....HH.<br />
+                </S.Usage>
+                <S.SubTitle>OVERVIEW</S.SubTitle>
                 <S.MapBox>
                     <S.Map src={data.images.map} alt="map" />
-                    <S.ImageDesc>4x4 grid with a new line character at the end of each line</S.ImageDesc>
+                    <S.ImageDesc>
+                        Each valid space is represented by a dot<br />
+                        4x4 grid with a new line character at the end of each line
+                    </S.ImageDesc>
                 </S.MapBox>
                 <S.Description>
                     Every piece of tetrimino must follow these rules:<br />
@@ -52,23 +65,15 @@ const Fillit: React.FC<IProps> = ({ data }) => {
                     </S.ImageBox>
                     <S.ImageDesc>All tetriminos must be part of 19 classic tetris piece</S.ImageDesc>
                 </S.MapBox>
-            </S.Row>
-            <S.Row>
-                <S.SubTitle>Usage</S.SubTitle>
-                <S.Usage>
-                    $&gt; ~make
-                </S.Usage>
-            </S.Row>
-            <S.Row>
-                <S.SubTitle>
-                    Limitation
-            </S.SubTitle>
+                <S.SubHeading>
+                    LIMITATION
+                </S.SubHeading>
                 <S.Description>
                     Allowed functions for this project are only <S.Bold>Open, close, exit, read, write, malloc</S.Bold> and <S.Bold>free</S.Bold>
                 </S.Description>
             </S.Row>
             <S.Row>
-                <S.SubTitle>Solution</S.SubTitle>
+                <S.SubTitle>SOLUTION</S.SubTitle>
                 <S.SubHeading>Step 1</S.SubHeading>
                 <S.Description>
                     Check the input piece file(a block of 4 lines) and check for the length of the line and<br />

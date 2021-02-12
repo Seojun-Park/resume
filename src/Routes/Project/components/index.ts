@@ -6,3 +6,4 @@ export { default as Camagru } from "./Camagru";
 export { default as FtSSL } from "./FtSSL";
 export { default as Uber } from "./Uber";
 export { default as Jinstagram } from "./Jinstagram";
+export { default as Filler } from "./Filler";

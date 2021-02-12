@@ -20,10 +20,12 @@ export const S = {
   `,
   Link: styled.a`
     padding-left: 10px;
+    padding-top: 10px;
+    font-size: 18px;
   `,
   Row: styled.div`
-    padding-left: 15px;
     margin: 20px 0;
+
     @media (max-width: 376px) {
       margin: 15px 0;
       padding: 0;
@@ -31,6 +33,7 @@ export const S = {
   `,
   Title: styled.h4`
     ${(props) => props.theme.typography.subtitle};
+    font-family: "Archivo", sans-serif;
     @media (max-width: 376px) {
       font-size: 2rem;
     }
@@ -47,7 +50,6 @@ export const S = {
   `,
   SubHeading: styled.h4`
     ${(props) => props.theme.typography.subheading};
-    padding-left: 20px;
     @media (max-width: 376px) {
       font-size: 1rem;
       padding: 0px;
@@ -68,7 +70,6 @@ export const S = {
   `,
   Description: styled.p`
     ${(props) => props.theme.typography.description};
-    padding-left: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
     @media (max-width: 376px) {

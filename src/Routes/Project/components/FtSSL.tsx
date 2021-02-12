@@ -22,7 +22,7 @@ const FtSSL: React.FC<IProps> = ({ data }) => {
                 <S.Link href={data.repository} target="_blank">Link</S.Link>
             </S.Head>
             <S.Row>
-                <S.SubTitle>Overview</S.SubTitle>
+                <S.SubTitle>OVERVIEW</S.SubTitle>
                 <S.Description>
                     A miniature implementation of openssl implementing several hashing algorithms, namely:<br />
                     <S.Bold>md5</S.Bold> / <S.Bold>sha224</S.Bold> / <S.Bold>sha255</S.Bold> / <S.Bold>sha512</S.Bold><br /><br />
@@ -34,7 +34,7 @@ const FtSSL: React.FC<IProps> = ({ data }) => {
                 </S.Description>
             </S.Row>
             <S.Row>
-                <S.SubTitle>Usage</S.SubTitle>
+                <S.SubTitle>USAGE</S.SubTitle>
                 <S.Usage>
                     To run the program, first run make, and then ./ssl with the appropriate command.<br /><br />
                     $&gt; echo "echo" | ./ssl md5<br />
@@ -52,7 +52,7 @@ const FtSSL: React.FC<IProps> = ({ data }) => {
                 </S.Usage>
             </S.Row>
             <S.Row>
-                <S.SubTitle>How it works</S.SubTitle>
+                <S.SubTitle>HOW IT WORKS</S.SubTitle>
                 <S.SubHeading>MD5</S.SubHeading>
                 <S.Row>
                     <S.Description>

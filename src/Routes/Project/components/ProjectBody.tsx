@@ -1,7 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { Fillit, Libft, NQueen, Camagru, FtSSL, Uber, Jinstagram } from '.'
+import {
+    Fillit,
+    Libft,
+    NQueen,
+    Camagru,
+    FtSSL,
+    Uber,
+    Jinstagram,
+    Filler
+} from '.'
 
 interface IProps {
     data: {
@@ -31,6 +40,7 @@ const S = {
     `,
     Title: styled.div`
     ${props => props.theme.typography.title};
+    text-transform:uppercase;
     `,
     Line: styled.div`
      width:7%;
@@ -75,11 +85,18 @@ const S = {
     Link: styled(Link)`
     /* padding:20px; */
     margin:20px;
+    color:black;
+    &:hover{
+        transition:0.2s linear;
+        color:${props => props.theme.palette.lightgray};
+    }
     @media (max-width:376px){
         display:none;
     }
     `
 }
+
+const Arrow = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" /></svg>
 
 const ProjectBody: React.FC<IProps> = ({ data }) => {
     const handlePresent = (title: string) => {
@@ -98,6 +115,8 @@ const ProjectBody: React.FC<IProps> = ({ data }) => {
                 return <Uber data={data} />
             case 'Jinstagram':
                 return <Jinstagram data={data} />
+            case 'filler':
+                return <Filler data={data} />
             default:
                 return;
         }
@@ -106,7 +125,7 @@ const ProjectBody: React.FC<IProps> = ({ data }) => {
         <S.Wrapper>
             <S.Title>{data.title}</S.Title>
             <S.Line />
-            <S.Link to="/projects" style={{ textDecoration: "none", color: 'black' }}>Go back to project list</S.Link>
+            <S.Link to="/projects" style={{ textDecoration: "none" }}><Arrow />{" "}BACK</S.Link>
             <S.Overview>
                 <S.Preview image={data.preview} />
                 <S.Description>{data.description}</S.Description>

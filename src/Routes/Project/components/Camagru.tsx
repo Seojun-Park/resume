@@ -48,7 +48,7 @@ const Camagru: React.FC<IProps> = ({ data }) => {
                     - Create an account<br />
                     - Modify user's private data<br />
                     - Create custom pictures using user's webcam or pictures from user's device,<br />
-                    and when the picture has been saved everyone can see the pictures<br />
+                    &nbsp;&nbsp;and when the picture has been saved everyone can see the pictures<br />
                     - Delete uploaded pictures
                     - Connected users are able to like a picture or comment
                     - Responsive web design
@@ -87,7 +87,9 @@ const Camagru: React.FC<IProps> = ({ data }) => {
                         <S.Image src={data.images.upload} alt="upload" />
                         <S.Image src={data.images.camera} alt="camera" />
                     </S.ImageBox>
-                    <S.ImageDesc>Description</S.ImageDesc>
+                    <S.ImageDesc>
+                        User can only upload a jpg or png type of image and put any sticker inth list on the uploaded or taken image.<br />
+                    </S.ImageDesc>
                 </S.MapBox>
             </S.Row>
             <S.Row>
@@ -97,7 +99,10 @@ const Camagru: React.FC<IProps> = ({ data }) => {
                         <S.Image src={data.images.gallery} alt="gallery" />
                         <S.Image src={data.images.comment} alt="comment" />
                     </S.ImageBox>
-                    <S.ImageDesc>Description</S.ImageDesc>
+                    <S.ImageDesc>
+                        Everyone can see the uploaded post even without login.<br />
+                        However, to like or to comment to the post, log in is neccessary.
+                    </S.ImageDesc>
                 </S.MapBox>
             </S.Row>
             <S.Row>
@@ -107,7 +112,10 @@ const Camagru: React.FC<IProps> = ({ data }) => {
                         <S.Image src={data.images.profile} alt="profile" />
                         <S.Image src={data.images.modify} alt="modify" />
                     </S.ImageBox>
-                    <S.ImageDesc>description</S.ImageDesc>
+                    <S.ImageDesc>
+                        User can edit its own profile data such as Username, email, name and passord.<br />
+                        If the user changes the username, the user should log in with the changed username for further login.
+                    </S.ImageDesc>
                 </S.MapBox>
             </S.Row>
         </S.Container>

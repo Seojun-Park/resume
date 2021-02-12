@@ -22,12 +22,7 @@ const NQueen: React.FC<IProps> = ({ data }) => {
                 <S.Link href={data.repository} target="_blank">Link</S.Link>
             </S.Head>
             <S.Row>
-                <S.SubTitle>Overview</S.SubTitle>
-                <S.Description>
-                    The eight queens puzzle is the problem of placing eight chess queens on an 8×8 chessboard <br />
-                so that no two queens threaten each other;<br />
-                thus, a solution requires that no two queens share the same row, column, or diagonal.
-                </S.Description>
+                <S.SubTitle>OVERVIEW</S.SubTitle>
                 <S.MapBox>
                     <S.ImageBox>
                         <S.Image src={data.images.nqueen} alt="nqueen" />
@@ -35,12 +30,6 @@ const NQueen: React.FC<IProps> = ({ data }) => {
                     </S.ImageBox>
                     <S.ImageDesc>As you know, the Queen is be able to access any spot on the same row, column, or diagonal</S.ImageDesc>
                 </S.MapBox>
-            </S.Row>
-            <S.Row>
-                <S.SubTitle>Usage</S.SubTitle>
-                <S.Usage>
-                    $&gt; ~ make
-                </S.Usage>
             </S.Row>
             <S.Row>
                 <S.SubTitle>How it works</S.SubTitle>
@@ -134,8 +123,13 @@ const NQueen: React.FC<IProps> = ({ data }) => {
                     Now, the programme tries to place the Queen at B6.
 
                     As you can see, back tracking algorithm works only in possible case.
-                    if it is impossible, it goes back and finding new possible way.
+                    if it is impossible, it goes back and finding new possible way.<br /><br />
+
+                    Here's how I implemented, please check out the code below:
                 </S.Description>
+                <S.ImageBox>
+                    <S.Image src={data.images.code} alt="code" />
+                </S.ImageBox>
             </S.Row>
         </S.Container>
     )
