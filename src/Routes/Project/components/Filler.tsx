@@ -41,12 +41,16 @@ const Filler: React.FC<IProps> = ({ data }) => {
                 <S.SubTitle>OVERVIEW</S.SubTitle>
                 <S.SubHeading>STRATEGY</S.SubHeading>
                 <S.Description>
-                    Strategy was to check relative position compared to challerenger.<br />
-                    then get close to challengers first position, surround it while maintaining enough distance.
-                    Once I surround the challerenger, the game is finished as a winner.
+                    My attack strategy was to check relative position compared to challenger.<br />
+                    While getting closer to the challenger's first position, my programme is also looking for nearest chanllerger's position.<br />
+                    Then, if the challenger's and my position are very close, my programme starts to chase the challenger's further position.<br />
+                    Once, I surround the challenger, the game is finished as a winner.<br /><br />
+
+                    Check the slow version of the video, it will help you understanding:<br />
+                    <S.ImageBox>
+                        <S.Image src={data.images.slow} alt="fillerslow" />
+                    </S.ImageBox>
                 </S.Description>
-                <S.SubHeading>HEATMAP ALGORITHME</S.SubHeading>
-                
             </S.Row>
         </S.Container>
     )

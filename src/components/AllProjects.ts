@@ -193,7 +193,9 @@ export const WORKS_ITEMS = [
     images: {
       page: "",
     },
-    description: "A program that imitates commands from OpenSSL",
+    description: `Ths first 42 project. The goal of this project is to recreate varius standard C library functions.
+    They should behave more or less the same as the standard C library.
+    `,
     repository: "https://github.com/Seojun-Park/42_projects/tree/main/ft_ssl",
   },
   {
@@ -203,7 +205,8 @@ export const WORKS_ITEMS = [
     thumbnail: "tbu",
     label: "1010",
     images: {
-      page: "",
+      slow:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/filler%2Ffiller_slow.gif?alt=media&token=849f9363-1fa3-41e7-9a59-3132b268565e",
     },
     description: `Filler is a 42 project to learn about Algorithm. The goal is to be the last player to put a piece, that can have any size and shape, sent by the Filler Virtual Machine.
       To put a piece it needs to overlap one player's cell and only one and not overlap any of the challengers cells.

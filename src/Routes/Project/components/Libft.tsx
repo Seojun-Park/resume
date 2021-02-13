@@ -52,20 +52,23 @@ const Libft: React.FC<IProps> = ({ data }) => {
             </S.Head>
             <S.Row>
                 <S.SubTitle>
-                    OverView
+                    OVERVIEW
                 </S.SubTitle>
-                <S.Usage>
-                    <S.Description>
-                        Libft has 4 sections:<br />
+                <S.Description>
+                    Libft has 4 sections:<br />
                     1. Libc fn : Some of the standard C functions<br />
                     2. Additional fn: Functions 42 deems will be useful for later project<br />
                     3. Bonus fn: Functions 42 deems will be useful for linked like manipulation<br />
                     4. Personal fn
                 </S.Description>
+                <S.Usage>
+                    <span style={{ fontWeight: 600 }}>$&gt; make</span><br />
+                then, include it into your C project:<br />
+                    <span style={{ fontWeight: 600 }}>#include</span> "libft.h"
                 </S.Usage>
             </S.Row>
             <S.Row>
-                <S.SubTitle>Function List</S.SubTitle>
+                <S.SubTitle>FUNCTION LIST</S.SubTitle>
                 <S.Table>
                     {handleTable('Standard')}
                     {handleTable('Additional')}
