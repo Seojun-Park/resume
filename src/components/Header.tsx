@@ -12,6 +12,10 @@ interface StyleProps {
     isOpen?: boolean;
 }
 
+interface DropProps {
+    dropdown: boolean;
+    isScroll?: boolean;
+}
 
 const S = {
     Wrapper: styled.div<StyleProps>`
@@ -34,9 +38,9 @@ const S = {
       align-items: center;
       justify-content:space-between;
       padding-right:1rem;
-      @media (max-width:750px){
-          justify-content:center;
-    }
+      @media (min-width: 320px) and (max-width: 480px) {
+          justify-content:space-between;
+      }
     `,
     Logo: styled.span<StyleProps>`
       color: ${({ isScroll, theme }) =>
@@ -52,7 +56,7 @@ const S = {
     Navigation: styled.div`
       display: flex;
       justify-content: center;
-      @media(max-width:750px){
+      @media (min-width: 320px) and (max-width: 480px) {
           display:none;
       }
     `,
@@ -68,16 +72,49 @@ const S = {
         opacity: 0.5;
         text-decoration-line:none;
       }
-      @media(max-width:750px){
+      @media (min-width: 320px) and (max-width: 480px) {
           display:none;
       }
+    `,
+    Dropdown: styled.div<DropProps>`
+    display:none;
+     @media (min-width: 320px) and (max-width: 480px) {
+         display:flex;
+         flex-direction:column;
+         justify-content:center;
+         position:relative;
+    }
+    `,
+    DropdownMenu: styled.div`
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    background-color:#EFF2F5;
+    position:absolute;
+    padding:10px;
+    width:120px;
+    top:25px;
+    right:4px;
+    `,
+    Burger: styled.button<StyleProps>`
+    transform:rotate(90deg);
+    border:none;
+    background-color: ${({ isScroll, theme }) =>
+            isScroll ? '#111111' : theme.palette.primary};
+    color:white;
+    font-weight:600;
+    `,
+    Menu: styled(Link)`
+    padding:10px 8px;
     `
+    ,
 };
 
 
 const Header: React.FC<IProps> = ({ homeref, home }) => {
     const [to, setTo] = useState<string>('')
     const [isScroll, setIsScroll] = useState<boolean>(false);
+    const [drop, setDrop] = useState<boolean>(false);
     const handleScroll = useCallback(() => {
         if (window.pageYOffset > 0) {
             setIsScroll(true)
@@ -87,12 +124,17 @@ const Header: React.FC<IProps> = ({ homeref, home }) => {
         }
     }, [])
 
+    const handleClick = () => {
+        setDrop(drop ? false : true);
+    }
+
     useEffect(() => {
         window.addEventListener('mousewheel', handleScroll);
         return () => {
             window.removeEventListener('mousewheel', handleScroll)
         }
     }, [handleScroll])
+
 
     useEffect(() => {
         if (homeref && homeref.current) {
@@ -151,6 +193,19 @@ const Header: React.FC<IProps> = ({ homeref, home }) => {
                         </Link>
                     </S.Navigation>
                 }
+                <S.Dropdown dropdown={false} isScroll={isScroll}>
+                    <S.Burger onClick={handleClick} isScroll={isScroll}>
+                        |||
+                    </S.Burger>
+                    {drop ? (
+                        <S.DropdownMenu>
+                            <S.Menu to='/home' style={{ textDecoration: 'none', color: 'black' }}>Home</S.Menu>
+                            <S.Menu to='/profile' style={{ textDecoration: 'none', color: 'black' }}>Profile</S.Menu>
+                            <S.Menu to='/projects' style={{ textDecoration: 'none', color: 'black' }}>Projects</S.Menu>
+                            <S.Menu to='/Contact' style={{ textDecoration: 'none', color: 'black' }}>Contact</S.Menu>
+                        </S.DropdownMenu>
+                    ) : ''}
+                </S.Dropdown>
             </S.Header>
         </S.Wrapper>
     )

@@ -14,6 +14,9 @@ const Wrapper = styled.div`
         /* margin-top: 1rem; */
     }
     width:100%;
+    @media (min-width: 320px) and (max-width: 480px) {
+        margin-top:30px;
+      }
 `;
 
 const Label = styled.div`

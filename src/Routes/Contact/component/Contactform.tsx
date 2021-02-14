@@ -12,6 +12,10 @@ const S = {
     display:flex;
     justify-content:center;
     align-items:center;
+    @media (min-width: 320px) and (max-width: 480px) {
+        width:100%;
+        height:100%;
+      }
     `,
     Container: styled.div`
     width:70%;
@@ -24,9 +28,17 @@ const S = {
     box-shadow:5px 5px 10px 8px #333;
     display:flex;
     flex-direction:column;
+    @media (min-width: 320px) and (max-width: 480px) {
+        width:90%;
+        max-width:479px;
+        min-width:321px;
+        margin:0 auto;
+        box-shadow:none;
+      }
     `,
     Title: styled.h3`
     ${props => props.theme.typography.subtitle};
+    text-transform:uppercase;
     `,
     Row: styled.div`
     width:100%;
@@ -36,6 +48,9 @@ const S = {
     display:flex;
     flex-direction:row;
     justify-content:space-between;
+    @media (min-width: 320px) and (max-width: 480px) {
+        flex-direction:column;
+      }
     `
     ,
     Input: styled(InputWithLabel)`
