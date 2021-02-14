@@ -47,6 +47,7 @@ const S = {
       max-width: 25%;
       padding-left:25px;
       text-decoration:none;
+      font-family: "Archivo", sans-serif;
     `,
     Navigation: styled.div`
       display: flex;

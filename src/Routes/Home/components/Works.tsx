@@ -17,19 +17,24 @@ const S = {
     justify-content: center;
     align-items:center;
     background-color:#EFF2F5;
-    @media (max-width:376px){
-      padding: 60px auto;
-      margin:auto;
-      margin-top: 400px;
+    @media (min-width: 320px) and (max-width: 480px) {
+      width: 90%;
+      padding:30px 0;
     }
   `,
   Line: styled.div`
    width:7%;
    height:20px;
    border-bottom:2px solid black;
+   @media (min-width: 320px) and (max-width: 480px) {
+     width:20%;
+    }
    `,
   Title: styled.div`
    ${props => props.theme.typography.title};
+   @media (min-width: 320px) and (max-width: 480px) {
+     text-align:center;
+    }
    `,
   Row: styled.div`
   margin:0 auto;
@@ -43,6 +48,11 @@ const S = {
    padding-right:30px;
    flex-wrap:wrap;
    justify-content:space-between;
+   @media (min-width: 320px) and (max-width: 480px) {
+     width: 90%;
+     max-width:475px;
+     min-width:320px;
+    }
    `,
   Description: styled.div`
    ${props => props.theme.typography.heading};
@@ -52,6 +62,11 @@ const S = {
   ExtendedLink: styled(Link)`
   width:100%;
   max-width:400px;
+  @media (min-width: 320px) and (max-width: 480px) {
+    max-width: 350px;
+    margin-top: 50px;
+    height:300px;
+    }
   `,
   Card: styled.div`
   width:100%;
@@ -65,6 +80,12 @@ const S = {
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
   }
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 90%;
+    height: 100%;
+    /* height: 500px; */
+    margin:0 auto;
+    }
   `,
   Preview: styled.div<IStyle>`
   background: no-repeat center/cover url(${props => props.image});
@@ -74,7 +95,12 @@ const S = {
     transition:0.2s linear;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-  }`,
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+    height: 90%;
+    max-width:350px;
+    }
+  `,
   CardDesc: styled.div`
   width:100%;
   /* min-width:500px; */
@@ -91,15 +117,25 @@ const S = {
     transition:0.2s linear;
     color:white;
 }
+@media (min-width: 320px) and (max-width: 480px) {
+  padding:10px;
+  height:100%;
+    }
   `,
   DescTitle: styled.div`
   ${props => props.theme.typography.subtitle};
   font-size:2rem;
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size:1.5rem;
+    }
   `,
   Desc: styled.div`
   margin-top:30px;
   ${props => props.theme.typography.description};
   /* color: ${props => props.theme.palette.gray}; */
+  @media (min-width: 320px) and (max-width: 480px) {
+    text-align:center;
+    }
   `,
   Bottom: styled.div`
   display:flex;

@@ -6,8 +6,8 @@ export const S = {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    @media (max-width: 376px) {
-      width: 100%;
+    @media (min-width: 320px) and (max-width: 480px) {
+      width: 80%;
     }
   `,
   Head: styled.div`
@@ -25,11 +25,6 @@ export const S = {
   `,
   Row: styled.div`
     margin: 20px 0;
-
-    @media (max-width: 376px) {
-      margin: 15px 0;
-      padding: 0;
-    }
   `,
   Title: styled.h4`
     ${(props) => props.theme.typography.subtitle};
@@ -42,17 +37,16 @@ export const S = {
     ${(props) => props.theme.typography.subheading};
     font-size: 1.7rem;
     margin-bottom: 10px;
-    @media (max-width: 376px) {
+    text-transform: uppercase;
+    @media (min-width: 320px) and (max-width: 480px) {
       font-size: 1.5rem;
-      padding: 0;
-      margin: 0 10px;
     }
   `,
   SubHeading: styled.h4`
     ${(props) => props.theme.typography.subheading};
-    @media (max-width: 376px) {
+    text-transform: uppercase;
+    @media (min-width: 320px) and (max-width: 480px) {
       font-size: 1rem;
-      padding: 0px;
     }
   `,
   Usage: styled.div`
@@ -64,17 +58,19 @@ export const S = {
     background-color: #eee;
     border-radius: 1rem;
     text-overflow: ellipsis;
-    @media (max-width: 376px) {
+    @media (min-width: 320px) and (max-width: 480px) {
+      width: 100%;
       padding: 10px;
+      font-size: 0.7rem;
     }
   `,
   Description: styled.p`
     ${(props) => props.theme.typography.description};
     margin-top: 20px;
     margin-bottom: 20px;
-    @media (max-width: 376px) {
-      padding-left: 8px;
+    @media (min-width: 320px) and (max-width: 480px) {
       width: 90%;
+      font-size: 0.8rem;
     }
   `,
   Bold: styled.span`
@@ -126,7 +122,8 @@ export const S = {
     &:last-child {
       margin-left: 25px;
     }
-    @media (max-width: 376px) {
+    @media (min-width: 320px) and (max-width: 480px) {
+      width: 280px;
       &:last-child {
         margin: 0;
         margin-top: 8px;
@@ -137,8 +134,9 @@ export const S = {
     ${(props) => props.theme.typography.caption};
     color: ${(props) => props.theme.palette.gray};
     padding: 15px;
-    @media (max-width: 376px) {
+    @media (min-width: 320px) and (max-width: 480px) {
       padding: 8px;
+      font-size: 0.8rem;
     }
   `,
   Table: styled.div`
@@ -178,13 +176,13 @@ export const S = {
   `,
   Snap: styled.img`
     width: 600px;
-    @media (max-width: 376px) {
-      width: 320px;
+    @media (min-width: 320px) and (max-width: 480px) {
+      width: 280px;
     }
   `,
   SnapBox: styled.img`
     width: 400px;
-    @media (max-width: 376px) {
+    @media (min-width: 320px) and (max-width: 480px) {
       width: 200px;
     }
   `,
@@ -194,12 +192,13 @@ export const S = {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    text-transform: uppercase;
     max-width: 800px;
     &:not(:last-child) {
       margin-bottom: 20px;
     }
-    @media (max-width: 376px) {
-      width: 80%;
+    @media (min-width: 320px) and (max-width: 480px) {
+      padding: 15px 0;
     }
   `,
   Col: styled.div`
@@ -208,13 +207,16 @@ export const S = {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    @media (min-width: 320px) and (max-width: 480px) {
+      height: 100px;
+    }
   `,
   Stack: styled.img`
     width: 100px;
     height: 100px;
     object-fit: contain;
-    @media (max-width: 376px) {
-      width: 50px;
+    @media (min-width: 320px) and (max-width: 480px) {
+      width: 60px;
     }
   `,
 };

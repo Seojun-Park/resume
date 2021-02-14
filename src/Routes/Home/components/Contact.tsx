@@ -13,6 +13,11 @@ justify-content: space-between;
 background-color:white;
 /* background-color: #485461; */
 /* background-image: linear-gradient(315deg, #485461 0%, #28313b 74%); */
+@media (min-width: 320px) and (max-width: 480px) {
+    width:90%;
+    margin:0 auto;
+    padding:0;
+    }
 `,
     Line: styled.div`
 width:7%;
@@ -31,6 +36,10 @@ align-items:center;
  ${props => props.theme.typography.heading};
   font-weight:600;
   margin-top: 50px;
+  @media (min-width: 320px) and (max-width: 480px) {
+      text-align:center;
+      font-size:1.5rem;
+    }
   /* color:white; */
 `,
     Circle: styled.div`
@@ -54,6 +63,9 @@ ${props => props.theme.typography.description};
   color:${props => props.theme.palette.gray};
   font-size:1.2rem;
   margin:20px;
+  @media (min-width: 320px) and (max-width: 480px) {
+      font-size:1rem;
+    }
   `
 }
 

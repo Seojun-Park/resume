@@ -27,6 +27,9 @@ export const S = {
     font-weight: 700;
     /* font-family: "Montserrat", sans-serif; */
     font-size: 5rem;
+    @media (min-width: 320px) and (max-width: 480px) {
+      font-size: 2rem;
+    }
   `,
   TitleDesc: styled.div`
     ${(props) => props.theme.typography.description};

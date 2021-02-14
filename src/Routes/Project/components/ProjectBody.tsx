@@ -34,26 +34,39 @@ const S = {
     padding-top:50px;
     min-height:100vh;
     background-color:white;
-    @media (max-width: 376px){
-        margin-top: 200px;
+    /* text-align:center; */
+    @media (min-width: 320px) and (max-width: 480px) {
+        width: 90%;
+        padding:30px 0;
+        margin:0 auto;
     }
     `,
     Title: styled.div`
     ${props => props.theme.typography.title};
     text-transform:uppercase;
+    @media (min-width: 320px) and (max-width: 480px) {
+    text-align:center;
+        font-size:2rem;
+    }
     `,
     Line: styled.div`
      width:7%;
      height:20px;
      border-bottom:2px solid black;
      margin-bottom: 30px;
+     @media (min-width: 320px) and (max-width: 480px) {
+         margin:0 auto;
+         margin-bottom:30px;
+         width:20%;
+    }
      `,
     Overview: styled.div`
     width: 80%;
     margin:0 auto;
     padding: 15px;
-    @media (max-width:376px){
-        padding:8px;
+    @media (min-width: 320px) and (max-width: 480px) {
+        width:100%;
+        padding:0;
     }
     `,
     Preview: styled.div<IStyle>`
@@ -63,8 +76,9 @@ const S = {
     background: no-repeat center/cover url(${props => props.image});
     background-size:contain;
     margin:15px auto;
-    @media (max-width:376px){
-        height: 150px;
+    @media (min-width: 320px) and (max-width: 480px) {
+        width:300px;
+        height:200px;
     }
     `,
     Content: styled.div`
@@ -72,8 +86,8 @@ const S = {
     display:flex;
     flex-direction: column;
     padding-left:20px;
-    @media (max-width:376px){
-        padding-left:8px;
+    @media (min-width: 320px) and (max-width: 480px) {
+        padding:0;
     }
 
     `,
@@ -81,6 +95,9 @@ const S = {
     ${props => props.theme.typography.description};
     width:80%;
     padding-top: 20px;
+    @media (min-width: 320px) and (max-width: 480px) {
+        font-size:0.9rem;
+    }
     `,
     Link: styled(Link)`
     /* padding:20px; */
@@ -90,8 +107,9 @@ const S = {
         transition:0.2s linear;
         color:${props => props.theme.palette.lightgray};
     }
-    @media (max-width:376px){
-        display:none;
+    @media (min-width: 320px) and (max-width: 480px) {
+        /* display:none; */
+        margin:10px 0;
     }
     `
 }

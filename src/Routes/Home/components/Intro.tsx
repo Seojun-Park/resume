@@ -15,15 +15,18 @@ const S = {
     align-items:center;
     font-family: 'Montserrat', sans-serif;
     @media (max-width:376px){
-      padding: 60px auto;
+      padding: 20px auto;
       margin:auto;
-      margin-top: 400px;
+      margin-top: 200px;
     }
   `,
   Line: styled.div`
   width:7%;
   height:20px;
   border-bottom:2px solid black;
+  @media (min-width: 320px) and (max-width: 480px) {
+    width:20%;
+    }
   `,
   Title: styled.div`
   ${props => props.theme.typography.title};
@@ -41,11 +44,17 @@ const S = {
   color:${props => props.theme.palette.gray};
   font-size:1.2rem;
   font-family: "Archivo", sans-serif;
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size:1rem;
+    }
   `,
   InnerRow: styled.div`
   display:flex;
   flex-direction:row;
   margin-top:30px;
+  @media (min-width: 320px) and (max-width: 480px) {
+    flex-wrap:wrap;
+    }
   `,
   Circle: styled.div`
   border:4px solid ${props => props.theme.palette.primary};
@@ -64,6 +73,9 @@ const S = {
     transition:0.2s linear;
     color:white;
   }
+  @media (min-width: 320px) and (max-width: 480px) {
+    margin: 10px 0;
+    }
   `,
   HyperLink: styled.a`
   text-decoration:none;

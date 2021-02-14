@@ -13,6 +13,9 @@ const S = {
     display: flex;
     flex-direction: column;
     background-color:white;
+    @media (min-width: 320px) and (max-width: 480px) {
+      padding:30px 0;
+    }
   `,
   Row: styled.div`
   width:100%;
@@ -39,11 +42,17 @@ const S = {
     ${props => props.theme.typography.subtitle};
     color: ${props => props.theme.palette.black};
     margin-bottom: 1rem;
+    @media (min-width: 320px) and (max-width: 480px) {
+      font-size:1.5rem;
+    }
   `,
   SubTitle: styled.h3`
   ${props => props.theme.typography.heading};
   margin:20px 0;
   margin-bottom:40px;
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size:1.2rem;
+    }
   `
   ,
   Description: styled.p`
@@ -51,12 +60,8 @@ const S = {
     color: ${props => props.theme.palette.black};
     margin-bottom: 2rem;
     /* margin-left:20px; */
-    @media (max-width:376px){
-      margin-top: 20px;
-      background-color: white;
-      width: 320px;
-      padding: 1rem;
-      margin-bottom:1rem;
+    @media (min-width: 320px) and (max-width: 480px) {
+      font-size:1rem;
     }
   `,
   List: styled.ul`
@@ -111,10 +116,17 @@ const S = {
   text-decoration:underline 1px solid;
   text-underline-offset:20%;
   padding-bottom:20px;
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size:1.2rem;
+    font-weight:600;
+    }
   `,
   ExpDesc: styled.div`
   ${props => props.theme.typography.description};
   margin-bottom: 20px;
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size:1rem;
+    }
   `,
   ExpSp: styled.div`
   display:grid;
@@ -128,11 +140,17 @@ const S = {
   ${props => props.theme.typography.subheading};
   font-weight:400;
   margin-bottom:15px;
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size:1rem;
+    }
   `,
   ColPeriod: styled.div`
   ${props => props.theme.typography.subheading};
   font-weight:400;
   color:${props => props.theme.palette.gray};
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size:0.5rem;
+    }
   `,
   Ul: styled.ul`
   list-style: inside;
@@ -141,6 +159,9 @@ const S = {
   `,
   Li: styled.li`
   padding:10px 0;
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size:0.9rem;
+    }
   `
 };
 
@@ -202,7 +223,7 @@ const ProfileBody = () => {
           <S.ExpSp>
             <S.ExpCol>
               <S.ColHeading>Winner</S.ColHeading>
-              <S.ColPeriod>2021.02.05 - 2021.02.07</S.ColPeriod>
+              <S.ColPeriod>2021.02.05 - 07</S.ColPeriod>
             </S.ExpCol>
             <S.ExpCol>
               <S.Ul>

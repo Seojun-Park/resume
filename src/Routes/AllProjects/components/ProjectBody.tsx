@@ -22,17 +22,25 @@ const S = {
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    @media (max-width: 376px){
-        margin-top: 250px;
+    @media (min-width: 320px) and (max-width: 480px) {
+        width:90%;
+        padding:30px auto;
+        margin:0 auto;
     }
     `,
     Line: styled.div`
    width:7%;
    height:20px;
    border-bottom:2px solid black;
+   @media (min-width: 320px) and (max-width: 480px) {
+       width:20%;
+    }
    `,
     Title: styled.div`
    ${props => props.theme.typography.title};
+   @media (min-width: 320px) and (max-width: 480px) {
+       font-size:2rem;
+    }
    `,
     Container: styled.div`
     width: 80%;
@@ -53,9 +61,17 @@ const S = {
         grid-auto-rows:150px;
     }
     `,
+    ProjectSp: styled.div`
+    display:none;
+    @media (min-width: 320px) and (max-width: 480px) {
+        width:90%;
+        height: 40px;
+        border-bottom:2px solid #333;
+    }
+    `,
     Project: styled(Link) <IProps>`
-    width:260px;
-    height:250px;
+    width:300px;
+    height:200px;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -79,6 +95,15 @@ const S = {
         height: 100%;
         transition:0.2s linear;
         }
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+        height:200px;
+        width:350px;
+        border-bottom:2px solid #333;
+        border-top:2px solid #333;
+
+        margin:30px auto;
+        /* margin-bottom: 30px; */
     }
     `,
     ProjectTitleBox: styled.div`

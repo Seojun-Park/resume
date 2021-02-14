@@ -16,11 +16,9 @@ interface IProps extends RouteComponentProps {
 const Wrapper = styled.div`
 width: 100%;
 background-color:#F8F5F2;
-@media(max-width: 376px) {
-    /* width: 100%; */
-    width: 376px;
-    background-color:#F8F5F2;
-}
+@media (min-width: 320px) and (max-width: 480px) {
+    width:100%;
+    }
 `
 
 const Project: React.FC<IProps> = ({ match }) => {
