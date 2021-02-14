@@ -55,17 +55,17 @@ const S = {
 const FIGURE_ITEMS = [
   {
     title: 'Total Projects',
-    number: 10,
+    number: 8,
     unit: '+',
     description: 'more than actual toy projects.',
   },
-  {
-    title: 'Partners',
-    number: 124,
-    unit: '',
-    description:
-      'Nisi scelerisque eu ultrices vitae auctor eu augue ut lectus.',
-  }
+  // {
+  //   title: 'Partners',
+  //   number: 124,
+  //   unit: '',
+  //   description:
+  //     'Nisi scelerisque eu ultrices vitae auctor eu augue ut lectus.',
+  // }
 ];
 
 const Figure = () => {

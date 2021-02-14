@@ -1,6 +1,7 @@
 interface IProps {
   palette: {
     primary: string;
+    hover: string;
     secondary: string;
     background: string;
     white: string;
@@ -63,6 +64,7 @@ interface IProps {
 const theme: IProps = {
   palette: {
     primary: "#0063FF",
+    hover: "#1e3799",
     secondary: "#0a8080",
     background: "#151619",
     white: "#ffffff",

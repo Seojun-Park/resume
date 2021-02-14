@@ -63,7 +63,7 @@ const S = {
     font-size:1.2rem;
     &:hover{
         transition:0.2s linear;
-        background-color:${props => props.theme.palette.orange};
+        background-color:${props => props.theme.palette.hover};
     }
     `
 }

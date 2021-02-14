@@ -21,7 +21,8 @@ const S = {
     &:hover{
         transition:0.2s linear;
         color:white;
-        background-color: ${props => props.theme.palette.primary};
+        background-color: ${props => props.theme.palette.hover};
+        border: 1px solid ${props => props.theme.palette.hover};
     }
     `
 }

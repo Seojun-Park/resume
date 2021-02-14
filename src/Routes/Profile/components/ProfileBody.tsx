@@ -182,7 +182,7 @@ const ProfileBody = () => {
         <S.Image {...animatedImage[0]} />
       </S.Row>
       <S.IntroRow>
-        <S.Title>About me</S.Title>
+        <S.Title>ABOUT ME</S.Title>
         <S.Description>
           Hello! I'm Jin. Currently, studying coding at école 42 Paris.<br />
           I have started my career as Marketing Export for 3 years in Seoul, South Korea and Frankfurt, Germany<br />
@@ -194,9 +194,24 @@ const ProfileBody = () => {
         <a style={{ margin: 30, marginTop: 10 }} href={`https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/Resume_Jinpark.pdf?alt=media&token=c0305e79-ab37-4d73-98ba-2151196ceb61`} download rel="noreferrer" target="_blank">Download resume</a>
       </S.IntroRow>
       <S.IntroRow>
-        <S.Title>Experience</S.Title>
+        <S.Title>EXPERIENCE / ACTIVITY</S.Title>
         <S.SubTitle>Developer</S.SubTitle>
-        <S.Description>Will be full</S.Description>
+        <S.ExpRow style={{ marginBottom: 30 }}>
+          <S.ExpTitle>Back 2 living room : 42 Hackathon</S.ExpTitle>
+          <a href="https://backtothelivingroom.tech/" style={{ marginBottom: 30 }}>Link</a>
+          <S.ExpSp>
+            <S.ExpCol>
+              <S.ColHeading>Winner</S.ColHeading>
+              <S.ColPeriod>2021.02.05 - 2021.02.07</S.ColPeriod>
+            </S.ExpCol>
+            <S.ExpCol>
+              <S.Ul>
+                <S.Li>Winner of Senior &#38; Technology</S.Li>
+                <S.Li><a href="https://seojun-park.github.io/Back2LivingRoom_Hackathon/#/">See Demo</a></S.Li>
+              </S.Ul>
+            </S.ExpCol>
+          </S.ExpSp>
+        </S.ExpRow>
         <S.Line />
         <S.SubTitle>Marketing</S.SubTitle>
         <S.ExpRow style={{ marginBottom: 30 }}>

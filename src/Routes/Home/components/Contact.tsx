@@ -44,8 +44,8 @@ align-items:center;
 cursor: pointer;
 ${props => props.theme.typography.description};
 &:hover{
-  background-color:${props => props.theme.palette.primary};
-  border:4px solid ${props => props.theme.palette.primary};
+  background-color:${props => props.theme.palette.hover};
+  border:4px solid ${props => props.theme.palette.hover};
   transition:0.2s linear;
   color:white;
 }`,
