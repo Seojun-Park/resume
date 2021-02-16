@@ -41,9 +41,11 @@ const S = {
   `,
   Description: styled.div`
   ${props => props.theme.typography.heading};
-  color:${props => props.theme.palette.gray};
+  font-weight:400;
+  /* color:${props => props.theme.palette.gray}; */
   font-size:1.2rem;
   font-family: "Archivo", sans-serif;
+  text-align:center;
   @media (min-width: 320px) and (max-width: 480px) {
     font-size:1rem;
     }

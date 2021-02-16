@@ -43,6 +43,7 @@ const S = {
   Title: styled.h3`
     ${(props) => props.theme.typography.subheading};
     margin: 1rem 0;
+    text-transform:uppercase;
     @media (max-width:376px){
       font-size: 16px;
     }
