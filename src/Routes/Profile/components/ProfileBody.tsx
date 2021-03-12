@@ -212,7 +212,8 @@ const ProfileBody = () => {
           <br />
           Studying in 42 curriculm which pushes studens to the limit, my problem solving
         </S.Description>
-        <a style={{ margin: 30, marginTop: 10 }} href={`https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/Resume_Jinpark.pdf?alt=media&token=c0305e79-ab37-4d73-98ba-2151196ceb61`} download rel="noreferrer" target="_blank">Download resume</a>
+        <a style={{ margin: 30, marginTop: 10 }} href={`https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/Jin_Park__Web_Developer.pdf?alt=media&token=25891439-2c04-4f59-8f41-47f766bdb74d`} download rel="noreferrer" target="_blank">Download resume_English Ver.</a>
+        <a style={{ margin: 30, marginTop: 10 }} href={`https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8C%E1%85%B5%E1%86%AB%E1%84%8E%E1%85%A5%E1%86%AF.pdf?alt=media&token=324c469e-eb87-4b9e-a98f-778a87873d71`} download rel="noreferrer" target="_blank">Download resume_Korean Ver.</a>
       </S.IntroRow>
       <S.IntroRow>
         <S.Title>EXPERIENCE / ACTIVITY</S.Title>
