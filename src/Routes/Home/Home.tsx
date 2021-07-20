@@ -29,7 +29,7 @@ const Home = () => {
             <Header homeref={ref} home={true} />
             <Hero />
             <Intro />
-            <Figure />
+            {/* <Figure /> */}
             <Works />
             <Contact />
             <MoveTop />

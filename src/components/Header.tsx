@@ -136,6 +136,8 @@ const Header: React.FC<IProps> = ({ homeref, home }) => {
     }, [handleScroll])
 
 
+
+    console.log(homeref?.current)
     useEffect(() => {
         if (homeref && homeref.current) {
             switch (to) {
@@ -144,11 +146,11 @@ const Header: React.FC<IProps> = ({ homeref, home }) => {
                     setTo('')
                     break;
                 case 'projects':
-                    homeref.current.children[4].scrollIntoView({ behavior: "smooth" })
+                    homeref.current.children[3].scrollIntoView({ behavior: "smooth" })
                     setTo('')
                     break;
                 case 'contact':
-                    homeref.current.children[5].scrollIntoView({ behavior: "smooth" })
+                    homeref.current.children[4].scrollIntoView({ behavior: "smooth" })
                     setTo('')
                     break;
             }
