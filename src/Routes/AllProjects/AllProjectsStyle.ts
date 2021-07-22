@@ -107,7 +107,8 @@ export const AllProjectStyle = {
   ProjectTitleBox: styled.div`
     border: 3px solid white;
     padding: 15px;
-    padding-top: 25px;
+    /* padding-top: 25px; */
+    margin: 0 10px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,10 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
-interface IStyle {
-  image: string
-}
+import Card from 'react-bootstrap/Card'
+import { forceHistory } from '../../../hooks/forceHistory';
 
 const S = {
   Wrapper: styled.div`
@@ -40,40 +37,21 @@ const S = {
   margin:0 auto;
    margin-top:30px;
    /* padding:0 10px; */
-   width:90%;
-   min-width:600px;
+   /* width:90%; */
+   /* min-width:600px; */
    max-width:1300px;
    display:flex;
    flex-direction:row;
    padding-right:30px;
    flex-wrap:wrap;
-   justify-content:space-between;
+   /* justify-content:space-between; */
    @media (min-width: 320px) and (max-width: 480px) {
      width: 90%;
      max-width:475px;
      min-width:320px;
     }
    `,
-  Description: styled.div`
-   ${props => props.theme.typography.heading};
-   color:${props => props.theme.palette.gray};
-   font-size:1.2rem;
-   `,
-  ExtendedLink: styled(Link)`
-  width:100%;
-  max-width:400px;
-  @media (min-width: 320px) and (max-width: 480px) {
-    max-width: 350px;
-    margin-top: 50px;
-    height:300px;
-    }
-  `,
-  Card: styled.div`
-  width:100%;
-  height: 600px;
-  display:flex;
-  flex-direction:column;
-  margin-top:40px;
+  Card: styled(Card)`
   cursor: pointer;
   filter: grayscale(100%);
   &:hover{
@@ -81,63 +59,14 @@ const S = {
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
     filter: none;
+    div.card-body{
+      transition:0.2s linear;
+      color:white;
+      background-color:${props => props.theme.palette.primary};
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius:4px;
+    }
   }
-  @media (min-width: 320px) and (max-width: 480px) {
-    width: 90%;
-    height: 100%;
-    /* height: 500px; */
-    margin:0 auto;
-    }
-  `,
-  Preview: styled.div<IStyle>`
-  background: no-repeat center/cover url(${props => props.image});
-  width:100%;
-  height: 70%;
-  &:hover{
-    transition:0.2s linear;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
-    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-  }
-  @media (min-width: 320px) and (max-width: 480px) {
-    height: 90%;
-    max-width:350px;
-    }
-  `,
-  CardDesc: styled.div`
-  width:100%;
-  /* min-width:500px; */
-  height:30%;
-  background-color:white;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  padding:35px;
-  color:black;
-  &:hover{
-    background-color:${props => props.theme.palette.primary};
-    transition:0.2s linear;
-    color:white;
-}
-@media (min-width: 320px) and (max-width: 480px) {
-  padding:10px;
-  height:100%;
-    }
-  `,
-  DescTitle: styled.div`
-  ${props => props.theme.typography.subtitle};
-  font-size:2rem;
-  @media (min-width: 320px) and (max-width: 480px) {
-    font-size:1.5rem;
-    }
-  `,
-  Desc: styled.div`
-  margin-top:30px;
-  ${props => props.theme.typography.description};
-  /* color: ${props => props.theme.palette.gray}; */
-  @media (min-width: 320px) and (max-width: 480px) {
-    text-align:center;
-    }
   `,
   Bottom: styled.div`
   display:flex;
@@ -166,6 +95,22 @@ const S = {
 };
 
 const WORKS_ITEMS = [
+  {
+    image: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/decode%2Fsw%2Fsw.png?alt=media&token=a6d24b26-daca-46cb-98ab-c58ef8307ac6',
+    title: 'SUNMOON UNIVERSITY SW Institute',
+    name: 'sw Sunmoon',
+    label: 'Mar, 2021',
+    description:
+      'Website',
+  },
+  {
+    image: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/decode%2Fbk%2Fbk.png?alt=media&token=c219a592-1953-4663-a6cb-41c3c4cb0211',
+    title: 'SUNMOON UNIVERSITY Brain Korea 21 Program',
+    name: 'BK21 Sunmoon',
+    label: 'Feb, 2021',
+    description:
+      'Website',
+  },
   {
     image: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/up.gif?alt=media&token=6e6b56c0-9097-46fb-b720-96b57ae93ec4',
     title: 'UBER CLONE',
@@ -211,15 +156,15 @@ const Works = () => {
       <S.Row>
         {WORKS_ITEMS.map((item, idx) => {
           return (
-            <S.ExtendedLink to={`/project/${item.name}`} style={{ textDecoration: "none" }} key={idx}>
-              <S.Card>
-                <S.Preview image={item.image} />
-                <S.CardDesc>
-                  <S.DescTitle>{item.title}</S.DescTitle>
-                  <S.Desc>{item.description}</S.Desc>
-                </S.CardDesc>
-              </S.Card>
-            </S.ExtendedLink>
+            <S.Card style={{ width: '18rem', margin: 10 }} key={idx} onClick={() => forceHistory.push(`/project/${item.name}`)}>
+              <Card.Img style={{ height: 250, objectFit: 'cover', objectPosition: 'center' }} variant="top" src={item.image} />
+              <Card.Body>
+                <Card.Title>{item.title}</Card.Title>
+                <Card.Text style={{ marginBottom: 15 }}>
+                  {item.description}
+                </Card.Text>
+              </Card.Body>
+            </S.Card>
           )
         })}
       </S.Row>
