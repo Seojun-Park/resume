@@ -9,7 +9,9 @@ import {
     FtSSL,
     Uber,
     Jinstagram,
-    Filler
+    Filler,
+    SW,
+    BK
 } from '.'
 
 interface IProps {
@@ -135,6 +137,10 @@ const ProjectBody: React.FC<IProps> = ({ data }) => {
                 return <Jinstagram data={data} />
             case 'filler':
                 return <Filler data={data} />
+            case 'SW Sunmoon':
+                return <SW data={data} />
+            case 'BK21':
+                return <BK data={data} />
             default:
                 return;
         }

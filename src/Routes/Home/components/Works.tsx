@@ -98,7 +98,7 @@ const WORKS_ITEMS = [
   {
     image: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/decode%2Fsw%2Fsw.png?alt=media&token=a6d24b26-daca-46cb-98ab-c58ef8307ac6',
     title: 'SUNMOON UNIVERSITY SW Institute',
-    name: 'sw Sunmoon',
+    name: 'SW Sunmoon',
     label: 'Mar, 2021',
     description:
       'Website',
@@ -106,7 +106,7 @@ const WORKS_ITEMS = [
   {
     image: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/decode%2Fbk%2Fbk.png?alt=media&token=c219a592-1953-4663-a6cb-41c3c4cb0211',
     title: 'SUNMOON UNIVERSITY Brain Korea 21 Program',
-    name: 'BK21 Sunmoon',
+    name: 'BK21',
     label: 'Feb, 2021',
     description:
       'Website',

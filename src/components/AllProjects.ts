@@ -2,21 +2,54 @@ export const WORKS_ITEMS = [
   {
     preview:
       "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/decode%2Fsw%2Fsw.png?alt=media&token=a6d24b26-daca-46cb-98ab-c58ef8307ac6",
-    title: "Sunmoon SW Institute",
+    title: "SW Sunmoon",
     thumbnail: "tbu",
-    label: "Mar, 2021",
-    images: {},
-    description: `sw`,
-    repository: "https://github.com/Seojun-Park/uberClone",
+    label: "Jul, 2021",
+    images: {
+      adminPreview:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/sw%2Fadmin_preview.gif?alt=media&token=7cd60559-d2cd-4311-9b6d-e8ced3a99266",
+      adminManage:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/sw%2Fadmin_manage.gif?alt=media&token=8a54ce6e-2a9f-46ff-a7bc-93f31b36a553",
+      adminProgramManage:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/sw%2Fadmin_programManage.gif?alt=media&token=f0ee101f-798f-4127-9797-5867399412d1",
+      adminProgramManage2:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/sw%2Fadmin_programManage2.gif?alt=media&token=4d7135e4-44a4-443f-b049-120c7f7c291a",
+      adminUserManage:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/sw%2Fadmin_userManage.gif?alt=media&token=485dcffa-32c8-41fe-bb75-a916a8bb8815",
+      emailAuth:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/sw%2Femail_auth.png?alt=media&token=3684bac8-0712-4068-bff5-875a44bbc1ac",
+      map: "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/sw%2Fmap.png?alt=media&token=74e03f61-553e-4dd6-993d-f608ed002f85",
+      pagePreview:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/sw%2Fpage_preview.gif?alt=media&token=ef5f853a-b433-44f6-b329-764832d03eac",
+      pageAuth:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/sw%2Fpage_auth.gif?alt=media&token=d40e087b-e8bf-467b-8b48-a240cf891686",
+      pageBoard:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/sw%2Fpage_board.gif?alt=media&token=d03cf1e1-a7d9-4438-a1a2-124323b3916e",
+      pageQnA:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/sw%2Fpage_pna.gif?alt=media&token=25e907f4-103e-4fcf-aca4-dd0584a722c9",
+      pageReservation:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/sw%2Fpage_reservation.gif?alt=media&token=4875414a-8458-4a2b-b084-8b3adcf036ba",
+    },
+    description: `Sunmoon SW Institute is a leading university institution in software education innovation, the institution aims to innovate education and foster new talent in collaboration with government ministries.
+    The website contains JWT webtoken user authentification, CMS(Contents Management System) by Admin, React-Time facility reservation system, ...etc
+    `,
+    repository: "",
   },
   {
     preview:
       "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/decode%2Fbk%2Fbk.png?alt=media&token=c219a592-1953-4663-a6cb-41c3c4cb0211",
-    title: "BK 21",
+    title: "BK21",
     thumbnail: "tbu",
     label: "Feb, 2021",
-    images: {},
-    description: `bk`,
+    images: {
+      pagePreview:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/bk%2Fpage_preview.gif?alt=media&token=f04f6133-08b5-43bc-8c76-92fe1f3f0f59",
+      adminPreview:
+        "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/bk%2Fadmin_preview.gif?alt=media&token=e6babe96-620b-457f-af43-9f42bec372eb",
+    },
+    description: `BK21(Brain Korea 21) project is to strengthen educational and research capabilities of outstanding graduate schools and promote the next generation of academic generations to enhance national competitiveness in the future.
+    This website contains CMS(Contents Management System) by Admin. Admin can control all data(create, read, update and delete). 
+    `,
     repository: "https://github.com/Seojun-Park/uberClone",
   },
   {

@@ -137,7 +137,6 @@ const Header: React.FC<IProps> = ({ homeref, home }) => {
 
 
 
-    console.log(homeref?.current)
     useEffect(() => {
         if (homeref && homeref.current) {
             switch (to) {

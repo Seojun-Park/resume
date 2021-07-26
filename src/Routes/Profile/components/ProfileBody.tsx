@@ -57,16 +57,66 @@ const ProfileBody = () => {
         <ProfileStyle.Title>EXPERIENCE / ACTIVITY</ProfileStyle.Title>
         <ProfileStyle.SubTitle>Developer</ProfileStyle.SubTitle>
         <ProfileStyle.ExpRow style={{ marginBottom: 30 }}>
+          <ProfileStyle.ExpTitle>Rapidle</ProfileStyle.ExpTitle>
+          <ProfileStyle.ExpSp>
+            <ProfileStyle.ExpCol>
+              <ProfileStyle.ColHeading>Intern</ProfileStyle.ColHeading>
+              <ProfileStyle.ColPeriod>2021.Apr - 2021.Jul</ProfileStyle.ColPeriod>
+            </ProfileStyle.ExpCol>
+            <ProfileStyle.ExpCol>
+              <ProfileStyle.Ul>
+                <ProfileStyle.Li>Worked on a GraphQL API and on various JS frameworks(React, React NativeAngular) for the Front part</ProfileStyle.Li>
+                <ProfileStyle.Li>Evaluating and maintaining a mobile application(Rapidle Manager) on React Native</ProfileStyle.Li>
+              </ProfileStyle.Ul>
+            </ProfileStyle.ExpCol>
+          </ProfileStyle.ExpSp>
+          <ProfileStyle.Line />
+        </ProfileStyle.ExpRow>
+        <ProfileStyle.ExpRow style={{ marginBottom: 30 }}>
+          <ProfileStyle.ExpTitle>Freelancer</ProfileStyle.ExpTitle>
+          <ProfileStyle.ExpSp>
+            <ProfileStyle.ExpCol>
+              <ProfileStyle.ColHeading>Sunmoon Univ.<br /> Software Institue Webpage</ProfileStyle.ColHeading>
+              <ProfileStyle.ColPeriod>2021.Feb - 2021.Apr</ProfileStyle.ColPeriod>
+            </ProfileStyle.ExpCol>
+            <ProfileStyle.ExpCol>
+              <ProfileStyle.Ul>
+                <ProfileStyle.Li>Winner of Senior &#38; Technology</ProfileStyle.Li>
+                <ProfileStyle.Li>Winner of Senior &#38; Technology</ProfileStyle.Li>
+                <ProfileStyle.Li>Winner of Senior &#38; Technology</ProfileStyle.Li>
+                <ProfileStyle.Li><a href="https://seojun-park.github.io/Back2LivingRoom_Hackathon/#/">See Demo</a></ProfileStyle.Li>
+              </ProfileStyle.Ul>
+            </ProfileStyle.ExpCol>
+          </ProfileStyle.ExpSp>
+          <ProfileStyle.Line />
+
+          <ProfileStyle.ExpSp style={{ marginTop: 15 }}>
+            <ProfileStyle.ExpCol>
+              <ProfileStyle.ColHeading>Sunmoon Univ.<br /> BK21 Program Webpage</ProfileStyle.ColHeading>
+              <ProfileStyle.ColPeriod>2021.Jan - 2021.Feb</ProfileStyle.ColPeriod>
+            </ProfileStyle.ExpCol>
+            <ProfileStyle.ExpCol>
+              <ProfileStyle.Ul>
+                <ProfileStyle.Li>Winner of Senior &#38; Technology</ProfileStyle.Li>
+                <ProfileStyle.Li>Winner of Senior &#38; Technology</ProfileStyle.Li>
+                <ProfileStyle.Li>Winner of Senior &#38; Technology</ProfileStyle.Li>
+                <ProfileStyle.Li><a href="https://seojun-park.github.io/Back2LivingRoom_Hackathon/#/">See Demo</a></ProfileStyle.Li>
+              </ProfileStyle.Ul>
+            </ProfileStyle.ExpCol>
+          </ProfileStyle.ExpSp>
+          <ProfileStyle.Line />
+        </ProfileStyle.ExpRow>
+        <ProfileStyle.ExpRow style={{ marginBottom: 30 }}>
           <ProfileStyle.ExpTitle>Back 2 living room : 42 Hackathon</ProfileStyle.ExpTitle>
           <a href="https://backtothelivingroom.tech/" style={{ marginBottom: 30 }}>Link</a>
           <ProfileStyle.ExpSp>
             <ProfileStyle.ExpCol>
               <ProfileStyle.ColHeading>Winner</ProfileStyle.ColHeading>
-              <ProfileStyle.ColPeriod>2021.02.05 - 07</ProfileStyle.ColPeriod>
+              <ProfileStyle.ColPeriod>2021.Feb.05 - 07</ProfileStyle.ColPeriod>
             </ProfileStyle.ExpCol>
             <ProfileStyle.ExpCol>
               <ProfileStyle.Ul>
-                <ProfileStyle.Li>Winner of Senior &#38; Technology</ProfileStyle.Li>
+                <ProfileStyle.Li>Winner in Senior &#38; Technology part</ProfileStyle.Li>
                 <ProfileStyle.Li><a href="https://seojun-park.github.io/Back2LivingRoom_Hackathon/#/">See Demo</a></ProfileStyle.Li>
               </ProfileStyle.Ul>
             </ProfileStyle.ExpCol>
@@ -80,7 +130,7 @@ const ProfileBody = () => {
           <ProfileStyle.ExpSp>
             <ProfileStyle.ExpCol>
               <ProfileStyle.ColHeading>Account Executive</ProfileStyle.ColHeading>
-              <ProfileStyle.ColPeriod>2017.09 - 2018.03</ProfileStyle.ColPeriod>
+              <ProfileStyle.ColPeriod>2017.Sep - 2018.Mar</ProfileStyle.ColPeriod>
             </ProfileStyle.ExpCol>
             <ProfileStyle.ExpCol>
               <ProfileStyle.Ul>
@@ -92,12 +142,12 @@ const ProfileBody = () => {
         </ProfileStyle.ExpRow>
         <ProfileStyle.Line />
         <ProfileStyle.ExpRow style={{ marginTop: 30 }}>
-          <ProfileStyle.ExpTitle>ProfileStyle.miles.co.ltd,.</ProfileStyle.ExpTitle>
+          <ProfileStyle.ExpTitle>S-miles.co.ltd,.</ProfileStyle.ExpTitle>
           <ProfileStyle.ExpDesc>Marketing</ProfileStyle.ExpDesc>
           <ProfileStyle.ExpSp>
             <ProfileStyle.ExpCol>
               <ProfileStyle.ColHeading>Account Executive</ProfileStyle.ColHeading>
-              <ProfileStyle.ColPeriod>2015.12 - 2017.07</ProfileStyle.ColPeriod>
+              <ProfileStyle.ColPeriod>2015.Dec - 2017.Jul</ProfileStyle.ColPeriod>
             </ProfileStyle.ExpCol>
             <ProfileStyle.ExpCol>
               <ProfileStyle.Ul>

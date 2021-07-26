@@ -45,6 +45,7 @@ export const S = {
   SubHeading: styled.h4`
     ${(props) => props.theme.typography.subheading};
     text-transform: uppercase;
+    margin-left: 30px;
     @media (min-width: 320px) and (max-width: 480px) {
       font-size: 1rem;
     }
@@ -134,6 +135,7 @@ export const S = {
     ${(props) => props.theme.typography.caption};
     color: ${(props) => props.theme.palette.gray};
     padding: 15px;
+    line-height: 1.7;
     @media (min-width: 320px) and (max-width: 480px) {
       padding: 8px;
       font-size: 0.8rem;
