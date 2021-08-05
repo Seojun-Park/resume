@@ -81,10 +81,13 @@ const ProfileBody = () => {
             </ProfileStyle.ExpCol>
             <ProfileStyle.ExpCol>
               <ProfileStyle.Ul>
-                <ProfileStyle.Li>Winner of Senior &#38; Technology</ProfileStyle.Li>
-                <ProfileStyle.Li>Winner of Senior &#38; Technology</ProfileStyle.Li>
-                <ProfileStyle.Li>Winner of Senior &#38; Technology</ProfileStyle.Li>
-                <ProfileStyle.Li><a href="https://seojun-park.github.io/Back2LivingRoom_Hackathon/#/">See Demo</a></ProfileStyle.Li>
+                <ProfileStyle.Li>Full stack development(Mainly NodeJS/React)</ProfileStyle.Li>
+                <ProfileStyle.Li>Real time facility reservation system</ProfileStyle.Li>
+                <ProfileStyle.Li>Created CMS(Contents Management System, CRUD)system</ProfileStyle.Li>
+                <ProfileStyle.Li>Login with jwt token</ProfileStyle.Li>
+                <ProfileStyle.Li>Managed several categorized boards</ProfileStyle.Li>
+                <ProfileStyle.Li>Interactive CSS design depending on device(Web / Mobile) by styled-components</ProfileStyle.Li>
+                <ProfileStyle.Li><a href="https://sw.sunmoon.ac.kr/" target="_blank" rel="noreferrer">Webpage Link</a></ProfileStyle.Li>
               </ProfileStyle.Ul>
             </ProfileStyle.ExpCol>
           </ProfileStyle.ExpSp>
@@ -97,10 +100,10 @@ const ProfileBody = () => {
             </ProfileStyle.ExpCol>
             <ProfileStyle.ExpCol>
               <ProfileStyle.Ul>
-                <ProfileStyle.Li>Winner of Senior &#38; Technology</ProfileStyle.Li>
-                <ProfileStyle.Li>Winner of Senior &#38; Technology</ProfileStyle.Li>
-                <ProfileStyle.Li>Winner of Senior &#38; Technology</ProfileStyle.Li>
-                <ProfileStyle.Li><a href="https://seojun-park.github.io/Back2LivingRoom_Hackathon/#/">See Demo</a></ProfileStyle.Li>
+                <ProfileStyle.Li>Full stack development(Mainly NodeJS/React)</ProfileStyle.Li>
+                <ProfileStyle.Li>Created CMS(Contents Management System, CRUD)system</ProfileStyle.Li>
+                <ProfileStyle.Li>Interactive CSS design depending on device(Web / Mobile) by styled-components</ProfileStyle.Li>
+                <ProfileStyle.Li><a href="https://bk21edu.sunmoon.ac.kr/" target="_blank" rel="noreferrer">Webpage Link</a></ProfileStyle.Li>
               </ProfileStyle.Ul>
             </ProfileStyle.ExpCol>
           </ProfileStyle.ExpSp>
