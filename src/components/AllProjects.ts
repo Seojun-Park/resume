@@ -2,7 +2,7 @@ export const WORKS_ITEMS = [
   {
     preview:
       "https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/decode%2Fsw%2Fsw.png?alt=media&token=a6d24b26-daca-46cb-98ab-c58ef8307ac6",
-    title: "SW Sunmoon",
+    title: "SW_Sunmoon",
     thumbnail: "tbu",
     label: "Jul, 2021",
     images: {

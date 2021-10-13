@@ -6,18 +6,17 @@ const S = {
   Wrapper: styled.section`
     width: 100%;
     max-width: 1180px;
-    margin: auto;
-    padding: 30px 0;
-    padding-left: 30px;
+    margin:50px auto 50px auto;
     display: flex;
     flex-direction: column;
     justify-content:center;
     align-items:center;
     font-family: 'Montserrat', sans-serif;
-    @media (max-width:376px){
-      padding: 20px auto;
-      margin:auto;
-      margin-top: 200px;
+    @media (min-width: 320px) and (max-width: 480px) {
+      padding: 5px;
+      margin:0 auto;
+      margin-top: 50px;
+      margin-bottom: 50px;;
     }
   `,
   Line: styled.div`
@@ -42,20 +41,20 @@ const S = {
   Description: styled.div`
   ${props => props.theme.typography.heading};
   font-weight:400;
-  /* color:${props => props.theme.palette.gray}; */
   font-size:1.2rem;
   font-family: "Archivo", sans-serif;
   text-align:center;
   @media (min-width: 320px) and (max-width: 480px) {
     font-size:1rem;
+    width:375px;
     }
   `,
   InnerRow: styled.div`
   display:flex;
   flex-direction:row;
   margin-top:30px;
+  flex-wrap:wrap;
   @media (min-width: 320px) and (max-width: 480px) {
-    flex-wrap:wrap;
     }
   `,
   Circle: styled.div`
@@ -76,6 +75,8 @@ const S = {
     color:white;
   }
   @media (min-width: 320px) and (max-width: 480px) {
+    padding: 4px 10px;
+    font-size:10px;
     margin: 10px 0;
     }
   `,
@@ -126,7 +127,7 @@ const Intro = () => {
         <S.InnerRow>
           {social.map((item, idx) => {
             return (
-              <S.HyperLink key={idx} href={item.url} style={{ textDecoration: "none" }}>
+              <S.HyperLink key={idx} href={item.url} style={{ textDecoration: "none" }} target="_blank" rel="noreferrer">
                 <S.Circle>
                   {item.sns}
                 </S.Circle>

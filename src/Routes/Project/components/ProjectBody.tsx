@@ -13,6 +13,7 @@ import {
     SW,
     BK
 } from '.'
+import { ArrowLeftOutlined } from '@ant-design/icons'
 
 interface IProps {
     data: {
@@ -45,17 +46,20 @@ const S = {
     `,
     Title: styled.div`
     ${props => props.theme.typography.title};
+    display: flex;
+    align-items: center;
     text-transform:uppercase;
     @media (min-width: 320px) and (max-width: 480px) {
-    text-align:center;
+        text-align:center;
         font-size:2rem;
     }
     `,
     Line: styled.div`
      width:7%;
-     height:20px;
+     height:15px;
      border-bottom:2px solid black;
      margin-bottom: 30px;
+     margin-left:90px;
      @media (min-width: 320px) and (max-width: 480px) {
          margin:0 auto;
          margin-bottom:30px;
@@ -112,11 +116,11 @@ const S = {
     @media (min-width: 320px) and (max-width: 480px) {
         /* display:none; */
         margin:10px 0;
+        margin-right: 15px;
     }
     `
 }
 
-const Arrow = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" /></svg>
 
 const ProjectBody: React.FC<IProps> = ({ data }) => {
     const handlePresent = (title: string) => {
@@ -137,7 +141,7 @@ const ProjectBody: React.FC<IProps> = ({ data }) => {
                 return <Jinstagram data={data} />
             case 'filler':
                 return <Filler data={data} />
-            case 'SW Sunmoon':
+            case 'SW_Sunmoon':
                 return <SW data={data} />
             case 'BK21':
                 return <BK data={data} />
@@ -147,9 +151,13 @@ const ProjectBody: React.FC<IProps> = ({ data }) => {
     }
     return (
         <S.Wrapper>
-            <S.Title>{data.title}</S.Title>
+            <S.Title>
+                <S.Link to="/projects" style={{ textDecoration: "none" }}>
+                    <ArrowLeftOutlined />
+                </S.Link>
+                {data.title}
+            </S.Title>
             <S.Line />
-            <S.Link to="/projects" style={{ textDecoration: "none" }}><Arrow />{" "}BACK</S.Link>
             <S.Overview>
                 <S.Preview image={data.preview} />
                 <S.Description>{data.description}</S.Description>

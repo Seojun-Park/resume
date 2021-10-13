@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Card from 'react-bootstrap/Card'
-import { forceHistory } from '../../../hooks/forceHistory';
 
 const S = {
   Wrapper: styled.div`
@@ -34,21 +33,19 @@ const S = {
     }
    `,
   Row: styled.div`
-  margin:0 auto;
+    margin:0 auto;
    margin-top:30px;
-   /* padding:0 10px; */
-   /* width:90%; */
-   /* min-width:600px; */
+   width:1280px;
    max-width:1300px;
    display:flex;
    flex-direction:row;
    padding-right:30px;
    flex-wrap:wrap;
-   /* justify-content:space-between; */
    @media (min-width: 320px) and (max-width: 480px) {
-     width: 90%;
+     width:375px;
      max-width:475px;
      min-width:320px;
+     justify-content: center;
     }
    `,
   Card: styled(Card)`
@@ -98,7 +95,7 @@ const WORKS_ITEMS = [
   {
     image: 'https://firebasestorage.googleapis.com/v0/b/resume-1ac93.appspot.com/o/decode%2Fsw%2Fsw.png?alt=media&token=a6d24b26-daca-46cb-98ab-c58ef8307ac6',
     title: 'SUNMOON UNIVERSITY SW Institute',
-    name: 'SW Sunmoon',
+    name: 'SW_Sunmoon',
     label: 'Mar, 2021',
     description:
       'Website',
@@ -146,7 +143,6 @@ const WORKS_ITEMS = [
 ];
 
 const Works = () => {
-
   return (
     <S.Wrapper className={'projects'}>
       <S.Title>
@@ -156,15 +152,20 @@ const Works = () => {
       <S.Row>
         {WORKS_ITEMS.map((item, idx) => {
           return (
-            <S.Card style={{ width: '18rem', margin: 10 }} key={idx} onClick={() => forceHistory.push(`/project/${item.name}`)}>
-              <Card.Img style={{ height: 250, objectFit: 'cover', objectPosition: 'center' }} variant="top" src={item.image} />
-              <Card.Body>
-                <Card.Title>{item.title}</Card.Title>
-                <Card.Text style={{ marginBottom: 15 }}>
-                  {item.description}
-                </Card.Text>
-              </Card.Body>
-            </S.Card>
+            <Link key={idx} to={`/project/${item.name}`}>
+              <S.Card
+                style={{ width: '18rem', margin: 10 }}
+                key={idx}
+              >
+                <Card.Img style={{ height: 250, objectFit: 'cover', objectPosition: 'center' }} variant="top" src={item.image} />
+                <Card.Body>
+                  <Card.Title>{item.title}</Card.Title>
+                  <Card.Text style={{ marginBottom: 15 }}>
+                    {item.description}
+                  </Card.Text>
+                </Card.Body>
+              </S.Card>
+            </Link>
           )
         })}
       </S.Row>

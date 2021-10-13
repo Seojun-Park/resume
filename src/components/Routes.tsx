@@ -1,6 +1,12 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import { AllProjects, Home, Profile, Project, Contact } from '../Routes'
+import { AllProjects } from '../Routes'
+import lodable from '@loadable/component'
+
+const Home = lodable(() => import('../Routes/Home/Home'))
+const Profile = lodable(() => import('../Routes/Profile/Profile'))
+const Project = lodable(() => import('../Routes/Project/Project'))
+const Contact = lodable(() => import('../Routes/Contact/Contact'))
 
 const Routes = () => (
     <Switch>
@@ -12,10 +18,8 @@ const Routes = () => (
     </Switch>
 )
 
-const AppRouter = () => {
+const AppRouter: React.VFC = () => {
     return (
-        // <BrowserRouter basename={`/resume/`}>
-        // <BrowserRouter basename={`https://Seojun-Park.github.io/resume/`}>
         <BrowserRouter basename={`/`}>
             <Routes />
         </BrowserRouter>

@@ -14,9 +14,7 @@ const App = () => {
         <link href={`https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap`} rel="stylesheet" />
       </Helmet>
       <GlobalStyle />
-      {/* <Router> */}
       <Routes />
-      {/* </Router> */}
     </ThemeProvider>
   )
 }
